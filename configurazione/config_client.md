@@ -2,11 +2,14 @@
 title: Configurazione Client
 description: 
 published: true
-date: 2023-01-22T09:42:18.379Z
+date: 2023-01-22T10:00:31.695Z
 tags: 
 editor: markdown
 dateCreated: 2023-01-22T00:08:07.747Z
 ---
+
+[Una buona configurazione è la base del buon funzionamento della mesh!](/teoria/Mesh)
+
 
 ## Nome dispositivo
 Il nome del dispositivo permette agli altri nodi di identificare il nodo in maniera univoca, non ci sono vincoli particolari sul nome. Ci sono due nomi da impostare: il LongName e lo ShortName 
