@@ -2,7 +2,7 @@
 title: Configurazione Client
 description: 
 published: true
-date: 2023-01-22T09:26:45.635Z
+date: 2023-01-22T09:37:54.563Z
 tags: 
 editor: markdown
 dateCreated: 2023-01-22T00:08:07.747Z
@@ -35,21 +35,23 @@ meshtastic --set-owner-short  'A1B2'
 Le normative in ambito radiantistico non sono armonizzate in tutto il mondo è quindi necessario selezionare le impostazioni corrette in modo che il dispositivo si comporti come prescritto dalla normativa del paese dove viene utilizzato. Inoltre è necessario impostare *hopLimit* in modo da evitare un'eccessiva trasmissione dei pacchetti lora.
 
 ### Region
-La regione è il paraqmetro che configura il modem LoRa in modo che si attenga alle normative.
+La regione è il parametro che configura il modem LoRa in modo che si attenga alle normative.
 
+| Region    | Value | Description               |
+| --------- | ------| -------------------------:|
+| `UNSET`   | `0`   | Non Configurato           |
+| `US`      | `1`   | Stati Uniti               | 
+| `EU_433`  | `2`   | Unione Europea 433MHz     |
+| `EU_868`  | `3`   | Unione Europea 868MHz     |
+| `CN`      | `4`   | Cina                      |
+| `JP`      | `5`   | Giappone                  |
+| `ANZ`     | `6`   | Australia e Nuova Zelanda |
+| `KR`      | `7`   | Corea                     |
+| `TW`      | `8`   | Taiwan                    |
+| `RU`      | `9`   | Russia                    |
+| `IN`      | `10`  | India                     |
+| `ANZ`     | `6`   | Australia e Nuova Zelanda |
 
-Region Code	Description
-UNSET	Unset
-US	United States
-EU_433	European Union 433MHz
-EU_868	European Union 868MHz
-CN	China
-JP	Japan
-ANZ	Australia & New Zealand
-KR	Korea
-TW	Taiwan
-RU	Russia
-IN	India
 NZ_865	New Zealand 865MHz
 TH	Thailand
 LORA_24	2.4 GHz band worldwide
