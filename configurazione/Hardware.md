@@ -2,7 +2,7 @@
 title: Hardware compatibile
 description: 
 published: true
-date: 2023-01-22T09:01:23.951Z
+date: 2023-01-22T09:01:47.093Z
 tags: 
 editor: markdown
 dateCreated: 2023-01-22T08:59:55.289Z
