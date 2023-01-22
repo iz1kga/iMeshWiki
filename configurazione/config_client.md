@@ -2,7 +2,7 @@
 title: Configurazione Client
 description: 
 published: true
-date: 2023-01-22T09:37:54.563Z
+date: 2023-01-22T09:42:18.379Z
 tags: 
 editor: markdown
 dateCreated: 2023-01-22T00:08:07.747Z
@@ -50,11 +50,9 @@ La regione è il parametro che configura il modem LoRa in modo che si attenga al
 | `TW`      | `8`   | Taiwan                    |
 | `RU`      | `9`   | Russia                    |
 | `IN`      | `10`  | India                     |
-| `ANZ`     | `6`   | Australia e Nuova Zelanda |
-
-NZ_865	New Zealand 865MHz
-TH	Thailand
-LORA_24	2.4 GHz band worldwide
+| `NZ_865`  | `11`  | Nuova Zelanda 865MHz      |
+| `TH`      | `12`  | Tailandia                 |
+| `LORA_24` | `13`  | Tutto il mondo 2.4GHz     |
 
 **Python CLI:**
 ```bash
