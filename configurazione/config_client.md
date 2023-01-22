@@ -2,7 +2,7 @@
 title: Configurazione Client
 description: 
 published: true
-date: 2023-01-22T10:00:31.695Z
+date: 2023-01-22T10:26:36.483Z
 tags: 
 editor: markdown
 dateCreated: 2023-01-22T00:08:07.747Z
@@ -35,7 +35,7 @@ meshtastic --set-owner-short  'A1B2'
 ```
 
 ## Radio Lora
-Le normative in ambito radiantistico non sono armonizzate in tutto il mondo è quindi necessario selezionare le impostazioni corrette in modo che il dispositivo si comporti come prescritto dalla normativa del paese dove viene utilizzato. Inoltre è necessario impostare *hopLimit* in modo da evitare un'eccessiva trasmissione dei pacchetti lora.
+Le **normative** in ambito radiantistico non sono armonizzate in tutto il mondo è quindi **necessario** selezionare le impostazioni corrette in modo che il dispositivo si comporti come prescritto dalla normativa del paese dove viene utilizzato. Inoltre è necessario impostare *hopLimit* in modo da evitare un'eccessiva trasmissione dei pacchetti lora.
 
 ### Region
 La regione è il parametro che configura il modem LoRa in modo che si attenga alle normative.
@@ -63,12 +63,23 @@ meshtastic --set lora.region 3
 ```
 
 ### HopLimit
-lorem ipsum
+Un pacchetto lora ha un **limite massimo** di nodi da cui può essere ripetuto. Ogni ripetizione di un nodo è chiamato **hop**. Un nodo client dovrebbe avere impostato l'***hopLimit*** da un minimo di 5 a un massimo di 7 hop (il massimo consentito dal LoRa).
+
+**Python CLI:**
+```bash
+meshtastic --set lora.hop_limit 5
+```
 
 ## Role
-lorem Ipsum
+Per i client l'impostazione del ruolo deve essere di tipo **CLIENT**
+
+```bash
+meshtastic --set device.role CLIENT
+```
 
 ## Position
+
+
 
 ## Telemetry
 
