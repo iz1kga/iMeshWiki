@@ -2,7 +2,7 @@
 title: Hardware
 description: 
 published: true
-date: 2023-01-27T14:21:58.708Z
+date: 2023-01-27T17:49:12.160Z
 tags: 
 editor: markdown
 dateCreated: 2023-01-27T13:28:35.196Z
@@ -22,8 +22,8 @@ dateCreated: 2023-01-27T13:28:35.196Z
 ## Heltec LoRa32
 ![helteclora32.png](/hardware/helteclora32.png =250x)
 
-## RAK
+## RAK WisBlock
 
-### RAK4631 su RAK19007
+### modulo Core RAK4631 su Base RAK19007
 
 ![rak4631on19007.jpg](/hardware/rak4631on19007.jpg =250x)
