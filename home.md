@@ -2,7 +2,7 @@
 title: Home
 description: Meshtastic Italia
 published: true
-date: 2023-01-27T14:04:05.180Z
+date: 2023-01-27T14:19:43.019Z
 tags: 
 editor: markdown
 dateCreated: 2023-01-21T23:17:51.009Z
