@@ -2,7 +2,7 @@
 title: Home
 description: Meshtastic Italia
 published: true
-date: 2023-01-23T10:00:00.355Z
+date: 2023-01-27T14:04:05.180Z
 tags: 
 editor: markdown
 dateCreated: 2023-01-21T23:17:51.009Z
@@ -23,7 +23,9 @@ I nodi possono essere impostati e configurati rapidamente consentendo una facile
 
 
 ## Contenuti
-- [:books: Teoria](/teoria)
+- [:satellite: Hardware Compatibile](/teoria/hardware)
+- [:gear: Configurazione](/configurazione/config-home)
+- [:books: Teoria](/teoria/Mesh)
 - [:sos: Supporto](https://t.me/meshtastic_italia)
 - [🌐 Mappa](https://hub.iz1kga.it)
 {.links-list}
