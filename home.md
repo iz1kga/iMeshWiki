@@ -2,7 +2,7 @@
 title: Home
 description: Meshtastic Italia
 published: true
-date: 2023-01-27T14:19:43.019Z
+date: 2023-01-28T23:12:15.896Z
 tags: 
 editor: markdown
 dateCreated: 2023-01-21T23:17:51.009Z
@@ -10,10 +10,9 @@ dateCreated: 2023-01-21T23:17:51.009Z
 
 # Meshtastic Italia
 
-Meshtastic è un tipo di rete mesh wireless basata sul protocollo LoRa che consente a più dispositivi (nodi) di comunicare tra loro formando una rete senza la necessità di un server o gateway centrale.
+Meshtastic è un tipo di rete mesh wireless basata sul protocollo LoRa che consente a più dispositivi di comunicare tra loro formando una rete senza la necessità di un server o gateway centrale.
 
-Ogni nodo della rete funge da relè, inoltrando i dati da altri nodi al nodo di destinazione. Ciò consente di creare una rete robusta e decentralizzata che, sfruttando l'efficienza del protocollo LoRa, è in grado di coprire una vasta area e fornire comunicazioni a lungo raggio.
-La comunicazione può essere in chiaro oppure cifrata AES-128 o AES-256.
+Ogni dispositivo è nodo della rete e funge da relè, inoltrando i dati da altri nodi al nodo di destinazione. Ciò consente di creare una rete robusta e decentralizzata che, sfruttando l'efficienza del protocollo LoRa, è in grado di fornire comunicazioni a lungo raggio. La comunicazione è cifrata AES-128 o AES-256, ma la cifratura può essere disattivata per applicazioni radioamatoriali.
 
 Meshtastic è progettato per l'uso all'aperto ed è spesso utilizzato per attività ricreative quali escursionismo, campeggio e fuoristrada. Può anche essere utilizzato per molte altre applicazioni come monitoraggio di sensori remoti, tracciamento di fauna selvatica, attività ricerca e soccorso.
 
