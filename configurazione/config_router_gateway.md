@@ -2,7 +2,7 @@
 title: Configurazione Router - Gateway
 description: 
 published: true
-date: 2023-01-30T14:22:58.582Z
+date: 2023-01-30T14:24:23.417Z
 tags: 
 editor: markdown
 dateCreated: 2023-01-30T13:59:05.219Z
@@ -85,12 +85,12 @@ meshtastic --setlat 45.12 --setlon 7.24 --setalt 250
 ```
 
 ## MQTT
-L'impostazione MQTT permette al dispositivo di collegarsi al broker e instradare e riceve i dati dei nodi via internet
+L'impostazione MQTT permette al dispositivo di collegarsi al broker e instradare e riceve i dati dei nodi via internet. Ricordate il carattere di escape **\\** davanti ai punti esclamativi **!**
 
 ```bash
 meshtastic --set mqtt.address meshtastic.iz1kga.it
-meshtastic --set mqtt.username "<USERNAME>"
-meshtastic --set mqtt.password "<PASSWORD>"
+meshtastic --set mqtt.username <USERNAME>
+meshtastic --set mqtt.password <PASSWORD>
 meshtastic --set mqtt.json_enabled true
 meshtastic --set mqtt.encryption_enabled false
 meshtastic --set mqtt.enabled true
