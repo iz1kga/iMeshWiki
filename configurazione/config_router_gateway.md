@@ -2,7 +2,7 @@
 title: Configurazione Router - Gateway
 description: 
 published: true
-date: 2023-01-30T14:24:23.417Z
+date: 2023-01-30T14:29:11.981Z
 tags: 
 editor: markdown
 dateCreated: 2023-01-30T13:59:05.219Z
@@ -94,6 +94,13 @@ meshtastic --set mqtt.password <PASSWORD>
 meshtastic --set mqtt.json_enabled true
 meshtastic --set mqtt.encryption_enabled false
 meshtastic --set mqtt.enabled true
+```
+
+Al fine di ricevere è trasmettere i pacchetti tramite MQTT è necessario configurare il downlink e l'uplink rispettivamente sul canale principale.
+
+```bash
+meshtastic --ch-index 0 --ch-set downlink_enabled true
+meshtastic --ch-index 0 --ch-set uplink_enabled true
 ```
 
 ## WiFi
