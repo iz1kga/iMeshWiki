@@ -2,7 +2,7 @@
 title: Configurazione Router - Gateway
 description: 
 published: true
-date: 2023-01-30T15:03:05.216Z
+date: 2023-01-30T15:05:47.245Z
 tags: 
 editor: markdown
 dateCreated: 2023-01-30T13:59:05.219Z
@@ -84,11 +84,22 @@ Per impostare la posizione eseguire il comando seguente
 meshtastic --setlat 45.12 --setlon 7.24 --setalt 250
 ```
 
-Impostare l'invio della posizione ogni due ore.
-
+Impostare l'invio della posizione ogni due ore per ridurre il traffico dai nodi statici
 ```bash
 meshtastic --set position.broadcast_secs 7200
 ```
+
+## Telemetry
+Ridurrela frequenza dei pacchetti di telemetria al fine di rudurre il traffico dei nodi statici
+```bash
+meshtastic --set telemetry.device_update_interval 1800
+```
+
+se sono disponibili sensori ambientali ridurre anche la loro frequenza di aggiornamento
+```bash
+meshtastic --set telemetry.environment_update_interval 1800
+```
+
 
 ## MQTT
 L'impostazione MQTT permette al dispositivo di collegarsi al broker e instradare e riceve i dati dei nodi via internet. Ricordate il carattere di escape **\\** davanti ai punti esclamativi **!**
