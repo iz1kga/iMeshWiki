@@ -2,7 +2,7 @@
 title: Configurazione Router - Gateway
 description: 
 published: true
-date: 2023-01-30T15:05:47.245Z
+date: 2023-01-30T15:06:29.756Z
 tags: 
 editor: markdown
 dateCreated: 2023-01-30T13:59:05.219Z
@@ -99,7 +99,6 @@ se sono disponibili sensori ambientali ridurre anche la loro frequenza di aggior
 ```bash
 meshtastic --set telemetry.environment_update_interval 1800
 ```
-
 
 ## MQTT
 L'impostazione MQTT permette al dispositivo di collegarsi al broker e instradare e riceve i dati dei nodi via internet. Ricordate il carattere di escape **\\** davanti ai punti esclamativi **!**
