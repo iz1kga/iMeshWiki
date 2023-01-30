@@ -2,7 +2,7 @@
 title: Configurazione Router - Gateway
 description: 
 published: true
-date: 2023-01-30T14:29:11.981Z
+date: 2023-01-30T14:47:56.115Z
 tags: 
 editor: markdown
 dateCreated: 2023-01-30T13:59:05.219Z
@@ -82,6 +82,12 @@ Per impostare la posizione eseguire il comando seguente
 
 ```bash
 meshtastic --setlat 45.12 --setlon 7.24 --setalt 250
+```
+
+Impostare l'invio della posizione ogni due ore.
+
+```bash
+meshtastic --set position.broadcast_secs 7200
 ```
 
 ## MQTT
