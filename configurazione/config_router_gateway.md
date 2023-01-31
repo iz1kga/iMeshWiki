@@ -2,7 +2,7 @@
 title: Configurazione Router - Gateway
 description: 
 published: true
-date: 2023-01-31T23:31:26.040Z
+date: 2023-01-31T23:48:07.336Z
 tags: 
 editor: markdown
 dateCreated: 2023-01-30T13:59:05.219Z
@@ -74,7 +74,7 @@ meshtastic --set lora.hop_limit 3
 Per i client l'impostazione del ruolo deve essere di tipo **ROUTER_CLIENT**
 
 ```bash
-meshtastic --set device.role ROUTER_CLIENT
+meshtastic --set device.role 3
 ```
 
 ## Position
