@@ -2,15 +2,15 @@
 title: Home
 description: Meshtastic Italia
 published: true
-date: 2023-02-04T22:25:04.377Z
+date: 2023-02-06T11:08:09.749Z
 tags: 
 editor: markdown
 dateCreated: 2023-01-21T23:17:51.009Z
 ---
 
-# Meshtastic Italia
+# itaMesh
 
-Meshtastic è un tipo di rete mesh wireless basata sul protocollo LoRa che consente a più dispositivi di comunicare tra loro formando una rete senza la necessità di un server o gateway centrale.
+Per creare la mesh stiamo usando firmware Meshtastic. La mesh wireless è basata sul protocollo LoRa che consente a più dispositivi di comunicare tra loro formando una rete senza la necessità di un server o gateway centrale.
 
 Ogni dispositivo è nodo della rete e funge da relè, inoltrando i dati da altri nodi al nodo di destinazione. Ciò consente di creare una rete robusta e decentralizzata che, sfruttando l'efficienza del protocollo LoRa, è in grado di fornire comunicazioni a lungo raggio. La comunicazione è cifrata AES-128 o AES-256, ma la cifratura può essere disattivata per applicazioni radioamatoriali.
 
@@ -20,7 +20,7 @@ Una delle caratteristiche chiave di Meshtastic è la sua capacità di lavorare i
 
 I nodi possono essere impostati e configurati rapidamente consentendo una facile implementazione, inoltre il software è open-source, il che significa che chiunque può utilizzarlo, modificarlo e distribuirlo.
 
-Meshtastic Italia è una community di appassionati, Non è un sito ufficiale di Meshtastic® [visita il sito ufficiale](www.meshtasit.org)
+itaMesh è una community di appassionati, Non fa parte di [Meshtastic®](www.meshtasit.org)
 
 ## Contenuti
 - [:satellite: Hardware Compatibile](/teoria/hardware)
