@@ -1,8 +1,8 @@
 ---
 title: Home
-description: Meshtastic Italia
+description: itaMesh
 published: true
-date: 2023-02-06T11:24:48.161Z
+date: 2023-02-06T11:25:37.463Z
 tags: 
 editor: markdown
 dateCreated: 2023-01-21T23:17:51.009Z
