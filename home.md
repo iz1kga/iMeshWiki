@@ -2,7 +2,7 @@
 title: Home
 description: LoRa Italia
 published: true
-date: 2023-02-11T07:56:47.530Z
+date: 2023-02-11T12:23:27.919Z
 tags: 
 editor: markdown
 dateCreated: 2023-01-21T23:17:51.009Z
@@ -29,6 +29,7 @@ Meshtastic® is a registered trademark of Meshtastic LLC.
 - [:gear: Configurazione](/configurazione/config_home)
 - [:books: Teoria](/teoria/Mesh)
 - [:nut_and_bolt: Applicazioni](/applicazioni/app_index)
+- [:memo: Reports & Tests](/Reports&Tests/test_index)
 - [:sos: Supporto](https://t.me/meshtastic_italia)
 - [🌐 Mappa](https://hub.iz1kga.it)
 {.links-list}
