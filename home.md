@@ -2,7 +2,7 @@
 title: Home
 description: itaMesh
 published: true
-date: 2023-02-11T07:51:29.803Z
+date: 2023-02-11T07:53:46.415Z
 tags: 
 editor: markdown
 dateCreated: 2023-01-21T23:17:51.009Z
@@ -20,7 +20,9 @@ Una delle caratteristiche chiave di Meshtastic® è la sua capacità di lavorare
 
 I nodi possono essere impostati e configurati rapidamente consentendo una facile implementazione, inoltre il software è open-source, il che significa che chiunque può utilizzarlo, modificarlo e distribuirlo.
 
-itaMesh è una community di appassionati, Non fa parte di [Meshtastic®](www.meshtastic.org)
+LoRa Italia è una community di appassionati, Non fa parte di [Meshtastic®](www.meshtastic.org)
+
+Meshtastic® is a registered trademark of Meshtastic LLC.
 
 ## Contenuti
 - [:satellite: Hardware Compatibile](/teoria/hardware)
