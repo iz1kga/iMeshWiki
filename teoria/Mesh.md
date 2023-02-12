@@ -2,7 +2,7 @@
 title: Teoria
 description: Teoria della mesh
 published: true
-date: 2023-02-12T13:12:55.198Z
+date: 2023-02-12T13:13:44.739Z
 tags: 
 editor: markdown
 dateCreated: 2023-01-21T23:18:47.654Z
@@ -72,3 +72,5 @@ In ambito LoRa (Long Range), la terminologia "long range" e "short range" si rif
 In sintesi, la differenza tra "long range" e "short range" in LoRa si basa sulla distanza di trasmissione dei dati, con la prima che è adatta per coprire grandi aree e la seconda per coprire aree più ridotte.
 
 https://youtu.be/LbvAMmKtjcE
+
+i due canali sono stati spostati in modo da non interferire in locale, la funzione è modifica dell'OFFSET che in questo caso è di 500 KHz
