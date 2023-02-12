@@ -2,7 +2,7 @@
 title: Gestione I/O
 description: Gestione I/O
 published: true
-date: 2023-02-12T07:02:40.773Z
+date: 2023-02-12T14:50:41.082Z
 tags: 
 editor: markdown
 dateCreated: 2023-02-10T10:50:18.072Z
@@ -63,7 +63,20 @@ Abilitare la gestione hardware remota
 ```plaintext
 meshtastic --port comXX  --set remote_hardware.enabled true
 ```
+--------------------------------------------------------------------
+(con canale gpio aggiungere --dest !xxxxxxxxx per comando remoto)
 
+meshtastic --ch-index 0 --ch-set downlink_enabled true
+meshtastic --ch-index 0 --ch-set uplink_enabled true
+meshtastic --ch-index 0 --ch-set psk none
+
+meshtastic --ch-index 1 --ch-set downlink_enabled true
+meshtastic --ch-index 1 --ch-set uplink_enabled true
+meshtastic --ch-index 1 --ch-set psk none
+
+----------------------------------------------
+
+meshtastic --port com54  --set remote_hardware.enabled true
 Attenzione : Con la versione firmware 2.0.3 non occorre attivare questa funzione, con quelle successive non funziona da console, ma occorre collegarsi con l'APP al dispositivo remoto e nella sezione: "Module Setting" > Remote Hardware Config > Remote Hardware enabled >Abilitare il Servizio (ON)
 
  Successivamente occorre configurare il dispositivo REMOTO per unire il canale gpio che creato sul dispositivo LOCALE:
