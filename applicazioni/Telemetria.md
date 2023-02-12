@@ -2,7 +2,7 @@
 title: Telemetria
 description: 
 published: true
-date: 2023-02-12T22:07:44.489Z
+date: 2023-02-12T22:08:26.163Z
 tags: 
 editor: markdown
 dateCreated: 2023-02-12T22:00:02.689Z
@@ -36,4 +36,6 @@ Inoltre, il sensore INA219 ha un'elevata risoluzione e una rapida risposta, il c
 In sintesi, il sensore INA219 serve a misurare corrente e tensione in sistemi a bassa potenza in modo preciso e affidabile, rendendolo utile in molte applicazioni diverse.
 
 # Configurare la Tbeam e Tlora con i  Sensori
+
+under construction
 
