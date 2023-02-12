@@ -2,7 +2,7 @@
 title: Gestione I/O
 description: Gestione I/O
 published: true
-date: 2023-02-11T08:03:12.003Z
+date: 2023-02-12T07:02:40.773Z
 tags: 
 editor: markdown
 dateCreated: 2023-02-10T10:50:18.072Z
@@ -13,6 +13,8 @@ dateCreated: 2023-02-10T10:50:18.072Z
 GPIO, o General Purpose Input/Output, si riferisce a un set di pin su un microcontrollore o computer a scheda singola che possono essere programmati come pin di input o output. LoRa, o Long Range, è una tecnologia di comunicazione wireless che consente la trasmissione di dati a lungo raggio con un basso consumo energetico.
 
 Se utilizzati insieme, GPIO e LoRa possono essere utilizzati per creare un sistema di comunicazione wireless in cui i pin GPIO possono essere utilizzati per controllare la comunicazione e il trasferimento dei dati utilizzando la tecnologia LoRa. Ad esempio, è possibile utilizzare un microcontrollore con pin GPIO e un modulo LoRa per creare una rete di sensori wireless, in cui il microcontrollore legge i dati del sensore e li invia a un dispositivo centrale utilizzando il modulo LoRa.
+
+![329989445_724949482593138_2375873192942626684_n.jpg](/329989445_724949482593138_2375873192942626684_n.jpg)
 
 Tieni presente che avrai bisogno di un modulo LoRa compatibile con i pin GPIO del microcontrollore e potresti anche dover scrivere codice per controllare la comunicazione e il trasferimento dei dati tra il microcontrollore e il modulo LoRa.
 
