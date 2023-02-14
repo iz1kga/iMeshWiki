@@ -2,7 +2,7 @@
 title: Test di Web Gui
 description: Web Gui accessibile at https://client.meshtastic.org
 published: true
-date: 2023-02-14T22:01:38.326Z
+date: 2023-02-14T22:06:34.010Z
 tags: 
 editor: markdown
 dateCreated: 2023-02-14T18:52:28.175Z
@@ -68,7 +68,7 @@ Ora ripensandoci con più calma posso dedurre che ciò è normale stante la conn
 Esistono ancora problemi e questioni da chiarire anche sulla App che a volte vede nei nodi ??? al posto dei nomi che un attimo prima erano presenti o ancora sul Router_Client connesso via USB che a volte fa autoreboot o ncora la stessa App che inopinatamente perde la connessione con IP o anche via BT (verso il client) ma l’insieme che vedo ora è più solido e lascia sperare verso una migliore stabilità del tutto.
 
 Allego schermata del test di oggi
-
+![test_messagi.png](/test_messagi.png)
 
 
 
