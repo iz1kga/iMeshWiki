@@ -2,7 +2,7 @@
 title: Test di Web Gui
 description: Web Gui accessibile at https://client.meshtastic.org
 published: true
-date: 2023-02-14T21:48:46.297Z
+date: 2023-02-14T21:50:12.707Z
 tags: 
 editor: markdown
 dateCreated: 2023-02-14T18:52:28.175Z
@@ -50,8 +50,7 @@ seguito fornisco i dettagli. Va subito detto, intanto, che è previsto invio di 
 ## Problemi di invio
 Con la Tbeam client in linea provo invio messaggio da web GUI e noto che a volte immediatamente, a volte dopo una decina di secondi, il cerchietto alla sinistra del messaggio sullo schermo va a contenere un ! al posto del biff che mi aspettavo. Il messaggio sulla Tbeam client di fatto non compare / arriva.
 
-Provato varie volte sempre senza successo. Provo allora da App collegata via IP alla Tlora Router_Client andando sul riferimento di
-canale 0 LongFast per indirizzare tutto il mesh e vedo che la nuvoletta a volte viene barrata, a volte biffata ma in ogni caso il messaggio arriva in un tempo da 10 a 40 secondi sulla Tbeam e anche su tutti i nodi attivi al momento.
+Provato varie volte sempre senza successo. Provo allora da App collegata via IP alla Tlora Router_Client andando sul riferimento di canale 0 LongFast per indirizzare tutto il mesh e vedo che la nuvoletta a volte viene barrata, a volte biffata ma in ogni caso il messaggio arriva in un tempo da 10 a 40 secondi sulla Tbeam e anche su tutti i nodi attivi al momento.
 
 Ritengo allora che l’interfaccia web abbia un problema e apro una ‘issue’ su github Meshtastic/web. Oggi mi accorgo che la mia deduzione era errata ovvero la web GUI effettivamente manda il
 messaggio e il ! che è segno di fallimento si comporta come la barra sulla nuvoletta nella App Android ovvero non è ritornato ack ma il messaggio potrebbe anche essere arrivato a segno. 
