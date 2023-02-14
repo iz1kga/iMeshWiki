@@ -2,13 +2,13 @@
 title: Test di Web Gui
 description: Web Gui accessibile at https://client.meshtastic.org
 published: true
-date: 2023-02-14T19:01:49.401Z
+date: 2023-02-14T19:03:09.481Z
 tags: 
 editor: markdown
 dateCreated: 2023-02-14T18:52:28.175Z
 ---
 
-## Test Meshtastic web gui Vincenzo Lorenzale 6 Feb. 2023 )
+## Test Meshtastic web gui (Vincenzo Lorenzale 6 Feb. 2023 )
 
  Dopo un anno di sosta ho ripreso i 4 device che avevo a versione 1.2.50 per aggiornarli a livello 2.0.x visto che questo livello segnava anche un bel salto di qualità.
  
