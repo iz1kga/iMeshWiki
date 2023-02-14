@@ -2,13 +2,13 @@
 title: Test di Web Gui
 description: Web Gui accessibile at https://client.meshtastic.org
 published: true
-date: 2023-02-14T21:10:56.907Z
+date: 2023-02-14T21:16:39.813Z
 tags: 
 editor: markdown
 dateCreated: 2023-02-14T18:52:28.175Z
 ---
 
-## Test Meshtastic web gui (Vincenzo Lorenzale 6 Feb. 2023 )
+# Test Meshtastic web gui (Vincenzo Lorenzale 6 Feb. 2023 )
 
  Dopo un anno di sosta ho ripreso i 4 device che avevo a versione 1.2.50 per aggiornarli a livello 2.0.x visto che questo livello segnava anche un bel salto di qualità.
  
@@ -26,5 +26,14 @@ Il device Meshtastic deve essere configurato con supporto server http collegato 
 La connessione verso l’indirizzo IP del device va fatta in https e di fatto risulta un po’ macchinosa per via del fatto che il server http configurato nel device non ha un certificato di crittografia valido e richiede che il browser sia forzato nella sua accettazione per riuscire ad operare con questa interfaccia. Spesso questa procedura si interrompe con errori strani e il tutto diventa quindi macchinoso e disincentivante.
 
 A fronte di queste difficoltà ho deciso di provare la connessione seriale constatando che questa è molto stabile, più rapida e funziona bene. Tutti i test successivi sono stati fatti utilizzando la connessione USB.
+
+## Ambiente di test
+E’ consistito in:
+1. una Tlora2-1.1.6 con firmware 2.0.18
+2. una Tbeam con firmware 2.0.10
+3. Uno smartphone Honor Lite 9.0 con Meshtastic App 2.0.14
+
+## Configurazione device
+Via interfaccia web sarebbe possibile configurare completamente il device collegato. Ho notato che dopo settato i parametri che ci interessa modificare, premendo Apply/Reboot effettivamente il device si reinizializza ma di fatto non per tutti i parametri le modifiche vanno a buon fine. Poco male perché l’interfaccia CLI python funziona egregiamente a riguardo.
 
 
