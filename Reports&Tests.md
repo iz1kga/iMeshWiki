@@ -2,7 +2,7 @@
 title: Test di Web Gui
 description: Web Gui accessibile at https://client.meshtastic.org
 published: true
-date: 2023-02-14T22:06:34.010Z
+date: 2023-02-14T22:12:30.379Z
 tags: 
 editor: markdown
 dateCreated: 2023-02-14T18:52:28.175Z
@@ -70,5 +70,6 @@ Esistono ancora problemi e questioni da chiarire anche sulla App che a volte ved
 Allego schermata del test di oggi
 ![test_messagi.png](/test_messagi.png)
 
-
+## Aggiornamento al 12 Feb 2023
+In questa data è stata reso disponibile at https://client.meshtastic.org una nuova versione aggiornata di Web Gui che ha risolto il problema dell'invio messaggi oltre ad aver creato un insieme più gradevole e funzionale. Con questa versione aggiornata risultano corrette anche le malfunzioni sui comandi di configurazione del device.
 
