@@ -2,7 +2,7 @@
 title: Test di Web Gui
 description: Web Gui accessibile at https://client.meshtastic.org
 published: true
-date: 2023-02-14T21:09:15.579Z
+date: 2023-02-14T21:10:56.907Z
 tags: 
 editor: markdown
 dateCreated: 2023-02-14T18:52:28.175Z
@@ -15,8 +15,7 @@ dateCreated: 2023-02-14T18:52:28.175Z
 Le cose nuove più interessanti sono l’interfaccia web innovativa, la connessione da App a device via IP in rete, la funzione di Gateway via rete con appoggio a server IOT. L’aggiornamento e la messa in rete del mio Gateway e l’aggiornamento dei miei 3 client non hanno avuto grosse difficoltà grazie anche al supporto del gruppo Telegram Meshtastic Italia di cui faccio parte dal Dicembre 2020. 
 
 Per l’interfaccia web gui invece la lotta è stata più dura e ancora non può dirsi completamente conclusa. Tralascio di riportare alcune instabilità dell’insieme Andriod App / Router_Client e vengo subito allo stato dell’arte dell’interfaccia Web GUI accessibile via https://client.meshtastic.org
-#
-### https://client.meshtastic.org
+
 Per questa interfaccia è indispensabile usare il web browser Microsoft Edge oppure Google Chrome che sono gli unici al momento in grado di supportare il collegamento in seriale USB
 verso il device Tlora o Tbeam Meshtastic. 
 
