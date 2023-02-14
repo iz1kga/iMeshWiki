@@ -2,7 +2,7 @@
 title: Test di Web Gui
 description: Web Gui accessibile at https://client.meshtastic.org
 published: true
-date: 2023-02-14T21:54:15.152Z
+date: 2023-02-14T21:56:33.037Z
 tags: 
 editor: markdown
 dateCreated: 2023-02-14T18:52:28.175Z
@@ -50,10 +50,9 @@ Con la Tbeam client in linea provo invio messaggio da web GUI e noto che a volte
 
 Provato varie volte sempre senza successo. Provo allora da App collegata via IP alla Tlora Router_Client andando sul riferimento di canale 0 LongFast per indirizzare tutto il mesh e vedo che la nuvoletta a volte viene barrata, a volte biffata ma in ogni caso il messaggio arriva in un tempo da 10 a 40 secondi sulla Tbeam e anche su tutti i nodi attivi al momento.
 
-Ritengo allora che l’interfaccia web abbia un problema e apro una ‘issue’ su github Meshtastic/web. Oggi mi accorgo che la mia deduzione era errata ovvero la web GUI effettivamente manda il
-messaggio e il ! che è segno di fallimento si comporta come la barra sulla nuvoletta nella App Android ovvero non è ritornato ack ma il messaggio potrebbe anche essere arrivato a segno. 
+Ritengo allora che l’interfaccia web abbia un problema e apro una ‘issue’ su github Meshtastic/web. Oggi mi accorgo che la mia deduzione era errata ovvero la web GUI effettivamente manda il messaggio e il ! che è segno di fallimento si comporta come la barra sulla nuvoletta nella App Android ovvero non è ritornato ack ma il messaggio potrebbe anche essere arrivato a segno. 
 
-Grazie a Bosc, JSNM e xlw che oggi mi hanno dato conferma che i messaggi da web GUI effettivamente funzionano, occorre però porre attenzione a:
+Un grazie a Bosc, JSNM e xlw che oggi mi hanno dato conferma che i messaggi da web GUI effettivamente funzionano, occorre però porre attenzione a:
 
 1. l fatto che il ! nel cerchietto appaia non immediatamente ma dopo un certo tempo compreso fra sei / 50 secondi. Nel tempo di attesa vedremo invece tre puntini.
 2. Se il ! appare immediatamente il messaggio è sicuramente fallito e la causa non sta nell’interfaccia web bensì nel device Router_Client che in qualche modo vede compromessa la connessione uplink oppure AirUtilTx del nostro client_router ha superato il 10%.
