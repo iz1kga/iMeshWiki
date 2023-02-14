@@ -2,7 +2,7 @@
 title: Test di Web Gui
 description: Web Gui accessibile at https://client.meshtastic.org
 published: true
-date: 2023-02-14T21:17:31.353Z
+date: 2023-02-14T21:48:20.192Z
 tags: 
 editor: markdown
 dateCreated: 2023-02-14T18:52:28.175Z
@@ -35,5 +35,41 @@ E’ consistito in:
 
 ## Configurazione device
 Via interfaccia web sarebbe possibile configurare completamente il device collegato. Ho notato che dopo settato i parametri che ci interessa modificare, premendo Apply/Reboot effettivamente il device si reinizializza ma di fatto non per tutti i parametri le modifiche vanno a buon fine. Poco male perché l’interfaccia CLI python funziona egregiamente a riguardo.
+
+## Visualizzazione dei nodi nel Mesh
+I riferimenti dei nodi compaiono via via che giungono i messaggi di NODE_INFO e di POSITION dal mesh via radio o via rete cui il Gateway è connesso. Allo stato c’è il problema che i nomi dei nodi non sono quelli reali ma sono tutti Meshtastic_xxxx dove le x sono i primi 4 digit del NodeID. I nomi reali sono invece riportati se ci si connette al device via App. A questo proposito ho aperto una ‘issue’ su github Meshtastic/web.
+
+## Visualizzazione della geoMap dei nodi
+Funziona bene circa la collocazione geografica delle icone che rappresentano i nodi, non vengono invece riportati i nomi e le coordinate geografiche cliccando sulle relative immagini
+in mappa. Anche questo problema l’ho riportato su github Meshtastic/web.
+
+## Ricezione e invio dei messaggi
+La ricezione avviene regolarmente con un cerchietto biffato accanto al messaggio ricevuto sotto icona e long name del mittente, la trasmissione è risultata invece problematica e di
+seguito fornisco i dettagli. Va subito detto, intanto, che è previsto invio di messaggi solo sul canale primario ovvero a tutto il Mesh. Non è previsto invio personalizzato.
+
+## Problemi di invio
+Con la Tbeam client in linea provo invio messaggio da web GUI e noto che a volte immediatamente, a volte dopo una decina di secondi, il cerchietto alla sinistra del messaggio sullo schermo va a contenere un ! al posto del biff che mi aspettavo. Il messaggio sulla Tbeam client di fatto non compare / arriva.
+
+Provato varie volte sempre senza successo. Provo allora da App collegata via IP alla Tlora Router_Client andando sul riferimento di
+canale 0 LongFast per indirizzare tutto il mesh e vedo che la nuvoletta a volte viene barrata, a volte biffata ma in ogni caso il messaggio arriva in un tempo da 10 a 40 secondi sulla Tbeam e anche su tutti i nodi attivi al momento.
+
+Ritengo allora che l’interfaccia web abbia un problema e apro una ‘issue’ su github Meshtastic/web. Oggi mi accorgo che la mia deduzione era errata ovvero la web GUI effettivamente manda il
+messaggio e il ! che è segno di fallimento si comporta come la barra sulla nuvoletta nella App Android ovvero non è ritornato ack ma il messaggio potrebbe anche essere arrivato a segno. 
+
+Grazie a Bosc, JSNM e xlw che oggi mi hanno dato conferma che i messaggi da web GUI effettivamente funzionano, occorre però porre attenzione a:
+
+1. l fatto che il ! nel cerchietto appaia non immediatamente ma dopo un certo tempo compreso fra sei / 50 secondi. Nel tempo di attesa vedremo invece tre puntini.
+2. Se il ! appare immediatamente il messaggio è sicuramente fallito e la causa non sta nell’interfaccia web bensì nel device Router_Client che in qualche modo vede compromessa la connessione uplink oppure AirUtilTx del nostro client_router ha superato il 10%.
+3. In ogni caso però il messaggio via radio diretto alla Tbeam client NON arriva e questo è stato l’elemento principale che mi aveva erroneamente indotto a pensare che l’invio messaggi via web GUI non funzionasse del tutto.
+
+Anche l’invio messaggi da App collegata o in BT al client Tbeam o alla Tlora Router_Client via IP (il mio BT sulla Tlora è down ma in ogni caso non funzionerebbe essendo attiva la connessione wifi al router internet locale) può essere in qualche modo problematico: anche qui se la barra arriva sulla nuvoletta immediatamente il messaggio è sicuramente fallito perché l’upload channel non funziona nel Router_Client causa AirUtilTx in eccesso. Se invece la barra o il biff arrivano dopo 8-50 secondi il messaggio è andato verosimilmente a buon fine.
+
+## Conclusione
+L’elemento fondamentale che mi aveva fatto pensare al fallimento dell’invio messaggi via web GUI è stato quello di non vedere il messaggio sul client Tbeam che avevo come monitor in mesh via radio col Tlora Router_Client.
+
+Ora ripensandoci con più calma posso dedurre che ciò è normale stante la connessione del Tlora come Gateway, ovvero che in trasmissione sfrutta il solo canale http uplink e non anche la radio e quindi il mio client non avrebbe potuto mai ricevere il messaggio. In ricezione radio invece i messaggi vengono ruotati verso il canale uplink http e il resto del mesh viene soddisfatto.
+
+Esistono ancora problemi e questioni da chiarire anche sulla App che a volte vede nei nodi ??? al posto dei nomi che un attimo prima erano presenti o ancora sul Router_Client connesso via USB che a volte fa autoreboot o ncora la stessa App che inopinatamente perde la connessione con IP o anche via BT (verso il client) ma l’insieme che vedo ora è più solido e lascia sperare verso una migliore stabilità del tutto.
+
 
 
