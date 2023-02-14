@@ -2,7 +2,7 @@
 title: Test di Web Gui
 description: Web Gui accessibile at https://client.meshtastic.org
 published: true
-date: 2023-02-14T21:56:33.037Z
+date: 2023-02-14T21:58:38.913Z
 tags: 
 editor: markdown
 dateCreated: 2023-02-14T18:52:28.175Z
