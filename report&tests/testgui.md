@@ -2,7 +2,7 @@
 title: Test Web Gui
 description: Web Gui accessibile at https://client.meshtastic.org
 published: true
-date: 2023-02-14T22:47:47.401Z
+date: 2023-02-15T14:21:39.317Z
 tags: 
 editor: markdown
 dateCreated: 2023-02-14T18:52:28.175Z
@@ -39,11 +39,10 @@ Via interfaccia web sarebbe possibile configurare completamente il device colleg
 I riferimenti dei nodi compaiono via via che giungono i messaggi di NODE_INFO e di POSITION dal mesh via radio o via rete cui il Gateway è connesso. Allo stato c’è il problema che i nomi dei nodi non sono quelli reali ma sono tutti Meshtastic_xxxx dove le x sono i primi 4 digit del NodeID. I nomi reali sono invece riportati se ci si connette al device via App. A questo proposito ho aperto una ‘issue’ su github Meshtastic/web.
 
 ## Visualizzazione della geoMap dei nodi
-Funziona bene circa la collocazione geografica delle icone che rappresentano i nodi, non vengono invece riportati i nomi e le coordinate geografiche cliccando sulle relative immagini in mappa. Anche questo problema l’ho riportato su github Meshtastic/web.
+Funziona bene circa la collocazione geografica delle icone che rappresentano i nodi, non vengono invece riportati i nomi e le coordinate  geografiche cliccando sulle relative immagini in mappa. Anche questo problema l’ho riportato su github Meshtastic/web.
 
 ## Ricezione e invio dei messaggi
-La ricezione avviene regolarmente con un cerchietto biffato accanto al messaggio ricevuto sotto icona e long name del mittente, la trasmissione è risultata invece problematica e di
-seguito fornisco i dettagli. Va subito detto, intanto, che è previsto invio di messaggi solo sul canale primario ovvero a tutto il Mesh. Non è previsto invio personalizzato.
+La ricezione avviene regolarmente con un cerchietto biffato accanto al messaggio ricevuto sotto icona e long name del mittente, la trasmissione è risultata invece problematica e di seguito fornisco i dettagli. Va subito detto, intanto, che è previsto invio di messaggi solo sul canale primario ovvero a tutto il Mesh. Non è previsto invio personalizzato.
 
 ## Problemi di invio
 Con la Tbeam client in linea provo invio messaggio da web GUI e noto che a volte immediatamente, a volte dopo una decina di secondi, il cerchietto alla sinistra del messaggio sullo schermo va a contenere un ! al posto del biff che mi aspettavo. Il messaggio sulla Tbeam client di fatto non compare / arriva.
