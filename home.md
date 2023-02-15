@@ -2,7 +2,7 @@
 title: Home
 description: LoRa Italia
 published: true
-date: 2023-02-15T17:53:06.890Z
+date: 2023-02-15T18:02:04.505Z
 tags: 
 editor: markdown
 dateCreated: 2023-01-21T23:17:51.009Z
