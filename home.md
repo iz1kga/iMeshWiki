@@ -2,7 +2,7 @@
 title: Home
 description: LoRa Italia
 published: true
-date: 2023-02-11T12:25:25.995Z
+date: 2023-02-15T17:44:34.751Z
 tags: 
 editor: markdown
 dateCreated: 2023-01-21T23:17:51.009Z
@@ -12,7 +12,7 @@ dateCreated: 2023-01-21T23:17:51.009Z
 
 Per creare la mesh stiamo usando firmware Meshtastic®. La mesh wireless è basata sul protocollo LoRa che consente a più dispositivi di comunicare tra loro formando una rete senza la necessità di un server o gateway centrale.
 
-LoRa Italia è una community di appassionati, Non fa parte di [Meshtastic®](www.meshtastic.org)
+LoRa Italia è una community di appassionati, mon fa parte di [Meshtastic®](www.meshtastic.org)
 
 Meshtastic® is a registered trademark of Meshtastic LLC.
 
