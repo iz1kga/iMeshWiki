@@ -2,15 +2,15 @@
 title: Convenzione del nome dei nodi
 description: 
 published: true
-date: 2023-02-16T16:55:00.384Z
+date: 2023-02-16T16:55:42.986Z
 tags: 
 editor: markdown
 dateCreated: 2023-02-16T16:55:00.384Z
 ---
 
-Per dare uno standar e aiutare gli utenti a entrare nel sistema abbiamo valutato che alcune informazioni debbano essere facilmente discernibili.
+Per dare uno standard e aiutare gli utenti a entrare nel sistema abbiamo valutato che alcune informazioni debbano essere facilmente discernibili.
 
-Purtroppo il protocollo attuale non dispone di tutte queste informazioni dobbiamo quindi poterle dedurre dal nome dei nodi stessi:
+Purtroppo il protocollo attuale non dispone di tutte queste informazioni dobbiamo quindi poterle dedurre dal nome dei nodi stessi.
 
 ![namingconvention.jpg](/namingconvention.jpg)
 
