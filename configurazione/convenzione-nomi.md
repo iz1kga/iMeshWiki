@@ -2,7 +2,7 @@
 title: Convenzione del nome dei nodi
 description: 
 published: true
-date: 2023-02-16T16:55:42.986Z
+date: 2023-02-16T17:39:31.356Z
 tags: 
 editor: markdown
 dateCreated: 2023-02-16T16:55:00.384Z
@@ -37,7 +37,7 @@ Il campo è obbligatorio per nodi fissi e gateway per permettere di identificare
 (433|868)
 ```
 
-##Campo UID
+## Campo UID
 Il campo è obbligatorio per i nodi mobili in modo da garantire l'unicità del nodo anche in presenza di molti nodi mobili
 
 ```regexp
