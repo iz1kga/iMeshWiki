@@ -2,7 +2,7 @@
 title: Convenzione del nome dei nodi
 description: 
 published: true
-date: 2023-02-17T11:34:53.507Z
+date: 2023-02-17T11:36:04.678Z
 tags: 
 editor: markdown
 dateCreated: 2023-02-16T16:55:00.384Z
