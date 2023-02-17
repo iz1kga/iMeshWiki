@@ -2,14 +2,15 @@
 title: Antenne
 description: Antenne LoRa
 published: true
-date: 2023-02-17T11:31:25.805Z
+date: 2023-02-17T11:36:27.720Z
 tags: 
 editor: markdown
 dateCreated: 2023-02-16T08:06:26.099Z
 ---
 
 # EUNEWR
-[EUNEWR LoRa Antenna 868MHZ 3dBi](https://amzn.eu/d/4Ie6jpj)
+[EUNEWR LoRa Antenna 868MHZ 3dBi - 30CM-B
+](https://amzn.eu/d/4Ie6jpj)
 ![eunwr_ant.jpg](/antenne/eunwr_ant.jpg =x300)![eunewr.jpg](/antenne/eunewr.jpg =500x)
 
 # RUIZHI
