@@ -2,7 +2,7 @@
 title: Convenzione del nome dei nodi
 description: 
 published: true
-date: 2023-02-17T13:31:10.287Z
+date: 2023-02-17T14:22:56.331Z
 tags: 
 editor: markdown
 dateCreated: 2023-02-16T16:55:00.384Z
@@ -29,27 +29,19 @@ Abbiamo quindi pensato di consigliare una convenzione per la composizione del no
 ## Nome nodo
 Il nome nodo deve essere composto da caratteri alfanumerici, è consentito il solo carattere speciale "-".
 
-```regexp
-([A-Za-z0-9]+)
-```
+`([A-Za-z0-9]+)`
 
 ## Campo Gateway
 Il campo è obbligatorio per permettere il riconoscimento dei nodi gateway
 
-```regexp
-(GW)
-```
-
+`(GW)
+`
 ## Campo Frequency
 Il campo è obbligatorio per nodi fissi e gateway per permettere di identificare la frequenza su cui operano i nodi già presenti un una zona.
 
-```regexp
-(433|868)
-```
+`(433|868)`
 
 ## Campo UID
 Il campo è obbligatorio per i nodi mobili in modo da garantire l'unicità del nodo anche in presenza di molti nodi mobili
 
-```regexp
-([A-Fa-f0-9]{4})
-```
+`([A-Fa-f0-9]{4})`
