@@ -2,7 +2,7 @@
 title: Antenne
 description: Antenne LoRa
 published: true
-date: 2023-02-17T11:30:46.611Z
+date: 2023-02-17T11:31:25.805Z
 tags: 
 editor: markdown
 dateCreated: 2023-02-16T08:06:26.099Z
@@ -24,4 +24,4 @@ dateCreated: 2023-02-16T08:06:26.099Z
 
 # 4G 5dbi Antenna LTE
 [Antenna LTE](https://it.aliexpress.com/item/32888310888.html)
-![4g_ant.webp](/antenne/4gant.webp =x300)![4glte.jpg](/antenne/4glte.jpg =500x)
+![4glte_ant.webp](/antenne/4glte_ant.webp =x300)![4glte.jpg](/antenne/4glte.jpg =500x)
