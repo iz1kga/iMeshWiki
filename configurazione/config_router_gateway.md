@@ -2,7 +2,7 @@
 title: Configurazione Router - Gateway
 description: 
 published: true
-date: 2023-01-31T23:48:07.336Z
+date: 2023-02-17T09:59:08.733Z
 tags: 
 editor: markdown
 dateCreated: 2023-01-30T13:59:05.219Z
@@ -104,7 +104,7 @@ meshtastic --set telemetry.environment_update_interval 3600
 L'impostazione MQTT permette al dispositivo di collegarsi al broker e instradare e riceve i dati dei nodi via internet. Ricordate il carattere di escape **\\** davanti ai punti esclamativi **!**
 
 ```bash
-meshtastic --set mqtt.address meshtastic.iz1kga.it
+meshtastic --set mqtt.address mqtt.loraitalia.it
 meshtastic --set mqtt.username <USERNAME>
 meshtastic --set mqtt.password <PASSWORD>
 meshtastic --set mqtt.json_enabled true
