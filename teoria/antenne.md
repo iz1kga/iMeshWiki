@@ -2,7 +2,7 @@
 title: Antenne
 description: Antenne LoRa
 published: true
-date: 2023-02-17T11:21:56.145Z
+date: 2023-02-17T11:30:46.611Z
 tags: 
 editor: markdown
 dateCreated: 2023-02-16T08:06:26.099Z
@@ -20,3 +20,8 @@ dateCreated: 2023-02-16T08:06:26.099Z
 ### Verifica in corso
 [Eightwood 868mhz Antenna](https://www.amazon.it/dp/B0716XRW4G)
 ![eightwood.jpg](/antenne/eightwood.jpg)
+
+
+# 4G 5dbi Antenna LTE
+[Antenna LTE](https://it.aliexpress.com/item/32888310888.html)
+![4g_ant.webp](/antenne/4gant.webp =x300)![4glte.jpg](/antenne/4glte.jpg =500x)
