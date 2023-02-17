@@ -2,7 +2,7 @@
 title: Convenzione del nome dei nodi
 description: 
 published: true
-date: 2023-02-17T11:27:58.897Z
+date: 2023-02-17T11:34:53.507Z
 tags: 
 editor: markdown
 dateCreated: 2023-02-16T16:55:00.384Z
@@ -19,6 +19,8 @@ Tuttavia, per evitare che sulla mappa possano comparire nodi omonimi, è consigl
 Per dare uno standard e aiutare gli utenti a entrare nel sistema abbiamo valutato che alcune informazioni debbano essere facilmente discernibili.
 
 Purtroppo il protocollo attuale non dispone di tutte queste informazioni dobbiamo quindi poterle dedurre dal nome dei nodi stessi.
+
+Abbiamo quindi pensato di consigliare una convenzione per la composizione del nome dei nodi per le reti Meshtatic di libero accesso, riassunta nella tabella seguente:
 
 ![namingconvention.jpg](/namingconvention.jpg)
 
