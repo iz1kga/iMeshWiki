@@ -2,7 +2,7 @@
 title: Convenzione del nome dei nodi
 description: 
 published: true
-date: 2023-02-17T14:37:49.535Z
+date: 2023-02-17T14:40:11.114Z
 tags: 
 editor: markdown
 dateCreated: 2023-02-16T16:55:00.384Z
@@ -45,6 +45,8 @@ Il campo è obbligatorio per nodi fissi e gateway per permettere di identificare
 Il campo è obbligatorio per i nodi mobili in modo da garantire l'unicità del nodo anche in presenza di molti nodi mobili
 
 `([A-Fa-f0-9]{4})`
+
+I campi possono essere separati da trattini o spazi.
 
 ---
 
