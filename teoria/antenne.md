@@ -2,7 +2,7 @@
 title: Antenne
 description: Antenne LoRa
 published: true
-date: 2023-02-17T11:20:24.930Z
+date: 2023-02-17T11:21:56.145Z
 tags: 
 editor: markdown
 dateCreated: 2023-02-16T08:06:26.099Z
@@ -14,7 +14,7 @@ dateCreated: 2023-02-16T08:06:26.099Z
 
 # RUIZHI
 [RUIZHI 3 dBi LoRa Antenna 868Mhz](https://www.amazon.it/dp/B09KLTR3SL)
-![eunwr_ant.jpg](/antenne/eunwr_ant.jpg =300x)![ruizhi.jpg](/antenne/ruizhi.jpg =500x)
+![ruizhi_ant.jpg](/antenne/ruizhi_ant.jpg =x300)![ruizhi.jpg](/antenne/ruizhi.jpg =500x)
 
 # EIGHTWOOD
 ### Verifica in corso
