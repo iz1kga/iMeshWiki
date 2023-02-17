@@ -2,7 +2,7 @@
 title: Convenzione del nome dei nodi
 description: 
 published: true
-date: 2023-02-17T11:36:04.678Z
+date: 2023-02-17T11:36:19.302Z
 tags: 
 editor: markdown
 dateCreated: 2023-02-16T16:55:00.384Z
@@ -24,7 +24,7 @@ Abbiamo quindi pensato di consigliare una convenzione per la composizione del no
 
 ![namingconvention.jpg](/namingconvention.jpg)
 
-É disponibile un **[Validatore](https://map.loraitalia.it/?page=validator)** per verificare la corretta semantica del nome nodo
+È disponibile un **[Validatore](https://map.loraitalia.it/?page=validator)** per verificare la corretta semantica del nome nodo
 
 ## Nome nodo
 Il nome nodo deve essere composto da caratteri alfanumerici, è consentito il solo carattere speciale "-".
