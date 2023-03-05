@@ -2,7 +2,7 @@
 title: Gestione I/O
 description: Gestione I/O
 published: true
-date: 2023-03-05T13:58:53.316Z
+date: 2023-03-05T14:05:18.219Z
 tags: 
 editor: markdown
 dateCreated: 2023-02-10T10:50:18.072Z
@@ -78,7 +78,9 @@ meshtastic --ch-index 1 --ch-set psk none
 
 meshtastic --port com54  --set remote_hardware.enabled true
 
-Attenzione : Con la versione firmware 2.0.3 non occorre attivare questa funzione, con quelle successive non funziona da console, ma occorre collegarsi con l'APP al dispositivo remoto e nella sezione: "Module Setting" > Remote Hardware Config > Remote Hardware enabled >Abilitare il Servizio (ON)
+Utilizzare firmware dalla versione 2.0.21 quelle precedenti hanno qualche problema
+
+Attenzione : Con la versione firmware 2.0.3 non occorre attivare questa funzione, con quelle successive non funziona da console, ma occorre collegarsi con l'APP al dispositivo remoto e nella sezione: "Module Setting" > Remote Hardware Config > Remote Hardware enabled >Abilitare il Servizio (ON).
 
  Successivamente occorre configurare il dispositivo REMOTO per unire il canale gpio che creato sul dispositivo LOCALE:
 
