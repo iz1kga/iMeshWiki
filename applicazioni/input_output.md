@@ -2,7 +2,7 @@
 title: Gestione I/O
 description: Gestione I/O
 published: true
-date: 2023-02-13T22:08:14.117Z
+date: 2023-03-05T13:58:53.316Z
 tags: 
 editor: markdown
 dateCreated: 2023-02-10T10:50:18.072Z
@@ -115,3 +115,38 @@ TBEAM v2.0 perfettamente funzionanti: 2, 13, 14, 15, 25
 TLORA V.1.1.6 perfettamente funzionanti: 2, 12, 13, 15, 19
 
 https://www.youtube.com/Ej2QexL5kts
+
+## Applicazione pratica dei GPIO da remoto
+
+Problema: da remoto vogliamo sapere se in casa la rete a 220V è caduta o se è un problema del router
+internet che è andato down e non è più raggiungibile
+
+Soluzione: con T-lora, verificare che sia effettivamente giù la 220V o sia andato giù il link internet e di
+conseguenza occorre un reboot del router per riattivazione la linea internet.
+
+Dopo aver configurato correttamente la tlora con i sensori INA219 e Relè su GPIO, in caso non si riesca a
+contattare il router occorre verificare se la tensione e corrente sono nella norma , tramite APP controllare i
+valori di tensione corrente rilevati sull’alimentazione del router dal Tlora remoto collegato al router:
+
+![whatsapp_image_2023-03-05_at_14.26.55(1).jpeg](/test/whatsapp_image_2023-03-05_at_14.26.55(1).jpeg)
+
+Corrente è su ! I valori Tensione e corrente sono a circa 12 Volt e corrente intorno a 60 ma
+Attivazione da remoto tramite di uno script su un raspberry che è su un nodo a circa 30 km di distanza :
+meshtastic --host 192.168.88.215 --gpio-wrb 2 1 --dest \!95aa7804 (spegne il router)
+
+Dopo qualche minuto si invia lo spegnimento del router:
+
+![whatsapp_image_2023-03-05_at_14.19.30.jpeg](/test/whatsapp_image_2023-03-05_at_14.19.30.jpeg)
+
+La corrente è giù abbiamo spento il router ! I valori Tensione e corrente sono a circa 7 Volt e corrente
+intorno a 0,3 mA
+
+Andiamo ad accendere il router:
+
+Meshtastic --gpio-wrb 2 0 --dest \”tuo ID remoto con relè” (accende router)
+
+![whatsapp_image_2023-03-05_at_14.19.29_(1).jpeg](/test/whatsapp_image_2023-03-05_at_14.19.29_(1).jpeg)
+
+Corrente è su ! I valori Tensione e corrente sono a circa 12 Volt e corrente intorno a 60 mA
+
+Dopo qualche minuto , il collegamento da remoto alla linea internet è operativo !!!!
