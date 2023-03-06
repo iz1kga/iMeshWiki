@@ -2,13 +2,13 @@
 title: Mesh performances
 description: 
 published: true
-date: 2023-03-06T17:11:10.917Z
+date: 2023-03-06T17:12:23.771Z
 tags: 
 editor: markdown
 dateCreated: 2023-02-15T17:54:35.741Z
 ---
 
-![mesh_data_show_1.png](/mesh_data_show_1.png)# Lo strumento di controllo sviluppato 
+# Lo strumento di controllo sviluppato 
 by Vincenzo Lorenzale il 6 Marzo 2023
 
 ---
@@ -28,6 +28,8 @@ Sono passati due anni d'allora e tutto il progetto ha avuto la sensibile evoluzi
 L'applicazione python-PyQt5 oggetto di questa descrizione si chiama broadcast_msg_pyq5.py ed è scaricabile da https://github.com/vinloren/meshtastic_broadcast clonando il repository o via download in formato  zip (il relativo README.md fa ancora riferimento alla vecchia versione non avendolo ancora aggionato alla descrizione attuale)
 ## Obiettivi dell'applicazione
 Più che fare una lista mi pare più utile prsentare l'immagine della GUI desrivendone i componenti attraverso i quali vengono raggiunti gli obiettivi desiderati.
+![mesh_data_show_1.png](/mesh_data_show_1.png)
+
 
 
 
