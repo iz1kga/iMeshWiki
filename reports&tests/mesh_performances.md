@@ -2,7 +2,7 @@
 title: Mesh performances
 description: 
 published: true
-date: 2023-03-06T16:41:56.844Z
+date: 2023-03-06T17:01:34.273Z
 tags: 
 editor: markdown
 dateCreated: 2023-02-15T17:54:35.741Z
@@ -25,6 +25,7 @@ Sono passati due anni d'allora e tutto il progetto ha avuto la sensibile evoluzi
 - pip install pyqtwebengine
 - pip install folium 
 
+L'applicazione python-PyQt5 oggetto di questa descrizione si chiama broadcast_msg_pyq5.py ed è scaricabile da https://github.com/vinloren/meshtastic_broadcast clonando il repository o via download in formato  zip
 
 
 
