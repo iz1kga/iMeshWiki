@@ -2,13 +2,13 @@
 title: Mesh performances
 description: 
 published: true
-date: 2023-03-06T17:08:59.838Z
+date: 2023-03-06T17:11:10.917Z
 tags: 
 editor: markdown
 dateCreated: 2023-02-15T17:54:35.741Z
 ---
 
-# Lo strumento di controllo sviluppato 
+![mesh_data_show_1.png](/mesh_data_show_1.png)# Lo strumento di controllo sviluppato 
 by Vincenzo Lorenzale il 6 Marzo 2023
 
 ---
