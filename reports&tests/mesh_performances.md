@@ -2,7 +2,7 @@
 title: Mesh performances
 description: 
 published: true
-date: 2023-03-07T12:14:34.026Z
+date: 2023-03-07T12:25:26.015Z
 tags: 
 editor: markdown
 dateCreated: 2023-02-15T17:54:35.741Z
@@ -12,7 +12,7 @@ dateCreated: 2023-02-15T17:54:35.741Z
 by Vincenzo Lorenzale il 6 Marzo 2023
 
 ---
-Da Dicembre 2020  sto seguendo il progetto Meshtastic che si propone di creare una rete di comunicazione su banda 868Mhz con apparecchi basati su ESP32 e LoRa radio (es.: TTGO-LoRa32-oled). Fin da inizio 2021 ho pensato di costruire uno strumento atto al controllo dei messaggi di protocollo nel mesh e all'utilizzo degli stessi per una rappresentazione grafica, in tempo reale, della posizione gps dei vari nodi collegati verso il nodo di controllo centrale che raccogliesse anche tutti i messaggi di testo interccorsi in rete e conservasse il tutto in un archivio storico.
+Da Dicembre 2020  sto seguendo il progetto Meshtastic che si propone di creare una rete di comunicazione su banda 868Mhz con apparecchi basati su ESP32 e LoRa radio (es.: TTGO-LoRa32-oled). Fin da inizio 2021 ho pensato di costruire uno strumento atto al controllo dei messaggi di protocollo nel mesh e all'utilizzo degli stessi per una rappresentazione grafica, in tempo reale, della posizione gps dei vari nodi collegati verso il nodo di controllo centrale che raccogliesse anche tutti i messaggi di testo interccorsi in rete e ne conservasse il tutto in un archivio storico.
 
 Sono passati due anni d'allora e tutto il progetto ha avuto la sensibile evoluzione che mi ha portato a integrare/perfezionare lo strumento sviluppato due anni fa per arrivare alla versione attuale che qui presento.
 ## Requisiti hw/sw
@@ -61,6 +61,11 @@ Contiene i riferimenti in tempo reale a tutti i nodi del mesh che al momento col
 Si spiega da sola ovvero con le note accennate col tasto 'SHOW MAP' e col radio button 'storico giorno:' visti sopra. 
 ### Text area 'Log protocollo'
 Sono sintetizzati in tempo reale i messaggi di protocollo ricevuti e trasmessi da 'mioGW'. Vengono riportati 'date-time', 'user_id', 'longname', 'dest_id', 'tipo messaggio'. Questi campi sono separati da tab e scritti in font 'courier new' (fixed size) in modo che se copiamo tutto il contenuto della text area negli appunti possimo poi creare agevolmante un file di testo in .csv atto a essere caricato in excell (o meglio in OpenOffice) per successive elaborazioni. 
+### Text area 'Texts ricevuti/trasmessi'
+Qui vengono riuportati i messaggi di testo intercorsi nel mesh con riferimenti temporali e indicazione del longname che li ha inviati.
+### Tasto 'START'
+Serve ad avviare lapplicazione e se premuto una volta avviata fa recepire all'applicazine l'invio di un nostro messaggio immediato al mesh o il cambiamento di stato fra 'solo ricezione' ovvero invio periodico di messaggio di test ogni 10 minuti.
+
 
 
 
