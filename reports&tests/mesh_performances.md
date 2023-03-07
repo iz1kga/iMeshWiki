@@ -2,7 +2,7 @@
 title: Mesh performances
 description: 
 published: true
-date: 2023-03-07T12:48:14.545Z
+date: 2023-03-07T14:57:21.179Z
 tags: 
 editor: markdown
 dateCreated: 2023-02-15T17:54:35.741Z
@@ -79,7 +79,15 @@ Se quasta checkbox è marcata, qualunque messaggio di testo in arrivo contenete 
 ### Checkbox 'Genera csv file'
 Già descritta sotto 'Tab Messaggi'
 ### Progress bar ChUtil e AirUtilTXx10
-Ogni messaggio Telemetry trasmesso dal nostro router_client contenete valori di ChannUtil e AirUtilTX
+Ogni messaggio Telemetry trasmesso dal nostro router_client contenete valori di ChannUtil e AirUtilTX viene intercettato per riprodurre sulle rispettive progress bar i valori percentuali riportati. ChanUtil è arrotondato all'unità nella progress bar come pure AirUtilTx moltiplicato per 10. 
+
+Le barre sono rappresentate con 3 colori possibili: 
+1. verde per ChanUtil e AirUtilTx < 51 (51 - 5.1)
+2. giallo per ChanUtil fra 51 e 75 e AirUtilTx fra 51 e 99 (9.9)
+3. rosso per ChanUtil > 75 e AirUtilTx = 100 (10.0)
+
+Com'è noto se AirUtilTX raggiunge il 10% l'unità che ha registrato questo valore non trasmette più e avere quindi sotto mano la situazione presso i vari router può dare un'idea dell'affidabilità della consegna dei messaggi in rete. Avere impostato tutti i devices in MEDIUM_FAST al posto del precedente LONG_FAST ha sensibilmente migliorato la situazione generale, per quanto ho però constatato il 10% viene ancoraqualche volta raggiunto dal mio GW mentre ciò apparentemente non capita con tutti gli altri nel mesh.
+
 
 
 
