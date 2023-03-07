@@ -2,7 +2,7 @@
 title: Mesh performances
 description: 
 published: true
-date: 2023-03-07T12:40:05.644Z
+date: 2023-03-07T12:48:14.545Z
 tags: 
 editor: markdown
 dateCreated: 2023-02-15T17:54:35.741Z
@@ -76,6 +76,13 @@ Già spiegato sotto tasto 'START'
 Già spiegato sotto campo di testo 'Dati inviati'.
 ### Checkbox 'Autorisposta'
 Se quasta checkbox è marcata, qualunque messaggio di testo in arrivo contenete la parola 'qsl?' avraà immediata risposta automatica di conferma ricezione. Il messaggio di risposta verrà mostrato sotto quello ricevuto in 'Texts ricevuti/trasmessi'.
+### Checkbox 'Genera csv file'
+Già descritta sotto 'Tab Messaggi'
+### Progress bar ChUtil e AirUtilTXx10
+Ogni messaggio Telemetry trasmesso dal nostro router_client contenete valori di ChannUtil e AirUtilTX
+
+
+
 
 
 
