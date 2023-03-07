@@ -2,7 +2,7 @@
 title: Mesh performances
 description: 
 published: true
-date: 2023-03-07T11:21:35.558Z
+date: 2023-03-07T11:36:47.808Z
 tags: 
 editor: markdown
 dateCreated: 2023-02-15T17:54:35.741Z
@@ -44,7 +44,17 @@ Produce una geo map (defaulut OpenStreetMap) con al centro la posizione del nost
 La mappa apparirà poi cliccando sul tab 'geo map' subito sotto nell'immagine. Una volta aperta la mappa, cliccando sui marker appariranno le relative informazioni da questi riferite.
 
 ### Readio button 'storico giorno:'
-Se questo widget non è selezionato la mappa conseguente sarà la foto del momento riferita alla posizione dei nodi riportati. Se invece è selezionato la mappa riporterà tutte le posizioni registrate nel giorno prescelto tramite la compo box che gli sta accanto. La scelta del giorno è limitata dai campi 'fra' ed 'e' precompilati ma alterabili a piacimento. Questa limitazione serviva a evitare di avere una lista dei giorni troppo lunga ma allo stato attuale, dato che i riferimenti di posizione geografica dei nodi sono limitati agli ultimi 7 giorni, oggi risulta ridondante.
+Se questo widget non è selezionato la mappa conseguente sarà la foto del momento riferita alla posizione dei nodi riportati. Se invece è selezionato la mappa riporterà tutte le posizioni registrate nel giorno prescelto tramite la compo box che gli sta accanto. La scelta del giorno è limitata dai campi 'fra' ed 'e' precompilati ma alterabili a piacimento. Questa limitazione serviva a evitare di avere una lista dei giorni troppo lunga ma allo stato attuale, dato che i riferimenti di posizione geografica dei nodi sono poi stati limitati agli ultimi 7 giorni, oggi risulta ridondante.
+
+### Combo box 'tipo map'
+Oltre alla OpenStreetMap sono disponibili altre sorgenti che si possono scegliere fra quelle offerte dalla libreria python folium qui riportate.
+
+### Tab 'Messaggi'
+Contiene i dettagli su tutti i messaggi di protocollo e di testo scambiati nel mesh in tempo reale. Il contenuto di questi messaggi oltre ad apparire in questa pagina di Tab, può anche essere salvato in un file .csv per successiva elaborazione su excell se ls checkbox 'genera csv file' a fondo pagina è selezionata. Il file risultante 'meshtastic_data.csv sarà disponibile deselezionando questa checkbox una volta selzionata.
+
+
+
+
 
 
 
