@@ -2,7 +2,7 @@
 title: Mesh performances
 description: 
 published: true
-date: 2023-03-07T15:12:20.712Z
+date: 2023-03-07T15:19:37.037Z
 tags: 
 editor: markdown
 dateCreated: 2023-02-15T17:54:35.741Z
@@ -91,7 +91,52 @@ Com'è noto se AirUtilTX raggiunge il 10% l'unità che ha registrato questo valo
 E' questo un argomento sul quale sto indagando anche perché vedo che il mio GW invia messaggi di Telemetry ogni minuto con grande precisione senza perderne alcuno, mentre questi messaggi non mi giungono dagli altri nodi / router con la stessa cadenza ma apparentemente in modo saltuario.
 
 ## Note sul DB meshDB.db
+Il DB è costituito da tre tabelle:
+Tabella per dati ChanUtil e AirUtilTX
+1. CREATE TABLE "airtx" (
+	"data"	TEXT,
+	"ora"	TEXT,
+	"nodenum"	INTEGER,
+	"longname"	TEXT,
+	"chanutil" REAL,
+	"airutiltx" REAL
+	)
+  
+Tabella per dati di monitor posizione geografica devices in tempo reale
+ 2.CREATE TABLE "connessioni" (
+	"data"	TEXT,
+	"ora"	TEXT,
+	"user"	TEXT,
+	"alt"	INTEGER,
+	"lat"	REAL,
+	"lon"	REAL,
+	"batt"	INTEGER,
+	"snr"	REAL,
+	"dist"	REAL,
+	"rilev"	REAL,
+	"_id"	INTEGER UNIQUE,
+	PRIMARY KEY("_id" AUTOINCREMENT)
+)
 
+Tabella per registazione dati di ciascun nodo aggiornati nel tempo
+3.CREATE TABLE "meshnodes" (
+	"data"	TEXT,
+	"ora"	TEXT,
+	"nodenum"	INTEGER UNIQUE PRIMARY KEY,
+	"longname"	TEXT,
+	"alt"	INTEGER,
+	"lat"	REAL,
+	"lon"	REAL,
+	"batt"	INTEGER,
+	"snr"	REAL,
+	"dist"	REAL,
+	"rilev"	REAL,
+	"chanutil" REAL,
+	"airutiltx" REAL,
+	"pressione" REAL,
+	"temperat" REAL,
+	"umidita" REAL
+	)
 
 
 
