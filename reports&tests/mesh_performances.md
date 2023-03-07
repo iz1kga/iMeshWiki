@@ -2,7 +2,7 @@
 title: Mesh performances
 description: 
 published: true
-date: 2023-03-07T10:53:09.891Z
+date: 2023-03-07T11:21:35.558Z
 tags: 
 editor: markdown
 dateCreated: 2023-02-15T17:54:35.741Z
@@ -26,14 +26,26 @@ Sono passati due anni d'allora e tutto il progetto ha avuto la sensibile evoluzi
 - pip install folium 
 
 L'applicazione python-PyQt5 oggetto di questa descrizione si chiama broadcast_msg_pyq5.py ed è scaricabile da https://github.com/vinloren/meshtastic_broadcast clonando il repository o via download in formato  zip (il relativo README.md fa ancora riferimento alla vecchia versione non avendolo ancora aggionato alla descrizione attuale)
+
+Insieme con broadcast_msg_pyq5.py, nella cardella che conterrà questo file, dovrà essere copiato il file meshDB.db che è lo Sqlite3 DB di supporto all'applicazione.
+
 ## Obiettivi dell'applicazione
 Più che fare una lista mi pare più utile prsentare l'immagine della GUI desrivendone i componenti attraverso i quali vengono raggiunti gli obiettivi desiderati.
 ![mesh_data_show_1.png](/mesh_data_show_1.png)
 
 ### Campi Home lat e Home lon / scopo
-Questi due campi di input devono contenere le coordinate geografiche del nostro router_client e attualmente riportano i valori del qth di vinloren_GW_0a78_868. Chi avesse installato l'applicazione dovrà al primo lancio sostituire queste coordinate con quelle del vero qth prima di dare START. Alla conclusione del primo lancio le nuove coordinate saranno salvate nel Sqlite3 DB meshDB.db che risiede nella stessa cartella del file python broadcast_msg_pyq5.py in modo che i lanci successivi troveranno automaticamente le nuove coordinate aggiornate.
+Questi due campi di input devono contenere le coordinate geografiche del nostro router_client e attualmente riportano i valori del qth di vinloren_GW_0a78_868. Chi avesse installato l'applicazione dovrà al primo lancio sostituire queste coordinate con quelle del vero qth prima di dare START. A conclusione del primo lancio le nuove coordinate saranno salvate nel Sqlite3 DB meshDB.db che risiede nella stessa cartella del file python broadcast_msg_pyq5.py in modo che i lanci successivi troveranno automaticamente le nuove coordinate aggiornate.
 
 Lo scopo della fissazione di queste coordinate è quello di poter poiu misurare rilevamento e distanza di tutti i nodi presenti in mesh rispetto alla posizione del nostro client_router.
+
+### Tasto SHOW MAP
+Produce una geo map (defaulut OpenStreetMap) con al centro la posizione del nostro router_clien (marker in blu) e tutti i GW presenti nel mesh (markers in rosso) come default. Se la combo box 'map nodes' punta su un nodo non GW anziché il default 'mappa solo i GW', oltre ai GW verra mappata anche la posisione del nodo scelto con un marker verde. 
+
+La mappa apparirà poi cliccando sul tab 'geo map' subito sotto nell'immagine. Una volta aperta la mappa, cliccando sui marker appariranno le relative informazioni da questi riferite.
+
+### Readio button 'storico giorno:'
+Se questo widget non è selezionato la mappa conseguente sarà la foto del momento riferita alla posizione dei nodi riportati. Se invece è selezionato la mappa riporterà tutte le posizioni registrate nel giorno prescelto tramite la compo box che gli sta accanto. La scelta del giorno è limitata dai campi 'fra' ed 'e' precompilati ma alterabili a piacimento. Questa limitazione serviva a evitare di avere una lista dei giorni troppo lunga ma allo stato attuale, dato che i riferimenti di posizione geografica dei nodi sono limitati agli ultimi 7 giorni, oggi risulta ridondante.
+
 
 
 
