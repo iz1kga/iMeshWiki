@@ -2,7 +2,7 @@
 title: Mesh performances
 description: 
 published: true
-date: 2023-03-07T14:57:21.179Z
+date: 2023-03-07T15:07:54.184Z
 tags: 
 editor: markdown
 dateCreated: 2023-02-15T17:54:35.741Z
@@ -86,7 +86,9 @@ Le barre sono rappresentate con 3 colori possibili:
 2. giallo per ChanUtil fra 51 e 75 e AirUtilTx fra 51 e 99 (9.9)
 3. rosso per ChanUtil > 75 e AirUtilTx = 100 (10.0)
 
-Com'è noto se AirUtilTX raggiunge il 10% l'unità che ha registrato questo valore non trasmette più e avere quindi sotto mano la situazione presso i vari router può dare un'idea dell'affidabilità della consegna dei messaggi in rete. Avere impostato tutti i devices in MEDIUM_FAST al posto del precedente LONG_FAST ha sensibilmente migliorato la situazione generale, per quanto ho però constatato il 10% viene ancoraqualche volta raggiunto dal mio GW mentre ciò apparentemente non capita con tutti gli altri nel mesh.
+Com'è noto se AirUtilTX raggiunge il 10% l'unità che ha registrato questo valore non trasmette più e avere quindi sotto mano la situazione presso i vari router può dare un'idea dell'affidabilità della consegna dei messaggi in rete. Avere impostato tutti i devices in MEDIUM_FAST al posto del precedente LONG_FAST ha sensibilmente migliorato la situazione generale, per quanto ho però constatato il 10% viene ancora qualche volta raggiunto dal mio GW mentre ciò apparentemente non capita con tutti gli altri nel mesh.
+
+E' questo un argomento sul quale sto indagando anche perché vedo che il mio GW invia messaggi di Telemetry ogni minuto con grande precisione senza perderne alcuno, mentre questi messaggi non mi giungono dagli altri nodi / router con la stessa cadenza ma apparentemente in modo saltuario.
 
 
 
