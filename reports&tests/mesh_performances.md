@@ -2,7 +2,7 @@
 title: Mesh performances
 description: 
 published: true
-date: 2023-03-07T12:25:26.015Z
+date: 2023-03-07T12:31:02.143Z
 tags: 
 editor: markdown
 dateCreated: 2023-02-15T17:54:35.741Z
@@ -65,6 +65,8 @@ Sono sintetizzati in tempo reale i messaggi di protocollo ricevuti e trasmessi d
 Qui vengono riuportati i messaggi di testo intercorsi nel mesh con riferimenti temporali e indicazione del longname che li ha inviati.
 ### Tasto 'START'
 Serve ad avviare lapplicazione e se premuto una volta avviata fa recepire all'applicazine l'invio di un nostro messaggio immediato al mesh o il cambiamento di stato fra 'solo ricezione' ovvero invio periodico di messaggio di test ogni 10 minuti.
+
+l'invio periodico del messaggio riportato dal text field 'Dati inviati' accanto a START avviene automaticamente con cadenza ogni 10 minuti se la checkbox 'solo ricezione' non è marcata. Questi messaggi hanno, oltre a data-ora, una numerazione progressiva atta alla verifica di quanto è stato ricevuto nel mesh. 
 
 
 
