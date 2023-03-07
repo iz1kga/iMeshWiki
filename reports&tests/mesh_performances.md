@@ -2,7 +2,7 @@
 title: Mesh performances
 description: 
 published: true
-date: 2023-03-07T15:07:54.184Z
+date: 2023-03-07T15:08:57.744Z
 tags: 
 editor: markdown
 dateCreated: 2023-02-15T17:54:35.741Z
@@ -90,6 +90,7 @@ Com'è noto se AirUtilTX raggiunge il 10% l'unità che ha registrato questo valo
 
 E' questo un argomento sul quale sto indagando anche perché vedo che il mio GW invia messaggi di Telemetry ogni minuto con grande precisione senza perderne alcuno, mentre questi messaggi non mi giungono dagli altri nodi / router con la stessa cadenza ma apparentemente in modo saltuario.
 
+## Note sul DB meshDB.db
 
 
 
