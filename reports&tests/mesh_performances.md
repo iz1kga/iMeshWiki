@@ -2,7 +2,7 @@
 title: Mesh performances
 description: 
 published: true
-date: 2023-03-07T18:56:32.676Z
+date: 2023-03-07T19:03:08.652Z
 tags: 
 editor: markdown
 dateCreated: 2023-02-15T17:54:35.741Z
@@ -40,15 +40,15 @@ Più che fare una lista mi pare più utile prsentare l'immagine della GUI desriv
 ### Campi Home lat e Home lon / scopo
 Questi due campi di input devono contenere le coordinate geografiche del nostro router_client e attualmente riportano i valori del qth di vinloren_GW_0a78_868. Chi avesse installato l'applicazione dovrà al primo lancio sostituire queste coordinate con quelle del vero qth prima di dare START. A conclusione del primo lancio le nuove coordinate saranno salvate nel Sqlite3 DB meshDB.db che risiede nella stessa cartella del file python broadcast_msg_pyq5.py in modo che i lanci successivi troveranno automaticamente le nuove coordinate aggiornate.
 
-Lo scopo della fissazione di queste coordinate è quello di poter poiu misurare rilevamento e distanza di tutti i nodi presenti in mesh rispetto alla posizione del nostro client_router.
+Lo scopo della fissazione di queste coordinate è quello di poter poi misurare rilevamento e distanza di tutti i nodi presenti in mesh rispetto alla posizione del nostro client_router.
 
 ### Tasto SHOW MAP
-Produce una geo map (defaulut OpenStreetMap) con al centro la posizione del nostro router_clien (marker in blu) e tutti i GW presenti nel mesh (markers in rosso) come default. Se la combo box 'map nodes' punta su un nodo non GW anziché il default 'mappa solo i GW', oltre ai GW verra mappata anche la posisione del nodo scelto con un marker verde. 
+Produce una geo map (default OpenStreetMap) con al centro la posizione del nostro router_clien (marker in blu) e tutti i GW presenti nel mesh (markers in rosso) come default. Se la combo box 'map nodes' punta su un nodo non GW anziché il default 'mappa solo i GW', oltre ai GW verra mappata anche la posisione del nodo scelto con un marker verde. 
 
 La mappa apparirà poi cliccando sul tab 'geo map' subito sotto nell'immagine. Una volta aperta la mappa, cliccando sui marker appariranno le relative informazioni da questi riferite.
 
-### Readio button 'storico giorno:'
-Se questo widget non è selezionato la mappa conseguente sarà la foto del momento riferita alla posizione dei nodi riportati. Se invece è selezionato la mappa riporterà tutte le posizioni registrate nel giorno prescelto tramite la compo box che gli sta accanto. La scelta del giorno è limitata dai campi 'fra' ed 'e' precompilati ma alterabili a piacimento. Questa limitazione serviva a evitare di avere una lista dei giorni troppo lunga ma allo stato attuale, dato che i riferimenti di posizione geografica dei nodi sono poi stati limitati agli ultimi 7 giorni, oggi risulta ridondante.
+### Radio button 'storico giorno:'
+Se questo widget non è selezionato la mappa conseguente sarà la foto del momento riferita alla posizione dei nodi riportati. Se invece è selezionato la mappa riporterà tutte le posizioni registrate nel giorno prescelto tramite la combo box che gli sta accanto. La scelta del giorno è limitata dai campi 'fra' ed 'e' precompilati ma alterabili a piacimento. Questa limitazione serviva a evitare di avere una lista dei giorni troppo lunga ma allo stato attuale, dato che i riferimenti di posizione geografica dei nodi sono poi stati limitati agli ultimi 7 giorni, oggi risulta ridondante.
 
 ### Combo box 'tipo map'
 Oltre alla OpenStreetMap sono disponibili altre sorgenti che si possono scegliere fra quelle offerte dalla libreria python folium qui riportate.
@@ -60,9 +60,9 @@ Contiene i riferimenti in tempo reale a tutti i nodi del mesh che al momento col
 ### Tab 'GeoMap'
 Si spiega da sola ovvero con le note accennate col tasto 'SHOW MAP' e col radio button 'storico giorno:' visti sopra. 
 ### Text area 'Log protocollo'
-Sono sintetizzati in tempo reale i messaggi di protocollo ricevuti e trasmessi da 'mioGW'. Vengono riportati 'date-time', 'user_id', 'longname', 'dest_id', 'tipo messaggio'. Questi campi sono separati da tab e scritti in font 'courier new' (fixed size) in modo che se copiamo tutto il contenuto della text area negli appunti possimo poi creare agevolmante un file di testo in .csv atto a essere caricato in excell (o meglio in OpenOffice) per successive elaborazioni. 
+Sono sintetizzati in tempo reale i messaggi di protocollo ricevuti e trasmessi da 'mioGW'. Vengono riportati 'date-time', 'user_id', 'longname', 'dest_id', 'tipo messaggio'. Questi campi sono separati da tab e scritti in font 'courier new' (fixed size) in modo che se copiamo tutto il contenuto della text area negli appunti possimo poi creare agevolmente un file di testo in .csv atto a essere caricato in excell (o meglio in OpenOffice) per successive elaborazioni. 
 ### Text area 'Texts ricevuti/trasmessi'
-Qui vengono riuportati i messaggi di testo intercorsi nel mesh con riferimenti temporali e indicazione del longname che li ha inviati.
+Qui vengono riportati i messaggi di testo intercorsi nel mesh con riferimenti temporali e indicazione del longname che li ha inviati.
 ### Tasto 'START'
 Serve ad avviare l'applicazione e se premuto una volta avviata, fa recepire al programma l'invio di un nostro messaggio immediato al mesh o il cambiamento di stato fra 'solo ricezione' ovvero invio periodico di messaggio di test ogni 10 minuti.
 
@@ -75,7 +75,7 @@ Già spiegato sotto tasto 'START'
 ### Checkbox 'Mess. immediato'
 Già spiegato sotto campo di testo 'Dati inviati'.
 ### Checkbox 'Autorisposta'
-Se quasta checkbox è marcata, qualunque messaggio di testo in arrivo contenete la parola 'qsl?' (senza apici) avrà immediata risposta automatica di conferma ricezione. Il messaggio di risposta verrà mostrato sotto quello ricevuto in 'Texts ricevuti/trasmessi'.
+Se questa checkbox è marcata, qualunque messaggio di testo in arrivo contenete la parola 'qsl?' (senza apici) avrà immediata risposta automatica di conferma ricezione. Il messaggio di risposta verrà mostrato sotto quello ricevuto in 'Texts ricevuti/trasmessi'.
 ### Checkbox 'Genera csv file'
 Già descritta sotto 'Tab Messaggi'
 ### Progress bar ChUtil e AirUtilTXx10
