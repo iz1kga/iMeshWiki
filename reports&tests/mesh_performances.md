@@ -2,7 +2,7 @@
 title: Mesh performances
 description: 
 published: true
-date: 2023-03-07T11:36:47.808Z
+date: 2023-03-07T12:02:10.901Z
 tags: 
 editor: markdown
 dateCreated: 2023-02-15T17:54:35.741Z
@@ -50,9 +50,13 @@ Se questo widget non è selezionato la mappa conseguente sarà la foto del momen
 Oltre alla OpenStreetMap sono disponibili altre sorgenti che si possono scegliere fra quelle offerte dalla libreria python folium qui riportate.
 
 ### Tab 'Messaggi'
-Contiene i dettagli su tutti i messaggi di protocollo e di testo scambiati nel mesh in tempo reale. Il contenuto di questi messaggi oltre ad apparire in questa pagina di Tab, può anche essere salvato in un file .csv per successiva elaborazione su excell se ls checkbox 'genera csv file' a fondo pagina è selezionata. Il file risultante 'meshtastic_data.csv sarà disponibile deselezionando questa checkbox una volta selzionata.
-
-
+Contiene i dettagli su tutti i messaggi di protocollo e di testo scambiati nel mesh in tempo reale. Il contenuto di questi messaggi oltre ad apparire in questa pagina di Tab, può anche essere salvato in un file .csv per successiva elaborazione su excell se ls checkbox 'genera csv file' a fondo pagina è selezionata. Il file risultante 'meshtastic_data.csv' sarà disponibile nella cartella contenente l'applicazione, deselezionando la checkbox una volta selezionata.
+### Tab 'Connessi'
+Contiene i riferimenti in tempo reale a tutti i nodi del mesh che al momento colloquiano col nostro client_router. I dati riportati sono autoesplicativi.
+### Tab 'GeoMap'
+Si spiega da sola ovvero con le note accennate col tasto 'SHOW MAP' e col radio button 'storico giorno:' visti sopra. 
+### Text area 'Log protocollo'
+Sono sintetizzati in tempo reale i messaggi di protocollo ricevuti e trasmessi da 'mioGW'. Vengono riportati 'date-time', 'user_id', 'longname', 'dest_id', 'tipo messaggio'. Questi campi sono separati da tab e scritti in font 'courier new' (fixed size) in modo che se copiamo tutto il contenuto della text area negli appunti possimo poi creare agevolmante un file di testo in .csv atto a essere caricato in excell (o meglio in OpenOffice) per successive elaborazioni. 
 
 
 
