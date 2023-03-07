@@ -2,7 +2,7 @@
 title: Mesh performances
 description: 
 published: true
-date: 2023-03-07T18:18:13.078Z
+date: 2023-03-07T18:53:17.165Z
 tags: 
 editor: markdown
 dateCreated: 2023-02-15T17:54:35.741Z
@@ -64,7 +64,7 @@ Sono sintetizzati in tempo reale i messaggi di protocollo ricevuti e trasmessi d
 ### Text area 'Texts ricevuti/trasmessi'
 Qui vengono riuportati i messaggi di testo intercorsi nel mesh con riferimenti temporali e indicazione del longname che li ha inviati.
 ### Tasto 'START'
-Serve ad avviare lapplicazione e se premuto una volta avviata fa recepire all'applicazine l'invio di un nostro messaggio immediato al mesh o il cambiamento di stato fra 'solo ricezione' ovvero invio periodico di messaggio di test ogni 10 minuti.
+Serve ad avviare l'applicazione e se premuto una volta avviata, fa recepire al programma l'invio di un nostro messaggio immediato al mesh o il cambiamento di stato fra 'solo ricezione' ovvero invio periodico di messaggio di test ogni 10 minuti.
 
 l'invio periodico del messaggio riportato dal text field 'Dati inviati' accanto a START avviene automaticamente con cadenza ogni 10 minuti se la checkbox 'solo ricezione' non è marcata. Questi messaggi hanno, oltre a data-ora, una numerazione progressiva atta alla verifica di quanto è stato ricevuto nel mesh. 
 
@@ -75,18 +75,18 @@ Già spiegato sotto tasto 'START'
 ### Checkbox 'Mess. immediato'
 Già spiegato sotto campo di testo 'Dati inviati'.
 ### Checkbox 'Autorisposta'
-Se quasta checkbox è marcata, qualunque messaggio di testo in arrivo contenete la parola 'qsl?' avraà immediata risposta automatica di conferma ricezione. Il messaggio di risposta verrà mostrato sotto quello ricevuto in 'Texts ricevuti/trasmessi'.
+Se quasta checkbox è marcata, qualunque messaggio di testo in arrivo contenete la parola 'qsl?' (senza apici) avrà immediata risposta automatica di conferma ricezione. Il messaggio di risposta verrà mostrato sotto quello ricevuto in 'Texts ricevuti/trasmessi'.
 ### Checkbox 'Genera csv file'
 Già descritta sotto 'Tab Messaggi'
 ### Progress bar ChUtil e AirUtilTXx10
-Ogni messaggio Telemetry trasmesso dal nostro router_client contenete valori di ChannUtil e AirUtilTX viene intercettato per riprodurre sulle rispettive progress bar i relativi valori percentuali. ChanUtil è arrotondato all'unità nella progress bar come pure AirUtilTx moltiplicato per 10. 
+Ogni messaggio Telemetry trasmesso dal nostro router_client contenete valori di ChanUtil e AirUtilTX viene intercettato per riprodurre sulle rispettive progress bar i relativi valori percentuali. ChanUtil è arrotondato all'unità nella progress bar come pure AirUtilTx moltiplicato per 10. 
 
 Le barre sono rappresentate con 3 colori possibili: 
 1. verde per ChanUtil e AirUtilTx < 51 (51 - 5.1)
 2. giallo per ChanUtil fra 51 e 75 e AirUtilTx fra 51 e 99 (9.9)
 3. rosso per ChanUtil > 75 e AirUtilTx = 100 (10.0)
 
-Com'è noto se AirUtilTX raggiunge il 10% l'unità che ha registrato questo valore non trasmette più e avere quindi sotto mano la situazione presso i vari router può dare un'idea dell'affidabilità della consegna dei messaggi in rete. Avere impostato tutti i devices in MEDIUM_FAST al posto del precedente LONG_FAST ha sensibilmente migliorato la situazione generale, per quanto ho però constatato il 10% viene ancora qualche volta raggiunto dal mio GW mentre ciò apparentemente non capita con tutti gli altri nel mesh.
+Com'è noto se AirUtilTX raggiunge il 10% l'unità che ha registrato questo valore non trasmette più e avere quindi sotto mano la situazione presso i vari router può dare un'idea dell'affidabilità della consegna dei messaggi in rete. Avere impostato tutti i devices in MEDIUM_FAST al posto del precedente LONG_FAST ha sensibilmente migliorato la situazione generale, per quanto ho però constatato, il 10% viene ancora a volte raggiunto dal mio GW mentre ciò apparentemente non capita con tutti gli altri nel mesh.
 
 E' questo un argomento sul quale sto indagando anche perché vedo che il mio GW invia messaggi di Telemetry ogni minuto con grande precisione senza perderne alcuno, mentre questi messaggi non mi giungono dagli altri nodi / router con la stessa cadenza ma apparentemente in modo saltuario.
 
@@ -142,10 +142,14 @@ La tabella connessioni contiene un record per ogni singolo nodo per ogni singola
 
 La tabella meshnodes contiene un singolo record per ciascun nodo identificato da chiave unica non duplicabile costituita dal nodenumber (integer su 4 bytes) attraverso il quale si risale a longname. Ad ogni variazione di dati il relativo record viene aggiornato anche nella data. Questi dati sono la base di riferimento ad ogni ripartenza dell'applicazione consentendoci così di identificare i nodi già dal primo messaggio qualunque sia il tipo di messaggio ricevuto.
 
-I dati vecchi oltre i 7 giorni vengono automaticamente cancellati ad ogni ripartenza.
+I dati vecchi oltre i 7 giorni vengono automaticamente cancellati ad ogni ripartenza in tutt'e tre le tabelle.
 
 ## Esempio di vista 'connessioni'
 ![mesh_data_show_2.png](/mesh_data_show_2.png)
 
 ## Esempio di vista 'GeoMap'
 ![mesh_data_show_3.jpg](/mesh_data_show_3.jpg)
+## Note pratiche d'uso
+1. Avendo raggiunto un numero di nodi gestiti nel mesh intorno alla trentina capita abbastanza spesso che la connessione seriale al device vada in time-out. Questa evenienza è segnalata nella text area protocollo con le istruzioni atte ad aggirare il problema: staccare e riattaccare la connessione USB, poi lanciare il comando CLI 'meshtastic --info' e ripeterlo fino a che finisca senza errore di time-out. A questo punto rilanciare l'applicazione.
+
+2. Il primo messaggio che normalmente esce dal device è un ADMIN_APP con origine e destinazione pari a node_id dello stesso. E' importante che questo messaggio arrivi nei primi inviati pervhé è per questo tramite che viene identificato il nodenum che è la chiave identificativa di mioGW ovvero il nodo Home. Se il messaggio ADMIN_APP non esce nei primi sette / otto basta al volo un reset per reboot e la cosa si risolve.
