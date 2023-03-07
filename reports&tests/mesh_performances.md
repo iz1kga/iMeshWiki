@@ -2,7 +2,7 @@
 title: Mesh performances
 description: 
 published: true
-date: 2023-03-07T15:08:57.744Z
+date: 2023-03-07T15:12:20.712Z
 tags: 
 editor: markdown
 dateCreated: 2023-02-15T17:54:35.741Z
@@ -79,7 +79,7 @@ Se quasta checkbox è marcata, qualunque messaggio di testo in arrivo contenete 
 ### Checkbox 'Genera csv file'
 Già descritta sotto 'Tab Messaggi'
 ### Progress bar ChUtil e AirUtilTXx10
-Ogni messaggio Telemetry trasmesso dal nostro router_client contenete valori di ChannUtil e AirUtilTX viene intercettato per riprodurre sulle rispettive progress bar i valori percentuali riportati. ChanUtil è arrotondato all'unità nella progress bar come pure AirUtilTx moltiplicato per 10. 
+Ogni messaggio Telemetry trasmesso dal nostro router_client contenete valori di ChannUtil e AirUtilTX viene intercettato per riprodurre sulle rispettive progress bar i relativi valori percentuali. ChanUtil è arrotondato all'unità nella progress bar come pure AirUtilTx moltiplicato per 10. 
 
 Le barre sono rappresentate con 3 colori possibili: 
 1. verde per ChanUtil e AirUtilTx < 51 (51 - 5.1)
