@@ -2,7 +2,7 @@
 title: Mesh performances
 description: 
 published: true
-date: 2023-03-07T12:02:10.901Z
+date: 2023-03-07T12:14:34.026Z
 tags: 
 editor: markdown
 dateCreated: 2023-02-15T17:54:35.741Z
@@ -28,6 +28,10 @@ Sono passati due anni d'allora e tutto il progetto ha avuto la sensibile evoluzi
 L'applicazione python-PyQt5 oggetto di questa descrizione si chiama broadcast_msg_pyq5.py ed è scaricabile da https://github.com/vinloren/meshtastic_broadcast clonando il repository o via download in formato  zip (il relativo README.md fa ancora riferimento alla vecchia versione non avendolo ancora aggionato alla descrizione attuale)
 
 Insieme con broadcast_msg_pyq5.py, nella cardella che conterrà questo file, dovrà essere copiato il file meshDB.db che è lo Sqlite3 DB di supporto all'applicazione.
+
+## Strumenti utili non indispensabil a supporto
+1. DB Browser for Sqlite scaricabile at https://sqlitebrowser.org/ per controllare il DB meshDB.db
+2. Open Office 4 scaricabile at https://www.openoffice.org/ per eventualmente elaborare gli output dell'applicazione
 
 ## Obiettivi dell'applicazione
 Più che fare una lista mi pare più utile prsentare l'immagine della GUI desrivendone i componenti attraverso i quali vengono raggiunti gli obiettivi desiderati.
