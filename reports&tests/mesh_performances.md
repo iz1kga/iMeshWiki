@@ -2,7 +2,7 @@
 title: Mesh performances
 description: 
 published: true
-date: 2023-03-07T10:43:30.587Z
+date: 2023-03-07T10:53:09.891Z
 tags: 
 editor: markdown
 dateCreated: 2023-02-15T17:54:35.741Z
@@ -30,8 +30,10 @@ L'applicazione python-PyQt5 oggetto di questa descrizione si chiama broadcast_ms
 Più che fare una lista mi pare più utile prsentare l'immagine della GUI desrivendone i componenti attraverso i quali vengono raggiunti gli obiettivi desiderati.
 ![mesh_data_show_1.png](/mesh_data_show_1.png)
 
-### Campi Home lat e Home lon
-Questi due campi di input devono contenere le coordinate geografiche del nostro router_client e attualmente riportano i valori del qth di vinloren_GW_0a78_868. Chi avesse installato l'applicazione dovrà allora al primo lancio sostituire queste coordinate con quelle del vero qth prima di dare START.
+### Campi Home lat e Home lon / scopo
+Questi due campi di input devono contenere le coordinate geografiche del nostro router_client e attualmente riportano i valori del qth di vinloren_GW_0a78_868. Chi avesse installato l'applicazione dovrà al primo lancio sostituire queste coordinate con quelle del vero qth prima di dare START. Alla conclusione del primo lancio le nuove coordinate saranno salvate nel Sqlite3 DB meshDB.db che risiede nella stessa cartella del file python broadcast_msg_pyq5.py in modo che i lanci successivi troveranno automaticamente le nuove coordinate aggiornate.
+
+Lo scopo della fissazione di queste coordinate è quello di poter poiu misurare rilevamento e distanza di tutti i nodi presenti in mesh rispetto alla posizione del nostro client_router.
 
 
 
