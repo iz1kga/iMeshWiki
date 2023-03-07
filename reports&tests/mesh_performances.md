@@ -2,7 +2,7 @@
 title: Mesh performances
 description: 
 published: true
-date: 2023-03-07T15:37:25.460Z
+date: 2023-03-07T18:18:13.078Z
 tags: 
 editor: markdown
 dateCreated: 2023-02-15T17:54:35.741Z
@@ -144,7 +144,8 @@ La tabella meshnodes contiene un singolo record per ciascun nodo identificato da
 
 I dati vecchi oltre i 7 giorni vengono automaticamente cancellati ad ogni ripartenza.
 
-# Esempio di vista 'connessioni'
+## Esempio di vista 'connessioni'
 ![mesh_data_show_2.png](/mesh_data_show_2.png)
 
-
+## Esempio di vista 'GeoMap'
+![mesh_data_show_3.jpg](/mesh_data_show_3.jpg)
