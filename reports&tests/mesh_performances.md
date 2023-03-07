@@ -2,7 +2,7 @@
 title: Mesh performances
 description: 
 published: true
-date: 2023-03-06T17:12:23.771Z
+date: 2023-03-07T10:43:30.587Z
 tags: 
 editor: markdown
 dateCreated: 2023-02-15T17:54:35.741Z
@@ -30,7 +30,8 @@ L'applicazione python-PyQt5 oggetto di questa descrizione si chiama broadcast_ms
 Più che fare una lista mi pare più utile prsentare l'immagine della GUI desrivendone i componenti attraverso i quali vengono raggiunti gli obiettivi desiderati.
 ![mesh_data_show_1.png](/mesh_data_show_1.png)
 
-
+### Campi Home lat e Home lon
+Questi due campi di input devono contenere le coordinate geografiche del nostro router_client e attualmente riportano i valori del qth di vinloren_GW_0a78_868. Chi avesse installato l'applicazione dovrà allora al primo lancio sostituire queste coordinate con quelle del vero qth prima di dare START.
 
 
 
