@@ -2,7 +2,7 @@
 title: Mesh performances
 description: 
 published: true
-date: 2023-03-07T15:29:36.686Z
+date: 2023-03-07T15:35:17.571Z
 tags: 
 editor: markdown
 dateCreated: 2023-02-15T17:54:35.741Z
@@ -136,11 +136,11 @@ Tabella per registazione dati di ciascun nodo aggiornati nel tempo
 	"pressione" REAL,
 	"temperat" REAL,
 	"umidita" REAL
-	)da 
+	)
 
 La tabella connessioni contiene un record per ogni singolo nodo per ogni singola variazione di distanza di oltre 100mt verso il router_client Home. In questo modo è possibile tracciare i percorsi effettuati dai nodi nel tempo.
 
-La tabella meshnodes contiene un singolo record per ciascun nodo identificato da chiave unica non duplicabile costituita dal nodenumber (integer su 4 bytes) attraverso il quale si risale a longname. Ad ogni variazione di dati il relativo record viene aggiornato oltre che nei dati nella data. Questi dati sono la base di riferimento ad ogni ripartenza dell'applicazione consentendoci così di identificare i nodi già dal primo messaggio qualunque sia il tipo di messaggio ricevuto.
+La tabella meshnodes contiene un singolo record per ciascun nodo identificato da chiave unica non duplicabile costituita dal nodenumber (integer su 4 bytes) attraverso il quale si risale a longname. Ad ogni variazione di dati il relativo record viene aggiornato anche nella data. Questi dati sono la base di riferimento ad ogni ripartenza dell'applicazione consentendoci così di identificare i nodi già dal primo messaggio qualunque sia il tipo di messaggio ricevuto.
 
 I dati vecchi oltre i 7 giorni vengono automaticamente cancellati ad ogni ripartenza.
 
