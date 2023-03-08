@@ -2,7 +2,7 @@
 title: AirUtilTx nel mesh Meshtastic Italia
 description: misura di AirUtilTX nel mesh e valutazioni a riguardo
 published: true
-date: 2023-03-08T14:13:11.213Z
+date: 2023-03-08T14:13:40.741Z
 tags: 
 editor: markdown
 dateCreated: 2023-03-08T10:53:04.155Z
@@ -25,7 +25,7 @@ Forte di questa assunzione, mi sono dedicato per qualche giorno alle verifiche c
 > 
 Ho grossolanamente definito "porta attiva in ricezione e trasmissione", per evidenziare il fatto che il device collegato alla porta USB con attivo il mio monitor invia un messaggio di Telemetry ogni minuto avendo ricevuto in esordio gli effetti dell'apertura della meshtastic interface col comando meshtastic.serial_interface.SerialInterface().
 
-In assenza di questa sollecitazione, un qualunque nodo invia i messaggi di Telemetry contenenti le informazioni ChanUtil e AirUtilTX con una ferquenza che sperimentalmente ho verificato essere di uno ogni 15 minuti. Non so se esista un parametro che definisca questa condizione oppure sia previsto così intrinsecamente al firmware.
+In assenza di questa sollecitazione, un qualunque nodo invia i messaggi di Telemetry contenenti le informazioni ChanUtil e AirUtilTX con una frequenza che sperimentalmente ho verificato essere di uno ogni 15 minuti. Non so se esista un parametro che definisca questa condizione oppure sia previsto così intrinsecamente al firmware.
 
 ## Conclusioni
 1. A fronte delle constatazioni sopra espresse, mi risuta ora chiaro perché stranamente solo il mio GW desse spesso segni di saturazione arrivando a superare la soglia di guardia. Stamattina poi, analizzando i dati qui esposti, notavo che il mio GW non era solitario perché anche IK1JNS-00 GW_868 superava la soglia alle ore 08:08:13 arrivando al valore di 10.04%. Dall'analisi temporale vedevo anche che questo nodo inviava i messaggi di Telemetry ogni minuto al pari del mio essendo sicuramente connesso in quel periodo a una porta seriale attiva.
