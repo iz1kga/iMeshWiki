@@ -2,7 +2,7 @@
 title: AirUtilTx nel mesh Meshtastic Italia
 description: misura di AirUtilTX nel mesh e valutazioni a riguardo
 published: true
-date: 2023-03-08T18:43:20.042Z
+date: 2023-03-08T18:45:48.566Z
 tags: 
 editor: markdown
 dateCreated: 2023-03-08T10:53:04.155Z
@@ -30,7 +30,7 @@ In assenza di questa sollecitazione, un qualunque nodo invia i messaggi di Telem
 ## Conclusioni
 1. A fronte delle constatazioni sopra espresse, mi risuta ora chiaro perché stranamente solo il mio GW desse spesso segni di saturazione arrivando a superare la soglia di guardia. Stamattina poi, analizzando i dati qui esposti, notavo che il mio GW non era solitario perché anche IK1JNS-00 GW_868 superava la soglia alle ore 08:08:13 arrivando al valore di 10.04%. Dall'analisi temporale vedevo anche che questo nodo inviava i messaggi di Telemetry ogni minuto al pari del mio essendo sicuramente connesso in quel periodo a una porta seriale attiva. Vedere il mio router eccedere la soglia nonostante l'invio di messaggi Telemetry ogni 15 minuti (non collegato alla seriale) sta a significare una durata di superamento soglia superiore a questo lasso di tempo: durate inferiori passano verosimilmente inosservabili. 
 
-2. Altra notazione di rilievo è quella che alle 08:13 la rete in toto era probabilmente in saturazione perché in questa condizione si trovavano contemporaneamente sia il mio GW che quello di nome IK1JNS-00. Probabilmente anche altri che però non potevano risultare non avendo inviato messaggi di superamento soglia nello stesso intervallo di 15 minuti.
+2. Altra notazione di rilievo è quella che alle 08:13 la rete in toto era probabilmente in saturazione perché in questa condizione si trovavano contemporaneamente sia il mio GW che quello di nome IK1JNS-00. Probabilmente anche altri che però non potevano risultare non avendo inviato messaggi di superamento soglia ovvero avendola magari superata per un lasso di tempo più breve di 15 minuti.
 
 3. Per avere un'immagine reale della situazione di occupazione di rete occorrerebbe che tutti i router avessero collegato un PC (o un Rpi) in modo da inviare un messaggio di Telemetry ogni minuto. Va però detto che così la rete risulterebbe già di per sè appesantita per il fatto stesso di inviare queste informazioni con una frequenza così alta. E allora il gioco magari non "vale la camdela"..
 
