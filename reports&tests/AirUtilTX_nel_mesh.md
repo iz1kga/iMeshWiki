@@ -2,7 +2,7 @@
 title: AirUtilTx nel mesh Meshtastic Italia
 description: misura di AirUtilTX nel mesh e valutazioni a riguardo
 published: true
-date: 2023-03-08T14:08:13.473Z
+date: 2023-03-08T14:08:59.407Z
 tags: 
 editor: markdown
 dateCreated: 2023-03-08T10:53:04.155Z
@@ -16,7 +16,7 @@ by Vincenzo Lorenzale addì 8 Marzo 2023
 ### I dati raccolti questa mattina
 ![merge_from_ofoct.jpg](/merge_from_ofoct.jpg)
 ### Analisi e commenti
-Questa mattina sono stati raccolti dati i dati di Telemetry intercorsi nel mesh fra le ore 7:13 e le 10:08 con lo scopo di valutare l'occupazione AirUtilTX presso i 10 router oggi attivi nel mesh per capire se questa potesse avere peso nella capacità di consegna dei messaggi fra i nodi. 
+Questa mattina sono stati raccolti i dati di Telemetry intercorsi nel mesh fra le ore 7:13 e le 10:08 con lo scopo di valutare l'occupazione AirUtilTX presso i 10 router oggi attivi nel mesh per capire se questa potesse avere peso nella capacità di consegna dei messaggi fra i nodi. 
 
 Per una corretta valutazione dello stato di saturazione della rete sarebbe utile poter conoscere in tempo reale lo stato del valore di AerUtilTX presente al momento presso i router attivi nel mesh. Secondo la lettura delle specifiche meshtastic, sembrerebbe che ogni nodo invii alla rete un messaggio di Telemetry ogni minuto qundi, se così fosse, sarebbe piuttosto agevole avere la costante misura di AerUtilTX presso un router di controllo centrale.
 
