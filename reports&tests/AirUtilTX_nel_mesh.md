@@ -2,7 +2,7 @@
 title: AirUtilTx nel mesh Meshtastic Italia
 description: misura di AirUtilTX nel mesh e valutazioni a riguardo
 published: true
-date: 2023-03-08T13:21:30.868Z
+date: 2023-03-08T13:22:28.265Z
 tags: 
 editor: markdown
 dateCreated: 2023-03-08T10:53:04.155Z
@@ -20,7 +20,7 @@ Questa mattina sono stati raccolti dati i dati di Telemetry intercorsi nel mesh 
 
 Per una corretta valutazione dello stato di saturazione della rete sarebbe utile poter conoscere in tempo reale lo stato del valore di AerUtilTX presente al momento presso i router attivi nel mesh. Secondo la lettura delle specifiche meshtastic, sembrerebbe che ogni nodo invii alla rete un messaggio di Telemetry ogni minuto qundi, se così fosse, sarebbe piuttosto agevole avere la costante misura di AerUtilTX presso un router di controllo centrale.
 
-Forte di questa assunzione, mi sono dedicato per qualche giorno alle verifiche conseguenti per arrivare alle conclusioni di oggi che qui riassumo:
+Forte di questa assunzione, mi sono dedicato per qualche giorno alle verifiche conseguenti per arrivare alla conclusioni di oggi che qui riassumo:
 1. l'assunzione è erronea perché mentre è vero che qualunque nodo connesso a una porta seriale attiva in ricezione e trasmissione effettivamente emette un messaggio di Telemetry ogni minuto, ciò non avviene per i nodi non connessi a porte seriali. In questo caso la tramissione, analizzando i dati raccolti in questi giorni, avviene ogni 15 minuti
 
 
