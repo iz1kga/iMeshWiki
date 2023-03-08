@@ -2,7 +2,7 @@
 title: AirUtilTx nel mesh Meshtastic Italia
 description: misura di AirUtilTX nel mesh e valutazioni a riguardo
 published: true
-date: 2023-03-08T13:58:06.947Z
+date: 2023-03-08T14:01:50.486Z
 tags: 
 editor: markdown
 dateCreated: 2023-03-08T10:53:04.155Z
@@ -28,7 +28,9 @@ Ho grossolanamente definito "porta attiva in ricezione e trasmissione" per evide
 In assenza di questa sollecitazione, un qualunque nodo invia i messaggi di Telemetry contenenti le informazioni ChanUtil e AirUtilTX con una ferquenza che sperimentalmente ho verificato essere di uno ogni 15 minuti. Non so se esista un parametro che definisca questa condizione oppure sia previsto così intrinsecamente al firmware.
 
 ## Conclusione
-A fronte delle constatazioni sopra espresse, mi risuta ora chiaro perché stranamente solo il mio GW desse spesso segni di saturazione arrivando a superare la soglia di guardia. Stamattina poi, analizzando i dati qui esposti, notavo che il mio GW non era solitario perché anche IK1JNS-00 GW_868 superava la soglia alle ore 08:08:13 arrivando al valore di 10.04%. Dall'analisi temporale vedevo anche che questo nodo inviava i messaggi di Telemetry ogni minuto al pare del mio essendo sicuramente connesso in quel periodo a una porta seriale attiva.
+A fronte delle constatazioni sopra espresse, mi risuta ora chiaro perché stranamente solo il mio GW desse spesso segni di saturazione arrivando a superare la soglia di guardia. Stamattina poi, analizzando i dati qui esposti, notavo che il mio GW non era solitario perché anche IK1JNS-00 GW_868 superava la soglia alle ore 08:08:13 arrivando al valore di 10.04%. Dall'analisi temporale vedevo anche che questo nodo inviava i messaggi di Telemetry ogni minuto al pari del mio essendo sicuramente connesso in quel periodo a una porta seriale attiva.
+
+Altra notazione di rilievo è quella che alle 08:13 la rete in toto era probabilmente in saturazione perché in questa condizionesi trovavano contemporaneamente sia il mio GW che quello di nome IK1JNS-00. Pobrabilmente anche altri che però non potevano risultare non avendo inviato messaggi.
 
 
 
