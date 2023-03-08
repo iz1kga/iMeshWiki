@@ -2,7 +2,7 @@
 title: AirUtilTx nel mesh Meshtastic Italia
 description: misura di AirUtilTX nel mesh e valutazioni a riguardo
 published: true
-date: 2023-03-08T14:07:42.414Z
+date: 2023-03-08T14:08:13.473Z
 tags: 
 editor: markdown
 dateCreated: 2023-03-08T10:53:04.155Z
@@ -32,7 +32,7 @@ In assenza di questa sollecitazione, un qualunque nodo invia i messaggi di Telem
 
 2. Altra notazione di rilievo è quella che alle 08:13 la rete in toto era probabilmente in saturazione perché in questa condizionesi trovavano contemporaneamente sia il mio GW che quello di nome IK1JNS-00. Pobrabilmente anche altri che però non potevano risultare non avendo inviato messaggi.
 
-3. Per avere un'immagine reale della situazione di occupazione di rete occorrerebbe che tutti i router avessero collegato un PC (o un Rpi) in modo da inviare un messaggio di Telemetry ogni minuto. Va però detto che così la rete risulterebbe già di per sè appesantita per il fatto stesso di inviare queste informazioni con una frequenza così alta. E allora il gioco magari non "vale la camdela".
+3. Per avere un'immagine reale della situazione di occupazione di rete occorrerebbe che tutti i router avessero collegato un PC (o un Rpi) in modo da inviare un messaggio di Telemetry ogni minuto. Va però detto che così la rete risulterebbe già di per sè appesantita per il fatto stesso di inviare queste informazioni con una frequenza così alta. E allora il gioco magari non "vale la camdela"..
 
 
 
