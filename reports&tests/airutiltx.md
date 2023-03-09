@@ -2,7 +2,7 @@
 title: AirUtilTx nel mesh Meshtastic Italia
 description: misura di AirUtilTX nel mesh e valutazioni a riguardo
 published: true
-date: 2023-03-09T18:24:47.195Z
+date: 2023-03-09T18:25:30.960Z
 tags: 
 editor: markdown
 dateCreated: 2023-03-08T10:53:04.155Z
@@ -32,7 +32,7 @@ In assenza di questa sollecitazione, e in assenza di connessione BLE con l'App m
 
 2. Altra notazione di rilievo è quella che alle 08:13 la rete in toto era probabilmente in saturazione perché in questa condizione si trovavano contemporaneamente sia il mio GW che quello di nome IK1JNS-00. Probabilmente anche altri che però non potevano risultare non avendo inviato messaggi di superamento soglia ovvero avendola magari superata per un lasso di tempo più breve di 15 minuti.
 
-3. Per avere un'immagine più reale della situazione di occupazione di rete occorrerebbe che tutti i router avessero configurato nel modulo 'telemetry' il valore 60 al posto di 900 di default in 'Device Metrics Update Interval'. Va però detto che così la rete risulterebbe già di per sè appesantita per il fatto stesso di inviare queste informazioni con una frequenza così alta. E allora il gioco magari non "vale la camdela". Si potrebbe però provare..
+3. Per avere un'immagine più reale della situazione di occupazione di rete occorrerebbe che tutti i router_client avessero configurato nel modulo 'telemetry' il valore 60 al posto di 900 di default in 'Device Metrics Update Interval'. Va però detto che così la rete risulterebbe già di per sè appesantita per il fatto stesso di inviare queste informazioni con una frequenza così alta. E allora il gioco magari non "vale la camdela". Si potrebbe però provare..
 
 
 
