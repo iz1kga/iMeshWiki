@@ -2,7 +2,7 @@
 title: AirUtilTx nel mesh Meshtastic Italia
 description: misura di AirUtilTX nel mesh e valutazioni a riguardo
 published: true
-date: 2023-03-09T18:42:03.970Z
+date: 2023-03-09T18:42:44.408Z
 tags: 
 editor: markdown
 dateCreated: 2023-03-08T10:53:04.155Z
