@@ -2,7 +2,7 @@
 title: AirUtilTx nel mesh Meshtastic Italia
 description: misura di AirUtilTX nel mesh e valutazioni a riguardo
 published: true
-date: 2023-03-09T18:04:36.848Z
+date: 2023-03-09T18:18:37.643Z
 tags: 
 editor: markdown
 dateCreated: 2023-03-08T10:53:04.155Z
@@ -25,7 +25,7 @@ Forte di questa assunzione, mi sono dedicato per qualche giorno alle verifiche c
 > 
 Ho grossolanamente definito "porta attiva in ricezione e trasmissione", per evidenziare il fatto che il device collegato alla porta USB con attivo il mio monitor invia un messaggio di Telemetry ogni minuto avendo ricevuto in esordio gli effetti dell'apertura della meshtastic interface col comando meshtastic.serial_interface.SerialInterface().
 
-In assenza di questa sollecitazione, che esiste anche alla pari della seriale anche quando l'App meshtastic è collegata a un nodo, un qualunque nodo invia i messaggi di Telemetry contenenti le informazioni ChanUtil e AirUtilTX con una frequenza che sperimentalmente ho verificato essere di uno ogni 15 minuti. Non so se esista un parametro che definisca questa condizione oppure sia previsto così intrinsecamente al firmware.
+In assenza di questa sollecitazione, e in assenza di connessione BLE con l'App meshtastic o con la Web Gui in BLE o in seriale, qualunque nodo invia i messaggi di Telemetry contenenti le informazioni ChanUtil e AirUtilTX con una frequenza che sperimentalmente ho verificato essere di uno ogni 15 scoprendo poi questo essere il default di configurazione del modulo 'telemetry' come ho acennato sopra.
 
 ## Conclusioni
 1. A fronte delle constatazioni sopra espresse, mi risuta ora chiaro perché stranamente solo il mio GW desse spesso segni di saturazione arrivando a superare la soglia di guardia. Stamattina poi, analizzando i dati qui esposti, notavo che il mio GW non era solitario perché anche IK1JNS-00 GW_868 superava la soglia alle ore 08:08:13 arrivando al valore di 10.04%. Dall'analisi temporale vedevo anche che questo nodo inviava i messaggi di Telemetry ogni minuto al pari del mio essendo sicuramente connesso in quel periodo a una porta seriale attiva. Vedere il mio router eccedere la soglia nonostante l'invio di messaggi Telemetry ogni 15 minuti (non collegato alla seriale) sta a significare una durata di superamento soglia superiore a questo lasso di tempo: durate inferiori passano verosimilmente inosservabili. 
