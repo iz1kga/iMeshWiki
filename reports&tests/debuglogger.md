@@ -2,7 +2,7 @@
 title: Produrre debug log mirati
 description: permette di raccogliere log di errore in automatico
 published: true
-date: 2023-03-13T17:58:21.095Z
+date: 2023-03-13T18:10:15.655Z
 tags: 
 editor: markdown
 dateCreated: 2023-03-13T16:48:48.281Z
@@ -26,6 +26,12 @@ Per default ho impostato di tralasciare i messaggi di tipo mqtt perché normalme
 ### Stop su
 Ho previsto di fermare il log quando si incotra la sequenza '[Screen] Done with boot' (senza apici) che è quella che compare sempre all'inizio del boot innescato da qualsivogli causa. Naturalmente il programma è aperto ad accettare qualunque altra sequenza che fosse necessaria.# Size out file
 ### Size out file
-E' una progress bar che indica la percentuale di dimensione massima raggiunta dal file che sarà prodotto come log. Il programma prevede di raccogliere 500 messaggi complessivi come dimensione standard (possono essere anche meno però). Sono 249 messaggi prima dell'incontro della sequenza di guardia e 250 messaggi successivi a questa sequenza. Praticamente avremo in uscita un file di dimensioni ridotte 
+E' una progress bar che indica la percentuale di dimensione massima raggiunta dal file che sarà prodotto come log. Il programma prevede di raccogliere 500 messaggi complessivi come dimensione standard (possono essere anche meno però). Sono 249 messaggi prima dell'incontro della sequenza di guardia e 250 messaggi successivi a questa sequenza. Praticamente avremo in uscita un file di dimensioni ridotte intorno a 75kB o anche meno contenente con sicurazza le informazioni che servono.
+### Colori della progress bar
+La progress bar parte e resta verde in tutta la fase di attesa. Diventa rossa nel momento in cui viene incontrata la sequenza di guardia. Dopo incontrata questa sequenza, il log va ancora avanti per 250 messaggi poi quando la barra diventerà gialla il file debugLog.log prodotto nella stessa cartella dell'applicazione sarà disponibile a successivo trattamento. 
+### Altri dettagli
+1) se si preme START quando la raccolta dati è avviata si otterrà il clear dell'area di log. Ciò non influisce per nulla con la raccolta dati che prosegue normalmente.
+2) Una volta finita la raccolta si può avviarne un'altra senza ricaricare l'applicazione ma semplicemente premendo nuovamente START.
+
 
 
