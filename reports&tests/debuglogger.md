@@ -2,7 +2,7 @@
 title: Produrre debug log mirati
 description: permette di raccogliere log di errore in automatico
 published: true
-date: 2023-03-13T18:19:27.650Z
+date: 2023-03-13T18:22:23.431Z
 tags: 
 editor: markdown
 dateCreated: 2023-03-13T16:48:48.281Z
