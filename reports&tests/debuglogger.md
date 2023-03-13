@@ -2,7 +2,7 @@
 title: Produrre debug log mirati
 description: permette di raccogliere log di errore in automatico
 published: true
-date: 2023-03-13T18:13:13.968Z
+date: 2023-03-13T18:19:27.650Z
 tags: 
 editor: markdown
 dateCreated: 2023-03-13T16:48:48.281Z
@@ -34,6 +34,7 @@ La progress bar parte e resta verde in tutta la fase di attesa. Diventa rossa ne
 2) Una volta finita la raccolta si può avviarne un'altra senza ricaricare l'applicazione ma semplicemente premendo nuovamente START.
 ### L'applicazione
 La metterò in github insiame a quanto già esiste per il monitor del mesh. La posto anche qui dato che è un singolo file e chi vuole potrà scaricarlo.
+[debug_monitor.py](/debug_monitor.py)
 
 
 
