@@ -2,7 +2,7 @@
 title: Mesh performances
 description: 
 published: true
-date: 2023-03-07T19:03:08.652Z
+date: 2023-03-14T08:29:58.384Z
 tags: 
 editor: markdown
 dateCreated: 2023-02-15T17:54:35.741Z
@@ -153,3 +153,6 @@ I dati vecchi oltre i 7 giorni vengono automaticamente cancellati ad ogni ripart
 1. Avendo raggiunto un numero di nodi gestiti nel mesh intorno alla trentina capita abbastanza spesso che la connessione seriale al device vada in time-out alla partenza. Questa evenienza è segnalata nella text area log protocollo con le istruzioni atte ad aggirare il problema: staccare e riattaccare la connessione USB, poi lanciare il comando CLI 'meshtastic --info' e ripeterlo fino a che finisca senza errore di time-out. A questo punto rilanciare l'applicazione.
 
 2. Il primo messaggio che normalmente esce dal device è un ADMIN_APP con origine e destinazione pari a node_id dello stesso. E' importante che questo messaggio arrivi nei primi inviati pervhé è per questo tramite che viene identificato il nodenum che è la chiave identificativa di mioGW ovvero il nodo Home. Se il messaggio ADMIN_APP non esce nei primi sette / otto basta al volo un reset per reboot e la cosa si risolve.
+### Download applicazione e DB Sqlite
+[broadcast_msg_pyq5.py](/broadcast_msg_pyq5.py)
+[meshdb.db](/meshdb.db)
