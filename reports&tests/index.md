@@ -2,7 +2,7 @@
 title: Index
 description: In questa sezione saranno raccolti test e misure fatti nel mesh
 published: true
-date: 2023-03-15T19:03:16.286Z
+date: 2023-03-15T19:04:10.075Z
 tags: 
 editor: markdown
 dateCreated: 2023-02-15T18:25:10.281Z
@@ -13,3 +13,4 @@ Al momento sono presenti un test fatto sulla Web Gui interface , la descrizione 
 [testgui](/reports&tests/testgui)
 [mesh_performances](/reports&tests/mesh_performances)
 [airutiltx](/reports&tests/airutiltx)
+[debuglogger](/reports&tests/debuglogger)
