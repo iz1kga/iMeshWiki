@@ -2,14 +2,14 @@
 title: Produrre debug log mirati
 description: permette di raccogliere log di errore in automatico
 published: true
-date: 2023-03-13T18:24:15.763Z
+date: 2023-03-15T16:29:17.546Z
 tags: 
 editor: markdown
 dateCreated: 2023-03-13T16:48:48.281Z
 ---
 
 # Debug manager
-by IU2RPO Vincenzo Lorenzale il 13 Mar 2023
+by Vincenzo Lorenzale (IU2RPO) il 13 Mar 2023
 
 ---
 ## Obiettivo dell'applicazione
