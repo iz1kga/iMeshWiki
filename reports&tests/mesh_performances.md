@@ -2,14 +2,14 @@
 title: Mesh performances
 description: 
 published: true
-date: 2023-03-15T15:03:51.298Z
+date: 2023-03-15T16:28:21.999Z
 tags: 
 editor: markdown
 dateCreated: 2023-02-15T17:54:35.741Z
 ---
 
 # Lo strumento di controllo sviluppato 
-by Vincenzo Lorenzale il 6 Marzo 2023
+by Vincenzo Lorenzale (IU2RPO) il 6 Marzo 2023
 
 ---
 Da Dicembre 2020  sto seguendo il progetto Meshtastic che si propone di creare una rete di comunicazione su banda 868Mhz con apparecchi basati su ESP32 e LoRa radio (es.: TTGO-LoRa32-oled). Fin da inizio 2021 ho pensato di costruire uno strumento atto al controllo dei messaggi di protocollo nel mesh e all'utilizzo degli stessi per una rappresentazione grafica, in tempo reale, della posizione gps dei vari nodi collegati verso il nodo di controllo centrale che raccogliesse anche tutti i messaggi di testo interccorsi in rete e ne conservasse il tutto in un archivio storico.
