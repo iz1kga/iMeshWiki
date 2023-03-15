@@ -682,7 +682,7 @@ class App(QWidget):
                 self.ricevuti.append(testo) 
                 if('qsl?' in packet['decoded']['text'] and self.rbtn4.isChecked()):
                     rmsg = self.qsl.text()
-                    rmsg = + packet['decoded']['text']+" da "+msgda
+                    rmsg = rmsg + packet['decoded']['text']+" da "+msgda
                     self.callmesh.sendImmediate(rmsg)
             
             if(self.rbtn2.isChecked()):
