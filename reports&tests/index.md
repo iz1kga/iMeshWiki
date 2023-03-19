@@ -2,7 +2,7 @@
 title: Index
 description: In questa sezione saranno raccolti test e misure fatti nel mesh
 published: true
-date: 2023-03-19T08:31:23.704Z
+date: 2023-03-19T08:32:23.501Z
 tags: 
 editor: markdown
 dateCreated: 2023-02-15T18:25:10.281Z
