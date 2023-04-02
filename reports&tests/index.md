@@ -2,7 +2,7 @@
 title: Index
 description: In questa sezione saranno raccolti test e misure fatti nel mesh
 published: true
-date: 2023-03-19T08:32:23.501Z
+date: 2023-04-02T11:20:32.847Z
 tags: 
 editor: markdown
 dateCreated: 2023-02-15T18:25:10.281Z
@@ -15,3 +15,4 @@ Al momento sono presenti un test fatto sulla Web Gui interface , la descrizione 
 [airutiltx](/reports&tests/airutiltx)
 [airutiltx190323.pdf](/airutiltx190323.pdf)
 [debuglogger](/reports&tests/debuglogger)
+[test_batteria2600_pannello_30w.pdf](/test_batteria2600_pannello_30w.pdf)
