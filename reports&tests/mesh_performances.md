@@ -2,7 +2,7 @@
 title: Mesh performances
 description: 
 published: true
-date: 2023-04-13T10:57:47.961Z
+date: 2023-04-13T10:58:56.361Z
 tags: 
 editor: markdown
 dateCreated: 2023-02-15T17:54:35.741Z
@@ -103,7 +103,8 @@ Tabella per dati ChanUtil e AirUtilTX
   "battlv" REAL,
   "pressione" REAL, 
   "temperatura" REAL, 
-  "umidita" REAL)
+  "umidita" REAL
+  )
   
 Tabella per dati di monitor posizione geografica devices in tempo reale
  2. CREATE TABLE "connessioni" (
