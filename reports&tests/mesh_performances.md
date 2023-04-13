@@ -2,7 +2,7 @@
 title: Mesh performances
 description: 
 published: true
-date: 2023-04-13T10:58:56.361Z
+date: 2023-04-13T11:04:25.441Z
 tags: 
 editor: markdown
 dateCreated: 2023-02-15T17:54:35.741Z
@@ -146,7 +146,7 @@ La tabella connessioni contiene un record per ogni singolo nodo per ogni singola
 
 La tabella meshnodes contiene un singolo record per ciascun nodo identificato da chiave unica non duplicabile costituita dal nodenumber (integer su 4 bytes) attraverso il quale si risale a longname. Ad ogni variazione di dati il relativo record viene aggiornato anche nella data. Questi dati sono la base di riferimento ad ogni ripartenza dell'applicazione consentendoci così di identificare i nodi già dal primo messaggio qualunque sia il tipo di messaggio ricevuto.
 
-I dati vecchi oltre i 7 giorni vengono automaticamente cancellati ad ogni ripartenza in tutt'e tre le tabelle.
+I dati vecchi oltre i 10 giorni vengono automaticamente cancellati ad ogni ripartenza in tutt'e tre le tabelle. Questo valore può essere modificato in textbox.
 
 ## Esempio di vista 'connessioni'
 ![mesh_data_show_2.png](/mesh_data_show_2.png)
