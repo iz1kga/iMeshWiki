@@ -2,7 +2,7 @@
 title: Mesh performances
 description: 
 published: true
-date: 2023-04-13T10:53:26.336Z
+date: 2023-04-13T10:57:47.961Z
 tags: 
 editor: markdown
 dateCreated: 2023-02-15T17:54:35.741Z
@@ -93,14 +93,17 @@ E' questo un argomento sul quale sto indagando anche perché vedo che il mio GW 
 ## Note sul DB meshDB.db
 Il DB è costituito da tre tabelle:
 Tabella per dati ChanUtil e AirUtilTX
-1. CREATE TABLE "airtx" (
+1.CREATE TABLE "airtx" (
 	"data"	TEXT,
 	"ora"	TEXT,
 	"nodenum"	INTEGER,
 	"longname"	TEXT,
 	"chanutil" REAL,
-	"airutiltx" REAL
-	)
+	"airutiltx" REAL, 
+  "battlv" REAL,
+  "pressione" REAL, 
+  "temperatura" REAL, 
+  "umidita" REAL)
   
 Tabella per dati di monitor posizione geografica devices in tempo reale
  2. CREATE TABLE "connessioni" (
