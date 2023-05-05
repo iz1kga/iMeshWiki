@@ -2,7 +2,7 @@
 title: Telemetria
 description: 
 published: true
-date: 2023-05-05T16:16:56.931Z
+date: 2023-05-05T16:22:17.383Z
 tags: 
 editor: markdown
 dateCreated: 2023-02-12T22:00:02.689Z
@@ -77,12 +77,12 @@ Col primo tentativo avevo capito che il firmware Tlora-V1_3 supporta la I2C sui 
 
 ## Conclusioni
 1. Se si è in possesso di una Tlora1, prima di tutto va capito se si tratta di una V1.0 o di una V1.3
-2. Per capire se è una V1.0 si carica il firware V1 e se l'oled si accende è una V1 altrimenti è una V1.3 o in alternativa l'oled è guasto.
+2. Per capire se è una V1.0 si carica il firmware V1 e se l'oled si accende è una V1 altrimenti è una V1.3 o in alternativa l'oled è guasto.
 3. Se abbiamo una V1.0 i sensori vanno cablati sui pin SDA 4 - SCL 15 altrimenti SDA 21 - SCL 22.
 
 ### Cablaggio del sensore INA219
 1. Vin al +3.3
-1. Gnd al un Gnd della Tlora
+1. Gnd a un Gnd della Tlora
 1. Scl al pin 15 o 22 a seconda se una V1.0 o una V1.3
 1. Sda al pin  4 0 21 a seconda se una V1.0 o una V1.3
 1. Negativo della batteria al filo nero del connettore JST innestato nella Tlora1
