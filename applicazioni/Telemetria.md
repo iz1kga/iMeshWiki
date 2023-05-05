@@ -2,7 +2,7 @@
 title: Telemetria
 description: 
 published: true
-date: 2023-05-05T16:07:44.275Z
+date: 2023-05-05T16:16:56.931Z
 tags: 
 editor: markdown
 dateCreated: 2023-02-12T22:00:02.689Z
@@ -92,5 +92,14 @@ Col primo tentativo avevo capito che il firmware Tlora-V1_3 supporta la I2C sui 
 ### Dati telemetry environment dai sensori
 Temperatura,PA,umidità ambiente si spiegano da soli mentre per il sensore INA219 è interessante notare come un valore di corrente positivo indica il consumo di corrente della batteria che alimenta il Tlora mentre un valore negativo indica l'attuale corrente che sta caricando la batteria grazie a pannello solare o alimentazione via USB.
 
+**Alimentazione via batteria**
+![ina219_scarica.jpg](/ina219_scarica.jpg)
 
+**Alimentazione via USB (carica batteria)**
+![ina219_carica.jpg](/ina219_carica.jpg)
 
+### Consumi di un Tlora1 senza WiFi
+Dall'osservazione fatta grazie al sensore INA219 abbiamo un consumo medio di 58mA che può salire a picchi di 160mA se in trasmissione
+
+### Corrente di carica via USB
+Sempre grazie al sensore INA219 vediamo una corrente di carica via porta USB di un PC che parte da 150mA per arrivare gradatamente a 0 dopo circa 14 ore quando il valore di tensione ha raggiunto 4.20V. A questo punto il led rosso di carica si spegne.
