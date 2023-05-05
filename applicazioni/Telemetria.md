@@ -2,7 +2,7 @@
 title: Telemetria
 description: 
 published: true
-date: 2023-05-05T08:40:34.886Z
+date: 2023-05-05T08:41:24.702Z
 tags: 
 editor: markdown
 dateCreated: 2023-02-12T22:00:02.689Z
@@ -59,5 +59,5 @@ Comparison between Lora V1.3 and Lora V1.0:
 2.Optimize LORA RF circuit
 3.Add battery voltage detection Pin IO35
 
-Ambedue le versioni riportano un bus I2C sui pin 21 (SDA) e 22(SCL). Ambedue le versioni segnano Oled montato su altro I2C bus (SDA) 4 e (SCL) 15. Tutto lascia quindi pensare che collegare SDA e SCL dei sensori che vogliamo usare a questo I2C bus sia logico. Il fatto che meshtastic abbia previsto un firmware specifico per ciascuna di queste versioni di Tlora1 mi lascia curioso ma posso pensare che sia motivato dal "voltage detection" presente solo sulla versione 1.3.
+Ambedue le versioni riportano un bus I2C sui pin 21 (SDA) e 22 (SCL). Ambedue le versioni segnano Oled montato su altro I2C bus (SDA) 4 e (SCL) 15. Tutto lascia quindi pensare che collegare SDA e SCL dei sensori che vogliamo usare a questo I2C bus sia logico. Il fatto che meshtastic abbia previsto un firmware specifico per ciascuna di queste versioni di Tlora1 mi lascia curioso ma posso pensare che sia motivato dal "voltage detection" presente solo sulla versione 1.3.
 
