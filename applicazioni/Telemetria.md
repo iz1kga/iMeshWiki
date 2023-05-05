@@ -2,7 +2,7 @@
 title: Telemetria
 description: 
 published: true
-date: 2023-05-05T05:35:02.826Z
+date: 2023-05-05T05:36:21.185Z
 tags: 
 editor: markdown
 dateCreated: 2023-02-12T22:00:02.689Z
@@ -37,7 +37,7 @@ In sintesi, il sensore INA219 serve a misurare corrente e tensione in sistemi a 
 
 # Configurare la Tbeam e Tlora con i  Sensori
 
-## Tlora-V1.0
+## Tlora-V1.0 (by IU2RPO)
 **Premessa**
 Tutto nasce dalla rottura del connettore micro usb del Tlora2-1.1.6 che usavo come GW su palo con antenna sul balcone. Senza connettore il device rimaneva congelato al firmware e alla configurazione del momento impedendomi ulteriori prove circa ottimizzazione di pannello solare e batteria da associare al progetto. 
 
