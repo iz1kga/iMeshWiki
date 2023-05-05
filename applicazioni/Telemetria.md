@@ -2,7 +2,7 @@
 title: Telemetria
 description: 
 published: true
-date: 2023-05-05T05:36:43.925Z
+date: 2023-05-05T05:43:12.076Z
 tags: 
 editor: markdown
 dateCreated: 2023-02-12T22:00:02.689Z
@@ -43,6 +43,8 @@ Tutto nasce dalla rottura del connettore micro usb del Tlora2-1.1.6 che usavo co
 
 Una via d'uscita immediata la vedevo nell'uso di un TloraV1.0 dei due in mio possesso ma occorreva che questa unità potesse fornire i dati di telemetry di batteria e di ambiente atmosferico così come li forniva il Tlora2-1.1.6 già sperimentato con successo.
 
+### Approccio, problemi e soluzione
+Sapendo che i sensori INA219 e BME280 funzionano utilzzando interfaccia I2C, affronto il problema andando a vedere nel pinout del TTGO-Lora32-oled quali pin andarea a scegliere per connettere i segnali SDA e SCL.
 
 
 
