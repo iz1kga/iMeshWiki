@@ -2,7 +2,7 @@
 title: Telemetria
 description: 
 published: true
-date: 2023-05-05T16:22:17.383Z
+date: 2023-05-05T16:28:42.425Z
 tags: 
 editor: markdown
 dateCreated: 2023-02-12T22:00:02.689Z
@@ -73,7 +73,7 @@ Il microcontroller ESP32 cuore del Tlora ha due interfacce IC2 anche se nel pino
 La scelta invece di supportare ambedue le interfacce sulla Tlora-V1.0 avrebbe evitato di creare confusione per chi avesse voluto installare sensori su questa scheda osservandone il pinout che mette in evidenza la IC2 sui pin 21 - 22 mentre invece questa interfaccia è di fatto del tutto ignorata. L'unico modo per capire dove cablare il sensore su TLora-V1.0 è quello di osservare il file variant.h dell'ambiente Tlora-v1 nei sorgenti del progetto git meshtastic non esendo disponibili note a riguardo in nessun wiki.
 
 ### Secondo tentativo
-Col primo tentativo avevo capito che il firmware Tlora-V1_3 supporta la I2C sui pin 21 - 22 (visibile da pinout comune alle 2 due versioni) sulla scheda Tlora-V1.0 che ha cablato l'oled sull'altra I2C facente capo ai pin 4 - 15. Mi rimaneva allora da provare ricaricando il firmware Tlora-V1 dopo aver cablato i sensori sulla I2C (non visibile nello schema del pinout) che fa capo ai pin 4 - 15. Detto fatto ho ottenuto il giusto funzionamneto sia del display oled che dei sensori INA219 e BME280 contemporaneamente.
+Col primo tentativo avevo capito che il firmware Tlora-V1_3 supporta la I2C sui pin 21 - 22 (visibile da pinout comune alle 2 due versioni) mentre sulla scheda Tlora-V1.0 che ha cablato l'oled sull'altra I2C facente capo ai pin 4 - 15 sarebbe richiesto di cablare qui anche i sensori. Mi rimaneva allora da provare ricaricando il firmware Tlora-V1 dopo aver cablato i sensori sulla I2C (non visibile nello schema del pinout) che fa capo ai pin 4 - 15. Detto fatto ho ottenuto il giusto funzionamneto sia del display oled che dei sensori INA219 e BME280 contemporaneamente.
 
 ## Conclusioni
 1. Se si è in possesso di una Tlora1, prima di tutto va capito se si tratta di una V1.0 o di una V1.3
