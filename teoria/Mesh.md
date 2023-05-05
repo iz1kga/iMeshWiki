@@ -2,7 +2,7 @@
 title: Teoria
 description: Teoria della mesh
 published: true
-date: 2023-02-12T13:13:44.739Z
+date: 2023-05-05T15:00:52.945Z
 tags: 
 editor: markdown
 dateCreated: 2023-01-21T23:18:47.654Z
@@ -74,3 +74,18 @@ In sintesi, la differenza tra "long range" e "short range" in LoRa si basa sulla
 https://youtu.be/LbvAMmKtjcE
 
 i due canali sono stati spostati in modo da non interferire in locale, la funzione è modifica dell'OFFSET che in questo caso è di 500 KHz
+
+---
+
+> ### Relazione tra canali e frequenze:
+> |canale | frequenza (433 MHz)| frequenza (868 MHz)|
+> |---|---|---|
+> |Very Long Slow | 433,000 MHz||
+> |Long Slow | 433,300 MHz||
+> |Long Moderate | 433,550 MHz||
+> |Long Fast | 433,875 MHz||
+> |Medium Slow | 433,875 MHz||
+> |Medium Fast | 433,125 MHz||
+> |Short Slow | 433,600 MHz||
+> Short Fast | 433,875 MHz||
+{.is-info}
