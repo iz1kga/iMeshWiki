@@ -2,7 +2,7 @@
 title: Telemetria
 description: 
 published: true
-date: 2023-05-05T05:36:21.185Z
+date: 2023-05-05T05:36:43.925Z
 tags: 
 editor: markdown
 dateCreated: 2023-02-12T22:00:02.689Z
