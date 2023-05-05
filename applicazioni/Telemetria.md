@@ -2,7 +2,7 @@
 title: Telemetria
 description: 
 published: true
-date: 2023-05-05T08:28:32.356Z
+date: 2023-05-05T08:32:47.140Z
 tags: 
 editor: markdown
 dateCreated: 2023-02-12T22:00:02.689Z
@@ -52,3 +52,9 @@ Va anche onsiderato che di versioni Tlora1 ne esistono due pin to pin compatibil
 
 **Tlora-V1.3**
 ![tlora-v1.3.jpg](/tlora-v1.3.jpg)
+Questa versione è pin to pin compatibile con la versione 1.0 e a riguardo il costruttore fa la seguente comparazione.
+
+Comparison between Lora V1.3 and Lora V1.0:
+1.Product low power design
+2.Optimize LORA RF circuit
+3.Add battery voltage detection Pin IO35
