@@ -2,7 +2,7 @@
 title: Telemetria
 description: 
 published: true
-date: 2023-05-05T08:48:43.395Z
+date: 2023-05-05T08:53:24.025Z
 tags: 
 editor: markdown
 dateCreated: 2023-02-12T22:00:02.689Z
@@ -66,3 +66,4 @@ Vado a cablare INA219 e BM280 sulla mia Tlora-V1.0 sulla I2C con SDA 21 / SCL 22
 
 Il supporto sia di Discourse sia di Discord non porta a nulla se non al consiglio di cambiare schedina dato che il Tlora1 è in "phase out" come prodotto usabile.
 
+Non mi do per vinto e vado allora a clonare il git di meshtastic sul mio PC per controllare i sorgenti con platformIO / VScode. Nella definizione delle schede 
