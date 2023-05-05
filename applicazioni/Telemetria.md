@@ -2,7 +2,7 @@
 title: Telemetria
 description: 
 published: true
-date: 2023-05-05T08:48:17.777Z
+date: 2023-05-05T08:48:43.395Z
 tags: 
 editor: markdown
 dateCreated: 2023-02-12T22:00:02.689Z
@@ -62,7 +62,7 @@ Comparison between Lora V1.3 and Lora V1.0:
 Ambedue le versioni riportano un bus I2C sui pin 21 (SDA) e 22 (SCL). Ambedue le versioni segnano Oled montato su altro I2C bus (SDA) 4 e (SCL) 15. Tutto lascia quindi pensare che collegare SDA e SCL dei sensori che vogliamo usare a questo I2C bus sia logico. Il fatto che meshtastic abbia previsto un firmware specifico per ciascuna di queste versioni di Tlora1 mi lascia curioso ma posso pensare che sia motivato dal "voltage detection" presente solo sulla versione 1.3.
 
 ### Primo tentativo di telemetry
-Vado a cablare INA219 e BM280 sulla mia Tlora-V1.0 sulla I2C con SDA 21 / SCL 22, configuro telmetry environment con la Android App e osservo il primo risultato: il Tlora1 sembra funzionare regolarmente ma i dati di telemetry non escono per nulla.
+Vado a cablare INA219 e BM280 sulla mia Tlora-V1.0 sulla I2C con SDA 21 / SCL 22, configuro telemetry environment con la Android App e osservo il primo risultato: il Tlora1 sembra funzionare regolarmente ma i dati di telemetry non escono per nulla.
 
 Il supporto sia di Discourse sia di Discord non porta a nulla se non al consiglio di cambiare schedina dato che il Tlora1 è in "phase out" come prodotto usabile.
 
