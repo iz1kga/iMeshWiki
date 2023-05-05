@@ -2,7 +2,7 @@
 title: Telemetria
 description: 
 published: true
-date: 2023-05-05T15:46:18.293Z
+date: 2023-05-05T16:07:44.275Z
 tags: 
 editor: markdown
 dateCreated: 2023-02-12T22:00:02.689Z
@@ -88,6 +88,9 @@ Col primo tentativo avevo capito che il firmware Tlora-V1_3 supporta la I2C sui 
 1. Negativo della batteria al filo nero del connettore JST innestato nella Tlora1
 1. Positivo della batteria al V+ del sensore INA219
 1. V- del sensore INA219 al filo rosso del connettore JST innestato nella Tlora1
+
+### Dati telemetry environment dai sensori
+Temperatura,PA,umidità ambiente si spiegano da soli mentre per il sensore INA219 è interessante notare come un valore di corrente positivo indica il consumo di corrente della batteria che alimenta il Tlora mentre un valore negativo indica l'attuale corrente che sta caricando la batteria grazie a pannello solare o alimentazione via USB.
 
 
 
