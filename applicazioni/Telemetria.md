@@ -2,7 +2,7 @@
 title: Telemetria
 description: 
 published: true
-date: 2023-05-05T08:02:30.916Z
+date: 2023-05-05T08:28:32.356Z
 tags: 
 editor: markdown
 dateCreated: 2023-02-12T22:00:02.689Z
@@ -50,5 +50,5 @@ Va anche onsiderato che di versioni Tlora1 ne esistono due pin to pin compatibil
 **Tlora-V1.0**
 ![lora_v1.0_600x600.webp](/lora_v1.0_600x600.webp)
 
-
-
+**Tlora-V1.3**
+![tlora-v1.3.jpg](/tlora-v1.3.jpg)
