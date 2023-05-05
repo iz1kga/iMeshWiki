@@ -2,7 +2,7 @@
 title: Telemetria
 description: 
 published: true
-date: 2023-02-12T22:08:26.163Z
+date: 2023-05-05T05:23:55.015Z
 tags: 
 editor: markdown
 dateCreated: 2023-02-12T22:00:02.689Z
@@ -37,5 +37,9 @@ In sintesi, il sensore INA219 serve a misurare corrente e tensione in sistemi a 
 
 # Configurare la Tbeam e Tlora con i  Sensori
 
-under construction
+## Tlora-V1.0
+
+
+
+
 
