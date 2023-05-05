@@ -2,7 +2,7 @@
 title: Telemetria
 description: 
 published: true
-date: 2023-05-05T15:20:10.714Z
+date: 2023-05-05T15:46:18.293Z
 tags: 
 editor: markdown
 dateCreated: 2023-02-12T22:00:02.689Z
@@ -70,7 +70,24 @@ Non mi do per vinto e vado allora a clonare il git di meshtastic sul mio PC per 
 
 Il microcontroller ESP32 cuore del Tlora ha due interfacce IC2 anche se nel pinout ne viene mostrata solo una (quella sui pin 21 - 22) mentre l'altra non viene mostrata come tale ma di supporto a altri servizi tipo il touch screen mentre sotto esiste sui pin 4 - 15. Evidentemente la scelta fatta al momento dello sviluppo del firmware Tlora1 è stata quella di supportare una sola interfaccia I2C che era qualla su cui era cablato il display oled che vede per la Tlora-v1.0 la I2C sui pin 4 - 15 mentre l'hardware della versione 1.3 vede l'oled cablato sulla I2C facente capo ai pin 21 - 22.  
 
-La scelta invece di supportare ambedue le interfacce sulla Tlora-V1.0 avrebbe evitato di creare confusione per chi avesse voluto installare sensori su questa scheda osservandone il pinout che mette in evidenza la IC2 sui pin 21 - 22 mentre invece viene supportata solo e soltanto la IC2 dove è montato l'oled.  
+La scelta invece di supportare ambedue le interfacce sulla Tlora-V1.0 avrebbe evitato di creare confusione per chi avesse voluto installare sensori su questa scheda osservandone il pinout che mette in evidenza la IC2 sui pin 21 - 22 mentre invece questa interfaccia è di fatto del tutto ignorata. L'unico modo per capire dove cablare il sensore su TLora-V1.0 è quello di osservare il file variant.h dell'ambiente Tlora-v1 nei sorgenti del progetto git meshtastic non esendo disponibili note a riguardo in nessun wiki.
+
+### Secondo tentativo
+Col primo tentativo avevo capito che il firmware Tlora-V1_3 supporta la I2C sui pin 21 - 22 (visibile da pinout comune alle 2 due versioni) sulla scheda Tlora-V1.0 che ha cablato l'oled sull'altra I2C facente capo ai pin 4 - 15. Mi rimaneva allora da provare ricaricando il firmware Tlora-V1 dopo aver cablato i sensori sulla I2C (non visibile nello schema del pinout) che fa capo ai pin 4 - 15. Detto fatto ho ottenuto il giusto funzionamneto sia del display oled che dei sensori INA219 e BME280 contemporaneamente.
+
+## Conclusioni
+1. Se si è in possesso di una Tlora1, prima di tutto va capito se si tratta di una V1.0 o di una V1.3
+2. Per capire se è una V1.0 si carica il firware V1 e se l'oled si accende è una V1 altrimenti è una V1.3 o in alternativa l'oled è guasto.
+3. Se abbiamo una V1.0 i sensori vanno cablati sui pin SDA 4 - SCL 15 altrimenti SDA 21 - SCL 22.
+
+### Cablaggio del sensore INA219
+1. Vin al +3.3
+1. Gnd al un Gnd della Tlora
+1. Scl al pin 15 o 22 a seconda se una V1.0 o una V1.3
+1. Sda al pin  4 0 21 a seconda se una V1.0 o una V1.3
+1. Negativo della batteria al filo nero del connettore JST innestato nella Tlora1
+1. Positivo della batteria al V+ del sensore INA219
+1. V- del sensore INA219 al filo rosso del connettore JST innestato nella Tlora1
 
 
 
