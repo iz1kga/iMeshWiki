@@ -2,7 +2,7 @@
 title: Telemetria
 description: 
 published: true
-date: 2023-05-05T09:09:14.002Z
+date: 2023-05-05T15:13:44.804Z
 tags: 
 editor: markdown
 dateCreated: 2023-02-12T22:00:02.689Z
@@ -66,7 +66,9 @@ Vado a cablare INA219 e BM280 sulla mia Tlora-V1.0 sulla I2C con SDA 21 / SCL 22
 
 Il supporto sia di Discourse sia di Discord non porta a nulla se non al consiglio di cambiare schedina dato che il Tlora1 è in "phase out" come prodotto usabile.
 
-Non mi do per vinto e vado allora a clonare il git di meshtastic sul mio PC per controllare i sorgenti con platformIO / VScode. Nella definizione delle schede vedo che per la Tlora-V1.0 SDA e SDL sono attribuiti ai pin 4 - 15 mentre per la Tlora-V1.3 SDA / SDL sono sui pin 21 - 22. Avendo io cablato i snsori su questi pin vado allora a caricare il firmware V1_3 al posto del V1 a noto subito che i sensori funzionano bene a scapito però del Oled che rimane spento.
+Non mi do per vinto e vado allora a clonare il git di meshtastic sul mio PC per controllare i sorgenti con platformIO / VScode. Nella definizione delle schede vedo che per la Tlora-V1.0 SDA e SDL sono attribuiti ai pin 4 - 15 mentre per la Tlora-V1.3 SDA / SDL sono sui pin 21 - 22. Avendo io cablato i snsori su questi pin vado allora a caricare il firmware V1_3 al posto del V1 a noto subito che i sensori funzionano bene a scapito però dell' Oled che rimane spento.
+
+Il microcontroller ESP32 cuore del Tlora ha due interfacce IC2 anche se nel pinout ne viene mostrata solo una (quella sui pin 21 - 22) mentre l'altra non viene mostrata come tale ma di supporto a altri servizi tipo il touch screen mentre sotto esiste sui pin 4 - 15. Evidentemente la scelta fatta al momento dello sviluppo del firmware Tlora1 è stata quella di supportare una sola interfaccia I2C che era qualla su cui era cablato il display oled che vede per la Tlora-v1.0 la I2C sui pin 4 - 15 mentre l'hardware della versione 1.3 vede l'oled cablato sulla I2C facente capo ai pin 21 - 22.  
 
 
 
