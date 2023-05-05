@@ -2,7 +2,7 @@
 title: Telemetria
 description: 
 published: true
-date: 2023-05-05T07:21:10.939Z
+date: 2023-05-05T08:01:43.249Z
 tags: 
 editor: markdown
 dateCreated: 2023-02-12T22:00:02.689Z
@@ -48,9 +48,7 @@ Sapendo che i sensori INA219 e BME280 funzionano utilzzando interfaccia I2C, aff
 
 Va anche onsiderato che di versioni Tlora1 ne esistono due pin to pin compatibili e non distinguibili ad osservazione esterna. Vediamo allora le immagini dei rispettivi pinout:
 
-
-
-
+![lora_v1.0_600x600.webp](/lora_v1.0_600x600.webp)
 
 
 
