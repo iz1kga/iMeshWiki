@@ -2,7 +2,7 @@
 title: Telemetria
 description: 
 published: true
-date: 2023-05-05T05:47:35.480Z
+date: 2023-05-05T07:21:10.939Z
 tags: 
 editor: markdown
 dateCreated: 2023-02-12T22:00:02.689Z
@@ -45,6 +45,10 @@ Una via d'uscita immediata la vedevo nell'uso di un TloraV1.0 dei due in mio pos
 
 ### Approccio, problemi e soluzione
 Sapendo che i sensori INA219 e BME280 funzionano utilzzando interfaccia I2C, affronto il problema andando a vedere nel pinout del Tlora-V1 (TTGO LoRa32-oled V1) quali pin scegliere per connettere i segnali SDA e SCL.
+
+Va anche onsiderato che di versioni Tlora1 ne esistono due pin to pin compatibili e non distinguibili ad osservazione esterna. Vediamo allora le immagini dei rispettivi pinout:
+
+
 
 
 
