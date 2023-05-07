@@ -2,7 +2,7 @@
 title: Mesh performances
 description: 
 published: true
-date: 2023-05-07T21:12:31.982Z
+date: 2023-05-07T21:13:44.699Z
 tags: 
 editor: markdown
 dateCreated: 2023-02-15T17:54:35.741Z
@@ -139,7 +139,9 @@ Tabella per registazione dati di ciascun nodo aggiornati nel tempo
 	"airutiltx" REAL,
 	"pressione" REAL,
 	"temperat" REAL,
-	"umidita" REAL
+	"umidita" REAL,
+  "voltage" REAL,
+  "corrente" REAL
 	)
 
 La tabella connessioni contiene un record per ogni singolo nodo per ogni singola variazione di distanza di oltre 100mt verso il router_client Home. In questo modo è possibile tracciare i percorsi effettuati dai nodi nel tempo.
