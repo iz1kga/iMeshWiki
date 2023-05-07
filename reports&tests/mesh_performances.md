@@ -2,7 +2,7 @@
 title: Mesh performances
 description: 
 published: true
-date: 2023-04-13T11:04:25.441Z
+date: 2023-05-07T21:12:03.969Z
 tags: 
 editor: markdown
 dateCreated: 2023-02-15T17:54:35.741Z
@@ -159,6 +159,8 @@ I dati vecchi oltre i 10 giorni vengono automaticamente cancellati ad ogni ripar
 2. Il primo messaggio che normalmente esce dal device è un ADMIN_APP con origine e destinazione pari a node_id dello stesso. E' importante che questo messaggio arrivi nei primi inviati pervhé è per questo tramite che viene identificato il nodenum che è la chiave identificativa di mioGW ovvero il nodo Home. Se il messaggio ADMIN_APP non esce nei primi sette / otto basta al volo un reset per reboot e la cosa si risolve.
 ### Ultimo aggiornamento
 In data 13 aprile 2023 aggiornati broadcast_msg_pyq5.py e meshdb.db in modo da registrare in DB nei dati di telemetry anche quelli di 'environment' ovvero pressione, temperatura, umidità che eventualmente il nodo fornisce con cadenza ogni 10 minuti.
+
+In data 7 Maggio 2023 aggiornati broadcast_msg_pyq5.py e meshdb.db in modo da registrare in DB nei dati di telemetry anche tensione di batteria e corrente consumata o di carica misurate dal sensore INA219
 ### Download applicazione e DB Sqlite
 [broadcast_msg_pyq5.py](/broadcast_msg_pyq5.py)
 [meshdb.db](/meshdb.db)
