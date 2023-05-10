@@ -2,7 +2,7 @@
 title: Teoria
 description: Teoria della mesh
 published: true
-date: 2023-05-10T07:24:30.662Z
+date: 2023-05-10T07:25:22.859Z
 tags: 
 editor: markdown
 dateCreated: 2023-01-21T23:18:47.654Z
