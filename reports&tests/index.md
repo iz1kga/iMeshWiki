@@ -2,7 +2,7 @@
 title: Index
 description: In questa sezione saranno raccolti test e misure fatti nel mesh
 published: true
-date: 2023-05-18T20:40:03.630Z
+date: 2023-05-26T12:57:04.320Z
 tags: 
 editor: markdown
 dateCreated: 2023-02-15T18:25:10.281Z
@@ -18,3 +18,4 @@ Al momento sono presenti un test fatto sulla Web Gui interface , la descrizione 
 [test_batteria2600_pannello_30w.pdf](/test_batteria2600_pannello_30w.pdf)
 [studio_batterie.pdf](/studio_batterie.pdf)
 [studio_batterie_tlora2-116.pdf](/studio_batterie_tlora2-116.pdf)
+[test_tlora2_batt3500mah_ps30w.pdf](/test_tlora2_batt3500mah_ps30w.pdf)
