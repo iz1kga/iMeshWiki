@@ -2,7 +2,7 @@
 title: Teoria
 description: Teoria della mesh
 published: true
-date: 2023-05-10T07:25:22.859Z
+date: 2023-08-14T13:59:05.557Z
 tags: 
 editor: markdown
 dateCreated: 2023-01-21T23:18:47.654Z
@@ -88,4 +88,6 @@ i due canali sono stati spostati in modo da non interferire in locale, la funzio
 > |Medium Fast | 433,125 MHz|869,453 MHz|
 > |Short Slow | 433,600 MHz|869,448 MHz|
 > Short Fast | 433,875 MHz|869,448 MHz|
+N.B. Non è necessario cambiare la frequenza sul dispositivo; la selezione del canale imposta automaticamente la frequenza.
 {.is-info}
+
