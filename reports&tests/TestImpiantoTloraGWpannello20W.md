@@ -1,8 +1,8 @@
 ---
-title: Test impianto Tlora GW con pannello 20W
+title: Test impianto Tlora GW con pannello 20W by IU2RPO 1 Sett 2023
 description: Messa in opera di pannello solare 20W per alimentare Tlora GW con supporto batteria Pb da 12V /Ah e MPPT charge controller
 published: true
-date: 2023-09-01T14:07:23.159Z
+date: 2023-09-01T14:10:41.228Z
 tags: 
 editor: markdown
 dateCreated: 2023-09-01T14:05:07.953Z
