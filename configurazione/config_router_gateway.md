@@ -2,7 +2,7 @@
 title: Configurazione Router - Gateway
 description: 
 published: true
-date: 2023-02-17T10:00:18.723Z
+date: 2023-09-18T14:05:30.540Z
 tags: 
 editor: markdown
 dateCreated: 2023-01-30T13:59:05.219Z
@@ -10,6 +10,9 @@ dateCreated: 2023-01-30T13:59:05.219Z
 
 [Una buona configurazione è la base del buon funzionamento della mesh!](/teoria/Mesh)
 
+## Canale
+
+al momento i due canali utilizzati sono LongFast e MediumFast, nel nord'ovest del paese c'è predominanza di radio a 868MHz impostate con LongFast. Accedendo alla [mappa](https://map.loraitalia.it) e possibile filtrare i nodi per canale e frequenza per avere un'idea della copertura attuale.
 
 ## Nome dispositivo
 Il nome del dispositivo permette agli altri nodi di identificare il nodo in maniera univoca, non ci sono vincoli particolari sul nome. Ci sono due nomi da impostare: il LongName e lo ShortName 
