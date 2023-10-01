@@ -404,6 +404,9 @@ class App(QWidget):
         qr = "delete from connessioni where data < '"+prvdate+"'"
         cur.execute(qr)
         conn.commit()
+        qr = "delete from origmsg where data < '"+prvdate+"'"
+        cur.execute(qr)
+        conn.commit()
         cur.close()
         conn.close()  
         print("Rimossi record vecchi piu di "+str(ng)+" giorni.")
@@ -731,13 +734,30 @@ class App(QWidget):
                 print(record)
                 self.log.append(record)
             self.count += 1
+            print("ID and FROM")
+            print(packet['id'])
+            msgID = packet['id']
+            print(packet['from'])
+            orig = packet['from']
+            longname = self.findUser(orig)
+            if(self.testMsgOrig(msgID,orig) == True):
+                #print("POSSO INSERIRE msgID e ORIGINE")
+                ora = datetime.datetime.now().strftime("%T")
+                data = datetime.datetime.now().strftime("%y/%m/%d")
+                qr = "insert into origmsg (data,ora,msgid,origin,longname,tipmsg) \
+                    values('"+data+"','"+ora+"','"+str(msgID)+"','"+str(orig)+"','"+longname+"','"+tipmsg+"')"
+                self.insertDB(qr)
+            else: 
+                msg = datetime.datetime.now().strftime("%d/%m/%y %T")+" "+str(msgID)+" da "+longname+" duplicato"
+                self.log.append(msg)    
+
         else:
             tipmsg = 'NON_GESTITO'
         user = self.findUser(from_)
         if(user == None):
             user = "unknown"
         if(len(user) > 20):
-            user = user[0:20]
+            user = user[:20]
         while(len(user) < 20):
                 user += ' '
         self.logpMsg(dachi,user,achi,tipmsg)
@@ -843,6 +863,21 @@ class App(QWidget):
                     self.table1.setItem(r,13,item13)
                 r += 1
     
+    def testMsgOrig(self,msgID,orig):
+        qr = "select count(*) from origmsg where msgid='"+str(msgID)+"' and origin='"+str(orig)+"'"
+        self.calldb.dbbusy = True
+        conn = dba.connect('meshDB.db')
+        cur = conn.cursor()
+        rows = cur.execute(qr)
+        datas = rows.fetchall()
+        #print(datas)
+        cur.close()
+        conn.close()
+        self.calldb.dbbusy = False
+        if(datas[0][0] == 0):
+            return True
+        return False
+
     
     def insertDB(self,query):
         timstr = time.perf_counter_ns()
@@ -1080,8 +1115,11 @@ class App(QWidget):
                 if('user' not in info):
                     self.nodeInfo[i].update({'user': self.findUser(nodenum)})
                 if(battlv == ' '):
-                    if('voltage' in self.nodeInfo[i]):
-                        carica = ((self.nodeInfo[i]['voltage']-3.6)/0.6)*100
+                    if('voltage' in self.nodeInfo[i]): # se controlliamo batteria da 12V / solar panel
+                        if(self.nodeInfo[i]['voltage'] > 10.4):
+                            carica = ((self.nodeInfo[i]['voltage']-10.5)/2.3)*100 # carica a 100% se batt = 12.8V
+                        else:   # batteria interna a Tlora
+                            carica = ((self.nodeInfo[i]['voltage']-3.6)/0.6)*100
                         battlv = round(carica,1)       
                 self.nodeInfo[i].update({'battlv': battlv})
                 self.nodeInfo[i].update({'chutil': round(chanutil,2)})
@@ -1212,11 +1250,12 @@ class meshInterface(QThread):
 
     def setInterface(self):    
         try:
-            self.interface = meshtastic.serial_interface.SerialInterface()
+            self.interface =  meshtastic.serial_interface.SerialInterface()
             pub.subscribe(self.onReceive, "meshtastic.receive") 
             print("Set interface..")
             return True
-        except:
+        except Exception as err:
+            print(f"Unexpected {err=}, {type(err)=}")
             print("Time out in attesa meshtastic.SerialInterface")
             ex.log.append("Errore time-out sulla seriale: STACCARE E RICOLLEGARE il device verificare poi che CLI meshtastic --info funzioni e quando OK rilanciare applicazione.")
             return False
@@ -1363,8 +1402,8 @@ class callDB(QThread):
         while(True):
             time.sleep(0.5)
             self.slptcnt += 1
-            #ogni 10 minuti salva valori chanUtil e AirUtilTX di mioGW
-            if(self.slptcnt % 1200 == 0):
+            #ogni 5 minuti salva valori chanUtil e AirUtilTX di mioGW
+            if(self.slptcnt % 600 == 0):
                 myair = ex.airustx.text()
                 myair = myair[0:len(myair)-1]
                 myair = float(myair)/10
@@ -1382,30 +1421,30 @@ class callDB(QThread):
                 for info in ex.nodeInfo:
                     qr = "insert into airtx (data,ora,nodenum,longname,chanutil,airutiltx,battlv,pressione,temperatura,umidita,voltage,corrente) values('"\
                         +data+"','"+ora+"','"
-                    if('tsTl' in info):
-                        if('chutil'in info and 'airutil' in info and not info['user'] == 'mioGW'):
-                            tdiff = tstamp - info['tsTl']
-                            press = ' '
-                            if('pressione' in info):
-                                press = str(round(info['pressione'],1))
-                            tempr = ' '
-                            if('temperatura' in info):
-                                tempr = str(round(info['temperatura'],1))
-                            umid = ' '
-                            if('humidity' in info):
-                                umid = str(round(info['humidity'],1))
-                            voltage = ' '
-                            if('voltage' in info):
-                                voltage =  str(round(info['voltage'],2))
-                            corrente = ' '
-                            if('corrente' in info):
-                                corrente = str(round(info['corrente'],2))
-                            if(tdiff < 606):    #ultimo msg non più vecchio di 10min
-                                qr += str(info['nodenum'])+"','"+info['user']+"','"+str(round(info['chutil'],2))+"','"+ \
-                                    str(round(info['airutil'],2))+"','"+str(info['battlv'])+"','"+press+"','"+tempr+"','"+umid+"','"+voltage+"','"+corrente+"')"
-                                self.insertDB(qr)
-                                print("Aggiornato AirUtilTX di "+info['user'])
-                                #print(info)
+                    #if('tsTl' in info):
+                    if('chutil'in info and 'airutil' in info and not info['user'] == 'mioGW'):
+                        #tdiff = tstamp - info['tsTl']
+                        press = ' '
+                        if('pressione' in info):
+                            press = str(round(info['pressione'],1))
+                        tempr = ' '
+                        if('temperatura' in info):
+                            tempr = str(round(info['temperatura'],1))
+                        umid = ' '
+                        if('humidity' in info):
+                            umid = str(round(info['humidity'],1))
+                        voltage = ' '
+                        if('voltage' in info):
+                            voltage =  str(round(info['voltage'],2))
+                        corrente = ' '
+                        if('corrente' in info):
+                            corrente = str(round(info['corrente'],2))
+                        #if(tdiff < 500):    #ultimo msg non più vecchio di 10min
+                        qr += str(info['nodenum'])+"','"+info['user']+"','"+str(round(info['chutil'],2))+"','"+ \
+                                str(round(info['airutil'],2))+"','"+str(info['battlv'])+"','"+press+"','"+tempr+"','"+umid+"','"+voltage+"','"+corrente+"')"
+                        self.insertDB(qr)
+                        print("Aggiornato AirUtilTX di "+info['user'])
+                        #print(info)
 
             if(len(self.arraypdict) == 0):  
                 continue
