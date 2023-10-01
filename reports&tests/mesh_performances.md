@@ -2,13 +2,13 @@
 title: Mesh performances
 description: 
 published: true
-date: 2023-05-14T16:48:33.025Z
+date: 2023-10-01T06:01:30.143Z
 tags: 
 editor: markdown
 dateCreated: 2023-02-15T17:54:35.741Z
 ---
 
-# Lo strumento di controllo sviluppato 
+[broadcast_msg_pyq5.py](/broadcast_msg_pyq5.py)# Lo strumento di controllo sviluppato 
 by Vincenzo Lorenzale (IU2RPO) il 6 Marzo 2023
 
 ---
@@ -163,6 +163,7 @@ I dati vecchi oltre i 10 giorni vengono automaticamente cancellati ad ogni ripar
 In data 13 aprile 2023 aggiornati broadcast_msg_pyq5.py e meshdb.db in modo da registrare in DB nei dati di telemetry anche quelli di 'environment' ovvero pressione, temperatura, umidità che eventualmente il nodo fornisce con cadenza ogni 10 minuti.
 
 In data 7 Maggio 2023 aggiornati broadcast_msg_pyq5.py e meshdb.db in modo da registrare in DB nei dati di telemetry anche tensione di batteria e corrente consumata o di carica misurate dal sensore INA219
+
+In data 1 Ottobre aggiunto controllo ricezione messaggi duplicati. Il DB aggiornato ha fallito il caricamento che andrà riprovato quanto prima.
 ### Download applicazione e DB Sqlite
 [broadcast_msg_pyq5.py](/broadcast_msg_pyq5.py)
-[meshdb.db](/meshdb.db)
