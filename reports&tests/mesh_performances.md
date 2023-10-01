@@ -2,7 +2,7 @@
 title: Mesh performances
 description: 
 published: true
-date: 2023-10-01T08:01:00.035Z
+date: 2023-10-01T08:46:02.015Z
 tags: 
 editor: markdown
 dateCreated: 2023-02-15T17:54:35.741Z
@@ -173,6 +173,7 @@ In data 13 aprile 2023 aggiornati broadcast_msg_pyq5.py e meshdb.db in modo da r
 
 In data 7 Maggio 2023 aggiornati broadcast_msg_pyq5.py e meshdb.db in modo da registrare in DB nei dati di telemetry anche tensione di batteria e corrente consumata o di carica misurate dal sensore INA219
 
-In data 1 Ottobre aggiunto controllo ricezione messaggi duplicati. Il DB aggiornato ha fallito il caricamento che andrà riprovato quanto prima.
+In data 1 Ottobre aggiunto controllo ricezione messaggi duplicati.
 ### Download applicazione e DB Sqlite
 [broadcast_msg_pyq5.py](/broadcast_msg_pyq5.py)
+[meshdb.db](/meshdb.db)
