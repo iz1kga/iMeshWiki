@@ -2,7 +2,7 @@
 title: Mesh performances
 description: 
 published: true
-date: 2023-10-01T06:07:49.911Z
+date: 2023-10-01T07:55:43.101Z
 tags: 
 editor: markdown
 dateCreated: 2023-02-15T17:54:35.741Z
@@ -143,6 +143,15 @@ Tabella per registazione dati di ciascun nodo aggiornati nel tempo
   "voltage" REAL,
   "corrente" REAL
 	)
+
+Tabella per controllo messaggi duplicati
+4. CREATE TABLE "origmsg" (
+	"data"	TEXT,
+	"ora"	TEXT,
+	"msgid"	TEXT,
+	"origin"	TEXT,
+	"longname"	TEXT
+, tipmsg text)
 
 La tabella connessioni contiene un record per ogni singolo nodo per ogni singola variazione di distanza di oltre 100mt verso il router_client Home. In questo modo è possibile tracciare i percorsi effettuati dai nodi nel tempo.
 
