@@ -2,7 +2,7 @@
 title: Hardware
 description: 
 published: true
-date: 2023-01-28T23:43:40.502Z
+date: 2024-01-02T20:31:47.714Z
 tags: 
 editor: markdown
 dateCreated: 2023-01-27T13:28:35.196Z
@@ -14,6 +14,8 @@ dateCreated: 2023-01-27T13:28:35.196Z
 ![lora32.jpg](/hardware/lora32.jpg =250x)
 Scheda basata su ESP32, è economica, piccola e integra display, BLE, Wi-Fi ma non il GPS.
 Basso assorbimento e buona affidabilità la rendono adatta all'uso come nodo fisso autoalimentato.
+
+Si può aggiungere agevolmente un ricevitore GPS per trasformare questa scheda in un ottimo nodo mobile
 
 ## T-Beam
 ![t-beam.jpg](/hardware/t-beam.jpg =250x)
