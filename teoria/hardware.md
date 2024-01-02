@@ -2,7 +2,7 @@
 title: Hardware
 description: 
 published: true
-date: 2024-01-02T20:57:13.322Z
+date: 2024-01-02T20:59:14.199Z
 tags: 
 editor: markdown
 dateCreated: 2023-01-27T13:28:35.196Z
@@ -17,7 +17,8 @@ Basso assorbimento e buona affidabilità la rendono adatta all'uso come nodo fis
 
 Si può aggiungere agevolmente un ricevitore GPS per trasformare questa scheda in un ottimo nodo mobile.
 
-[Modulo GPS](https://it.aliexpress.com/item/1005005594442876.html)
+[Modulo GPS (Aliexpress)](https://it.aliexpress.com/item/1005005594442876.html)
+[Modulo GPS (Amazon)](https://www.amazon.it/ICQUANZX-GY-NEO6MV2-Controller-ceramica-resistente/dp/B088LR3488/)
 
 [![gpsconn.png](/hardware/gpsconn.png =250x)](/hardware/gpsconn.png)
 Connessione modulo GPS
