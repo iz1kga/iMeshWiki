@@ -2,7 +2,7 @@
 title: Hardware
 description: 
 published: true
-date: 2024-01-02T20:31:47.714Z
+date: 2024-01-02T20:57:13.322Z
 tags: 
 editor: markdown
 dateCreated: 2023-01-27T13:28:35.196Z
@@ -15,7 +15,13 @@ dateCreated: 2023-01-27T13:28:35.196Z
 Scheda basata su ESP32, è economica, piccola e integra display, BLE, Wi-Fi ma non il GPS.
 Basso assorbimento e buona affidabilità la rendono adatta all'uso come nodo fisso autoalimentato.
 
-Si può aggiungere agevolmente un ricevitore GPS per trasformare questa scheda in un ottimo nodo mobile
+Si può aggiungere agevolmente un ricevitore GPS per trasformare questa scheda in un ottimo nodo mobile.
+
+[Modulo GPS](https://it.aliexpress.com/item/1005005594442876.html)
+
+[![gpsconn.png](/hardware/gpsconn.png =250x)](/hardware/gpsconn.png)
+Connessione modulo GPS
+
 
 ## T-Beam
 ![t-beam.jpg](/hardware/t-beam.jpg =250x)
