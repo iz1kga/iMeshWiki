@@ -1,8 +1,8 @@
 ---
-title: Hardware
+title: Dispositivi LoRa
 description: 
 published: true
-date: 2024-01-02T20:59:14.199Z
+date: 2024-01-05T18:06:47.760Z
 tags: 
 editor: markdown
 dateCreated: 2023-01-27T13:28:35.196Z
