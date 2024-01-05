@@ -2,7 +2,7 @@
 title: Antenne
 description: Antenne LoRa
 published: true
-date: 2024-01-05T16:54:29.223Z
+date: 2024-01-05T17:27:40.571Z
 tags: 
 editor: markdown
 dateCreated: 2023-02-16T08:06:26.099Z
@@ -25,3 +25,8 @@ dateCreated: 2023-02-16T08:06:26.099Z
 # 4G 5dbi Antenna LTE
 [Antenna LTE](https://it.aliexpress.com/item/32888310888.html)
 ![4glte_ant.webp](/antenne/4glte_ant.webp =x300)![4glte.jpg](/antenne/4glte.jpg =500x)
+
+# Grandwisdom 5dBi
+[Antenna portatile da 27cm](https://www.aliexpress.com/item/1005004357899957.html) Attenzione a selezionare il connettore "SMA Male"
+![grandwisdom2.webp](/grandwisdom2.webp)
+![grandwisdom_inside.jpeg](/grandwisdom_inside.jpeg)
