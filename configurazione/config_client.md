@@ -2,7 +2,7 @@
 title: Configurazione Client
 description: 
 published: true
-date: 2024-01-07T21:35:53.778Z
+date: 2024-01-07T21:54:12.932Z
 tags: 
 editor: markdown
 dateCreated: 2023-01-22T00:08:07.747Z
@@ -85,3 +85,17 @@ Il dispositivo tramite dei sensori interni può inviare a intervalli regolari il
 ## Neighbor Info
 
 Questo modulo invia in rete informazioni circa i nodi con i quali il nostro nodo riesce a stabilire una comunicazione radio diretta. Questo permette di visualizzare sulla [mappa](https://map.loraitalia.it/) la topologia di rete e ci restituisce informazioni preziose circa la bontà dei link che vengono stabiliti. E' bene attivarlo ed impostare a 36000 secondi la frequenza di invio.
+
+## Channel URL
+
+Meshtastic prevede l'utilizzo di 8 canali (da ZERO A SETTE) dedicati alla chat.
+Il canale primario è di default lo ZERO, ed è su questo che vengono inviati i messaggi periodici di telemetria e posizione.
+I restanti 7 canali sono disponibili e ne abbiamo utilizzati 4 per suddividere i temi di discussione principale, un po' come avviene sui forum o sulle chat.
+Canale 1: NewsFeed (messaggi automatici tipo report meteo o letture di sensori utili per la comunità)
+Canale 2: 
+Canale 3: 
+Canale 4: 
+
+Per configurare questi canali sul tuo dispositivo puoi, se usi l'app per smartphone, inquadrare il QR-Code sottostante oppure, tramite web-client, incollare l'URL che segue.
+
+QR-Code e URL in arrivo. Stay tuned.
