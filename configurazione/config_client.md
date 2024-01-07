@@ -2,7 +2,7 @@
 title: Configurazione Client
 description: 
 published: true
-date: 2023-01-22T10:26:36.483Z
+date: 2024-01-07T20:27:32.969Z
 tags: 
 editor: markdown
 dateCreated: 2023-01-22T00:08:07.747Z
@@ -15,19 +15,16 @@ dateCreated: 2023-01-22T00:08:07.747Z
 Il nome del dispositivo permette agli altri nodi di identificare il nodo in maniera univoca, non ci sono vincoli particolari sul nome. Ci sono due nomi da impostare: il LongName e lo ShortName 
 
 ### LongName
-il LongName viene usato per visualizzare l'elenco dei nodi ricevuti e la mappa. 
-
-Si di inserire al fondo del nome gli ultimi quatro caratteri dell'ID dispositivo in modo da garantire l'unicità del nome, esempio:
-
-*Nome_Nodo_Lora_**a2db***
+il LongName viene usato nell'elenco dei nodi ricevuti e nella mappa. 
+Può contenere lettere, numeri, simboli ed anche icone
 
 **Python CLI:**
 ```bash
-meshtastic --set-owner 'NODE-NAME_af38'
+meshtastic --set-owner 'NODE-NAME'
 ```
 
 ### ShortName
-Lo short name viene utilizzato per identificare il nodo nella chat. Ha un vincolo sulla lunghezza di 4 caratteri.
+Lo short name viene utilizzato per identificare il nodo nella chat. Ha un vincolo sulla lunghezza di 4 caratteri, oppure un'icona.
 
 **Python CLI:**
 ```bash
@@ -63,15 +60,15 @@ meshtastic --set lora.region 3
 ```
 
 ### HopLimit
-Un pacchetto lora ha un **limite massimo** di nodi da cui può essere ripetuto. Ogni ripetizione di un nodo è chiamato **hop**. Un nodo client dovrebbe avere impostato l'***hopLimit*** da un minimo di 5 a un massimo di 7 hop (il massimo consentito dal LoRa).
+Un pacchetto lora ha un **limite massimo** di nodi da cui può essere ripetuto. Ogni ripetizione di un nodo è chiamato **hop**. Un nodo client dovrebbe avere impostato l'***hopLimit*** a 3.
 
 **Python CLI:**
 ```bash
-meshtastic --set lora.hop_limit 5
+meshtastic --set lora.hop_limit 3
 ```
 
 ## Role
-Per i client l'impostazione del ruolo deve essere di tipo **CLIENT**
+Il ruolo di un nodo, salvo casi particolari, deve essere di tipo **CLIENT**
 
 ```bash
 meshtastic --set device.role CLIENT
@@ -79,7 +76,8 @@ meshtastic --set device.role CLIENT
 
 ## Position
 
-
+La posizione viene acquisita dal dispositivo in maniera automatica se dotato di ricevitore GPS integrato. In caso contrario è possibile impostare dei valori fissi di latitudine / longitudine oppure far si che questi vengano acquisiti, tramite bluetooth, dallo smartphone.
 
 ## Telemetry
 
+Il dispositivo tramite dei sensori interni può inviare a intervalli regolari il livello di carica della batteria e anche, se dotato di sensori aggiuntivi, misure relative all'ambiente (T/H/P) o - ad esempio - alla corrente e alla tensione di un circuito di alimentazione solare.
