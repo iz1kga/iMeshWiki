@@ -2,7 +2,7 @@
 title: Teoria
 description: Teoria della mesh
 published: true
-date: 2024-01-08T18:44:32.262Z
+date: 2024-01-08T19:09:19.171Z
 tags: 
 editor: markdown
 dateCreated: 2023-01-21T23:18:47.654Z
@@ -72,7 +72,7 @@ Esistono 6 canali predefiniti, che prevedono valori diversi dei seguenti paramet
 
 > ### Canali predefiniti
 > |Channel setting | Alt Channel Name | Data-Rate | SF / Symbols | Coding Rate | Bandwidth | Link Budget |
-> |---|---|---|
+> |---|---|---|---|---|---|---|
 > |Short Range / Fast | Short Fast |	10.94 kbps |	7 / 128 |	4/5 |	250 |	137dB |
 > |Short Range / Slow |	Short Slow |	6.25 kbps |	8 / 256 |	4/5 |	250 |	140dB |
 > |Medium Range / Fast |	Medium Fast |	3.52 kbps |	9 / 512 |	4/5 |	250 |	143dB |
