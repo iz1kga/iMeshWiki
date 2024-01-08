@@ -1,0 +1,77 @@
+<!--
+title: Sensori per moduli LoRa
+description: Sensori di temperatura, pressione, umidità, corrente, tensione
+published: true
+date: 2024-01-08T21:54:41.219Z
+tags: 
+editor: ckeditor
+dateCreated: 2024-01-08T21:54:41.219Z
+-->
+
+<h1>Sensori</h1>
+<p>&nbsp;</p>
+<h3>Sensori supportati dal firmware Meshtastic</h3>
+<figure class="table">
+  <table>
+    <thead>
+      <tr>
+        <th style="background-color:var(--ifm-table-head-background);border-bottom:solid var(--ifm-table-border-color);border-left:solid var(--ifm-table-border-color);border-right:solid var(--ifm-table-border-color);border-top:solid var(--ifm-table-border-color);text-align:center;vertical-align:bottom;"><strong>Sensor</strong></th>
+        <th style="background-color:var(--ifm-table-head-background);border-bottom:solid var(--ifm-table-border-color);border-left:solid var(--ifm-table-border-color);border-right:solid var(--ifm-table-border-color);border-top:solid var(--ifm-table-border-color);text-align:center;vertical-align:bottom;"><strong>I<sup>2</sup>C Address</strong></th>
+        <th style="background-color:var(--ifm-table-head-background);border-bottom:solid var(--ifm-table-border-color);border-left:solid var(--ifm-table-border-color);border-right:solid var(--ifm-table-border-color);border-top:solid var(--ifm-table-border-color);text-align:center;vertical-align:bottom;"><strong>Data Points</strong></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="border-bottom:solid var(--ifm-table-border-color);border-left:solid var(--ifm-table-border-color);border-right:solid var(--ifm-table-border-color);border-top:solid var(--ifm-table-border-color);padding:0.75em 0.75em 0.75em 0px;text-align:center;">BMP280</td>
+        <td style="border-bottom:solid var(--ifm-table-border-color);border-left:solid var(--ifm-table-border-color);border-right:solid var(--ifm-table-border-color);border-top:solid var(--ifm-table-border-color);padding:0.75em;text-align:center;">0x76, 0x77</td>
+        <td style="border-bottom:solid var(--ifm-table-border-color);border-left:solid var(--ifm-table-border-color);border-right:solid var(--ifm-table-border-color);border-top:solid var(--ifm-table-border-color);padding:0.75em 0px 0.75em 0.75em;text-align:center;">Temperature and barometric pressure</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:solid var(--ifm-table-border-color);border-left:solid var(--ifm-table-border-color);border-right:solid var(--ifm-table-border-color);border-top:solid var(--ifm-table-border-color);padding:0.75em 0.75em 0.75em 0px;text-align:center;">BME280</td>
+        <td style="border-bottom:solid var(--ifm-table-border-color);border-left:solid var(--ifm-table-border-color);border-right:solid var(--ifm-table-border-color);border-top:solid var(--ifm-table-border-color);padding:0.75em;text-align:center;">0x76, 0x77</td>
+        <td style="border-bottom:solid var(--ifm-table-border-color);border-left:solid var(--ifm-table-border-color);border-right:solid var(--ifm-table-border-color);border-top:solid var(--ifm-table-border-color);padding:0.75em 0px 0.75em 0.75em;text-align:center;">Temperature, barometric pressure and humidity</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:solid var(--ifm-table-border-color);border-left:solid var(--ifm-table-border-color);border-right:solid var(--ifm-table-border-color);border-top:solid var(--ifm-table-border-color);padding:0.75em 0.75em 0.75em 0px;text-align:center;">BME680</td>
+        <td style="border-bottom:solid var(--ifm-table-border-color);border-left:solid var(--ifm-table-border-color);border-right:solid var(--ifm-table-border-color);border-top:solid var(--ifm-table-border-color);padding:0.75em;text-align:center;">0x76, 0x77</td>
+        <td style="border-bottom:solid var(--ifm-table-border-color);border-left:solid var(--ifm-table-border-color);border-right:solid var(--ifm-table-border-color);border-top:solid var(--ifm-table-border-color);padding:0.75em 0px 0.75em 0.75em;text-align:center;">Temperature, barometric pressure, humidity and air resistance</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:solid var(--ifm-table-border-color);border-left:solid var(--ifm-table-border-color);border-right:solid var(--ifm-table-border-color);border-top:solid var(--ifm-table-border-color);padding:0.75em 0.75em 0.75em 0px;text-align:center;">MCP9808</td>
+        <td style="border-bottom:solid var(--ifm-table-border-color);border-left:solid var(--ifm-table-border-color);border-right:solid var(--ifm-table-border-color);border-top:solid var(--ifm-table-border-color);padding:0.75em;text-align:center;">0x18</td>
+        <td style="border-bottom:solid var(--ifm-table-border-color);border-left:solid var(--ifm-table-border-color);border-right:solid var(--ifm-table-border-color);border-top:solid var(--ifm-table-border-color);padding:0.75em 0px 0.75em 0.75em;text-align:center;">Temperature</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:solid var(--ifm-table-border-color);border-left:solid var(--ifm-table-border-color);border-right:solid var(--ifm-table-border-color);border-top:solid var(--ifm-table-border-color);padding:0.75em 0.75em 0.75em 0px;text-align:center;">INA260</td>
+        <td style="border-bottom:solid var(--ifm-table-border-color);border-left:solid var(--ifm-table-border-color);border-right:solid var(--ifm-table-border-color);border-top:solid var(--ifm-table-border-color);padding:0.75em;text-align:center;">0x40, 0x41</td>
+        <td style="border-bottom:solid var(--ifm-table-border-color);border-left:solid var(--ifm-table-border-color);border-right:solid var(--ifm-table-border-color);border-top:solid var(--ifm-table-border-color);padding:0.75em 0px 0.75em 0.75em;text-align:center;">Current and Voltage</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:solid var(--ifm-table-border-color);border-left:solid var(--ifm-table-border-color);border-right:solid var(--ifm-table-border-color);border-top:solid var(--ifm-table-border-color);padding:0.75em 0.75em 0.75em 0px;text-align:center;">INA219</td>
+        <td style="border-bottom:solid var(--ifm-table-border-color);border-left:solid var(--ifm-table-border-color);border-right:solid var(--ifm-table-border-color);border-top:solid var(--ifm-table-border-color);padding:0.75em;text-align:center;">0x40, 0x41</td>
+        <td style="border-bottom:solid var(--ifm-table-border-color);border-left:solid var(--ifm-table-border-color);border-right:solid var(--ifm-table-border-color);border-top:solid var(--ifm-table-border-color);padding:0.75em 0px 0.75em 0.75em;text-align:center;">Current and Voltage</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:solid var(--ifm-table-border-color);border-left:solid var(--ifm-table-border-color);border-right:solid var(--ifm-table-border-color);border-top:solid var(--ifm-table-border-color);padding:0.75em 0.75em 0.75em 0px;text-align:center;">LPS22</td>
+        <td style="border-bottom:solid var(--ifm-table-border-color);border-left:solid var(--ifm-table-border-color);border-right:solid var(--ifm-table-border-color);border-top:solid var(--ifm-table-border-color);padding:0.75em;text-align:center;">0x5D, 0x5c</td>
+        <td style="border-bottom:solid var(--ifm-table-border-color);border-left:solid var(--ifm-table-border-color);border-right:solid var(--ifm-table-border-color);border-top:solid var(--ifm-table-border-color);padding:0.75em 0px 0.75em 0.75em;text-align:center;">Barometric pressure</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:solid var(--ifm-table-border-color);border-left:solid var(--ifm-table-border-color);border-right:solid var(--ifm-table-border-color);border-top:solid var(--ifm-table-border-color);padding:0.75em 0.75em 0.75em 0px;text-align:center;">SHTC3</td>
+        <td style="border-bottom:solid var(--ifm-table-border-color);border-left:solid var(--ifm-table-border-color);border-right:solid var(--ifm-table-border-color);border-top:solid var(--ifm-table-border-color);padding:0.75em;text-align:center;">0x70</td>
+        <td style="border-bottom:solid var(--ifm-table-border-color);border-left:solid var(--ifm-table-border-color);border-right:solid var(--ifm-table-border-color);border-top:solid var(--ifm-table-border-color);padding:0.75em 0px 0.75em 0.75em;text-align:center;">Temperature and humidity</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:solid var(--ifm-table-border-color);border-left:solid var(--ifm-table-border-color);border-right:solid var(--ifm-table-border-color);border-top:solid var(--ifm-table-border-color);padding:0.75em 0.75em 0.75em 0px;text-align:center;">SHT31</td>
+        <td style="border-bottom:solid var(--ifm-table-border-color);border-left:solid var(--ifm-table-border-color);border-right:solid var(--ifm-table-border-color);border-top:solid var(--ifm-table-border-color);padding:0.75em;text-align:center;">0x44</td>
+        <td style="border-bottom:solid var(--ifm-table-border-color);border-left:solid var(--ifm-table-border-color);border-right:solid var(--ifm-table-border-color);border-top:solid var(--ifm-table-border-color);padding:0.75em 0px 0.75em 0.75em;text-align:center;">Temperature and humidity</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:solid var(--ifm-table-border-color);border-left:solid var(--ifm-table-border-color);border-right:solid var(--ifm-table-border-color);border-top:solid var(--ifm-table-border-color);padding:0.75em 0.75em 0.75em 0px;text-align:center;">PMSA003I</td>
+        <td style="border-bottom:solid var(--ifm-table-border-color);border-left:solid var(--ifm-table-border-color);border-right:solid var(--ifm-table-border-color);border-top:solid var(--ifm-table-border-color);padding:0.75em;text-align:center;">0x12</td>
+        <td style="border-bottom:solid var(--ifm-table-border-color);border-left:solid var(--ifm-table-border-color);border-right:solid var(--ifm-table-border-color);border-top:solid var(--ifm-table-border-color);padding:0.75em 0px 0.75em 0.75em;text-align:center;">Concentration units by size and particle counts by size</td>
+      </tr>
+    </tbody>
+  </table>
+</figure>
+<p>&nbsp;</p>
