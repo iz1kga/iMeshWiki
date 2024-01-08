@@ -2,7 +2,7 @@
 title: Teoria
 description: Teoria della mesh
 published: true
-date: 2023-08-14T13:59:05.557Z
+date: 2024-01-08T17:58:24.267Z
 tags: 
 editor: markdown
 dateCreated: 2023-01-21T23:18:47.654Z
@@ -12,48 +12,50 @@ dateCreated: 2023-01-21T23:18:47.654Z
 <!-- SUBTITLE: A quick summary of Teoria Della Mesh -->
 
 ## Tipologia di nodi
-I nodi possono essere di diverso tipo:
+Le configurazioni che abbiamo pensato per il buon funzionamento della rete prevedono 3 tipologie di nodi:
 * client
 * router
 * gateway
 
-Il nodo di tipo client è quello che viene usato dagli utenti per accedere alla mesh e comunicare con gli altri utenti.
-Il nodo di tipo router si occupa di instradare I pacchetti ma non è pensato per interfacciarsi con gli utenti.
-Il nodo di tipo gateway instrada verso e da internet i pacchetti ricevuti, per fare questo utilizza la connesione a un broker MQTT.
+Il nodo di tipo client è quello che viene usato dall'utente finale per accedere alla mesh e comunicare con gli altri.
+Il nodo di tipo router ha una funzione infrastrutturale e asseconda la necessità di risparmio energetico dettata da una probabile installazione a fotovoltaico.
+Il nodo di tipo gateway instrada, attraverso la connessione internet a un broker MQTT, il traffico ricevuto, sostituendo una tratta radio non ancora in essere.
 
-Qeste tipologie di nodi possono essere unite, ad esempio può esistere un client gateway o un client_router.
+Qeste tipologie di nodi possono essere unite: può, ad esempio, esistere un client-gateway o un gateway-router.
 
 ## Una mesh efficiente
 
-Quello che vorremmo ottenere è una mesh efficiente che permetta di far circolare i messaggi in modo rapido e affidabile. Per fare questo è importante la progettazione della rete in modo che i nodi siano configurati opportunamente.
+Quello che vorremmo ottenere è una mesh efficiente che permetta di far circolare i messaggi in modo rapido e affidabile. 
+Con questo scopo si è progettata la rete e la configurazione dei nodi che ne entrano a far parte.
 
 ### Nodi Backbone di primo livello
 
-Questi sono i nodi principali della rete, sono dei nodi fissi installati in posizione strategica e sono quelli che garantiscono grazie l'elevata copertura il minimo numero di HOP che i pacchetti devono fare per raggiungere la loro destinazione. Questi nodi dovrebbero essere così configurati:
-* Tipo - ROUTER o CLIENT_ROUTER
-* Limite Hop - min 3 max 4
+Questi sono i nodi principali della rete: sono installati in modo fisso in posizione strategica e garantiscono, grazie all'elevata copertura geografica, il minimo numero di HOP che i pacchetti devono fare per raggiungere la loro destinazione. Questi nodi dovrebbero essere così configurati:
+* Tipo - ROUTER
+* Limite Hop - 3
 
 ### Nodi Backbone di secondo livello
 
-Questi sono i nodi secondari della rete, sono dei nodi fissi. Sono quei nodi che permettono ai nodi utente di raggiungere I nodi principali quando questi sono da loro direttamente raggiungibili.
+Questi sono i nodi secondari della rete: sono fissi e permettono ai nodi client di raggiungere i nodi principali quando questi non sono da loro direttamente raggiungibili.
 Questi nodi dovrebbero essere così configurati:
-* Tipo - ROUTER o CLIENT_ROUTER
-* Limite Hop - min 4 max 5
+* Tipo - ROUTER
+* Limite Hop - 3
 
 ### Nodi client o utente
 
-Questi sono i nodi degli utenti della rete e dovrebbero essere così configurati:
+Questi sono i nodi finali della rete, quelli effettivamente utilizzati dagli utenti e dovrebbero essere così configurati:
 
 * Tipo - CLIENT
-* Limite Hop - min 5 max 7
+* Limite Hop - min 3 max 5
 
 ### Gateway
 
-I gateway sono dei nodi che instradando da e tramite internet i pacchetti ricevuti permettono di unire parti della mesh che altrimenti non sarebbero in comunicazione e di inviare informazioni ad alcuni server che permettono, ad esempio, di generare una mappa dinamica dei nodi della mesh (https://hub.iz1kga.it).
+I gateway sono dei nodi che instradamo da e tramite internet i pacchetti ricevuti permettendo di unire parti della mesh che altrimenti non sarebbero in comunicazione.
+Trasmettono inoltre alcune informazioni ad alcuni server che permettono, ad esempio, di generare una mappa dinamica dei nodi della mesh (https://map.loraitalia.it).
 
-Bisogna ricordare che la filosofia della mesh è quella di garantire il suo **funzionamento in qualsiasi condizione**. Da questo si deduce che l'utilizzo dei gateway debba essere limitato il più possibile e possibilmente per la sola funzione della generazione della mappa. 
+Merita di essere sottolineato che lo spirito della mesh è quella di garantire il suo **funzionamento in qualsiasi condizione**. Da questo si deduce che l'utilizzo dei gateway (e di internet, quindi) debba essere limitato il più possibile, idealmente per la sola funzione di generazione della mappa. 
 
-Questo si può ottenere progettando correttamente la rete. Al momento ci sono diversi gateway operativi che verranno disattivati e sostituiti da nodi di primo livello.
+Questo importante obiettivo è raggiungibile ponendo la massima attenzione nella realizzazione dei link radio, curandone la realizzazione in ogni dettaglio.
 
 ## Esempio di infrastruttura
 ![mesh-diagram.jpg](/mesh-map/mesh-diagram.jpg =450x671)
@@ -75,7 +77,7 @@ https://youtu.be/LbvAMmKtjcE
 
 i due canali sono stati spostati in modo da non interferire in locale, la funzione è modifica dell'OFFSET che in questo caso è di 500 KHz
 
----
+
 
 > ### Relazione tra canali e frequenze:
 > |canale | frequenza (433 MHz)| frequenza (868 MHz)|
@@ -89,5 +91,5 @@ i due canali sono stati spostati in modo da non interferire in locale, la funzio
 > |Short Slow | 433,600 MHz|869,448 MHz|
 > Short Fast | 433,875 MHz|869,448 MHz|
 N.B. Non è necessario cambiare la frequenza sul dispositivo; la selezione del canale imposta automaticamente la frequenza.
-{.is-info}
+
 
