@@ -2,7 +2,7 @@
 title: Lo.Ra.
 description: 
 published: true
-date: 2024-01-08T16:37:52.323Z
+date: 2024-01-08T16:38:38.466Z
 tags: 
 editor: markdown
 dateCreated: 2023-01-22T07:59:58.412Z
