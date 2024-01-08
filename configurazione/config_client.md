@@ -2,7 +2,7 @@
 title: Configurazione Client
 description: 
 published: true
-date: 2024-01-07T21:54:12.932Z
+date: 2024-01-08T19:35:55.630Z
 tags: 
 editor: markdown
 dateCreated: 2023-01-22T00:08:07.747Z
