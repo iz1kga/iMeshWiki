@@ -2,13 +2,13 @@
 title: Mesh performances
 description: 
 published: true
-date: 2023-10-01T08:46:02.015Z
+date: 2024-01-09T14:42:01.842Z
 tags: 
 editor: markdown
 dateCreated: 2023-02-15T17:54:35.741Z
 ---
 
-[broadcast_msg_pyq5.py](/broadcast_msg_pyq5.py)# Lo strumento di controllo sviluppato 
+# Lo strumento di controllo sviluppato 
 by Vincenzo Lorenzale (IU2RPO) il 6 Marzo 2023
 
 ---
