@@ -2,7 +2,7 @@
 title: Home
 description: LoRa Italia
 published: true
-date: 2024-01-11T10:07:00.338Z
+date: 2024-01-11T10:16:15.833Z
 tags: 
 editor: markdown
 dateCreated: 2023-01-21T23:17:51.009Z
@@ -72,4 +72,4 @@ Meshtastic® is a registered trademark of Meshtastic LLC.
 
 - [⚙️ Configurazione](/configurazione/config_home)
 
-- [📡 Hardware Compatibile](/hardware)
+- [📡 Hardware Compatibile](/hardware/dispositivi_lora)
