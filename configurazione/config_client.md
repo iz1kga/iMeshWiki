@@ -2,7 +2,7 @@
 title: Configurazione Client
 description: 
 published: true
-date: 2024-01-11T10:24:18.941Z
+date: 2024-01-11T11:07:47.657Z
 tags: 
 editor: markdown
 dateCreated: 2023-01-22T00:08:07.747Z
@@ -12,7 +12,8 @@ dateCreated: 2023-01-22T00:08:07.747Z
 
 
 ## Nome dispositivo
-Il nome del dispositivo permette agli altri nodi di identificare il nodo in maniera univoca, non ci sono vincoli particolari sul nome. Ci sono due nomi da impostare: il LongName e lo ShortName 
+Il nome del dispositivo permette agli altri nodi di identificare il proprio in maniera univoca.
+Ci sono due nomi da impostare: il LongName e lo ShortName 
 
 ### LongName
 il LongName viene usato nell'elenco dei nodi ricevuti e nella mappa. 
@@ -32,7 +33,7 @@ meshtastic --set-owner-short  'A1B2'
 ```
 
 ## Radio Lora
-Le **normative** in ambito radiantistico non sono armonizzate in tutto il mondo è quindi **necessario** selezionare le impostazioni corrette in modo che il dispositivo si comporti come prescritto dalla normativa del paese dove viene utilizzato. Inoltre è necessario impostare *hopLimit* in modo da evitare un'eccessiva trasmissione dei pacchetti lora.
+Le **normative** in ambito radiantistico non sono armonizzate in tutto il mondo ed è quindi **necessario** selezionare le impostazioni corrette in modo che il dispositivo si comporti come prescritto dalla normativa del paese dove viene utilizzato. Inoltre è necessario impostare *hopLimit* in modo da evitare un'eccessiva propagazione dei pacchetti lora.
 
 ### Region
 La regione è il parametro che configura il modem LoRa in modo che si attenga alle normative del proprio paese. 
@@ -44,7 +45,9 @@ meshtastic --set lora.region 3
 ```
 
 ### HopLimit
-Un pacchetto lora ha un **limite massimo** di nodi da cui può essere ripetuto. Ogni ripetizione di un nodo è chiamato **hop**. Un nodo client dovrebbe avere impostato l'***hopLimit*** a 3.
+Un pacchetto lora ha un **limite massimo** di nodi da cui può essere ripetuto. 
+Ogni ripetizione di un nodo è chiamato **hop**. 
+Un nodo client dovrebbe avere impostato l'***hopLimit*** a 3.
 
 **Python CLI:**
 ```bash
@@ -65,7 +68,7 @@ Impostare 43200 secondi come intervallo di invio della posizione è più che suf
 
 ## Telemetry
 
-Il dispositivo tramite dei sensori interni può inviare a intervalli regolari il livello di carica della batteria e anche, se dotato di sensori aggiuntivi, misure relative all'ambiente (T/H/P) o - ad esempio - alla corrente e alla tensione di un circuito di alimentazione solare.
+Il dispositivo, tramite dei sensori interni, può inviare a intervalli regolari il livello di carica della batteria e anche, se dotato di sensori aggiuntivi, misure relative all'ambiente (T/H/P) o - ad esempio - alla corrente e alla tensione di un circuito di alimentazione solare.
 
 ## Neighbor Info
 
