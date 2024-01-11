@@ -1,14 +1,14 @@
 ---
-title: Dispositivi LoRa
-description: 
+title: Schede LoRa
+description: Schede LoRa compatibili con Meshtastic
 published: true
-date: 2024-01-05T18:06:47.760Z
+date: 2024-01-11T10:15:49.292Z
 tags: 
 editor: markdown
 dateCreated: 2023-01-27T13:28:35.196Z
 ---
 
-# Hardware compatibile con MeshTastic
+# Schede compatibili con MeshTastic
 
 ## T-LoRa (Lora 32)
 ![lora32.jpg](/hardware/lora32.jpg =250x)
