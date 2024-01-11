@@ -2,21 +2,36 @@
 title: Flashing del firmware
 description: Flashing del firmware Meshtastic 
 published: true
-date: 2024-01-10T18:08:08.433Z
+date: 2024-01-11T10:56:44.639Z
 tags: firmware flash
 editor: ckeditor
 dateCreated: 2024-01-10T18:08:08.433Z
 -->
 
-<h1>Flashing del firmware Mehtastic</h1>
-<p><a href="https://flasher.meshtastic.org">https://flasher.meshtastic.org</a></p>
-<figure class="image"><img src="/firmware_flashing/firmware_flashing_4.png"></figure>
+<h1>Flashing del firmware Mehtastic da PC / Mac</h1>
 <p>&nbsp;</p>
+<h3>Schede basate su chip ESP32</h3>
+<p>Il modo più semplice per caricare il firmware Meshtastic sul proprio dispositivo è utilizzare lo strumento disponibile all'indirizzo <a href="https://flasher.meshtastic.org">https://flasher.meshtastic.org</a></p>
+<p>E' necessario utilizzare il browser “Google Chrome” oppure “Edge”.</p>
+<p>Collegare tramite cavo USB la scheda al computer</p>
+<figure class="image"><img src="/firmware_flashing/firmware_flashing_1.png"></figure>
+<p>&nbsp;</p>
+<p>Il primo passo è selezionare il proprio dispositivo dal menu a tendina.<br>Nel menu successivo scegliere il firmware più recente tra quelli “Stable”.<br>Fare click su FLASH</p>
+<p>Nella schermata che si aprirà potrebbe essere necessario (ma generalmente le impostazioni di default sono corrette) selezionare la porta sulla quale è collegata la scheda e la velocità di collegamento seriale.<br><br>Se si seleziona “Full erase and Install” verranno cancellate anche eventuali impostazioni già presenti sulla scheda.&nbsp;</p>
+<p>Quando si è sicuri delle proprie scelte, cliccare sul tasto verde al fondo della pagina.</p>
+<p>Non cambiare pagina del browser mentre l'attività è in corso.</p>
 <figure class="image"><img src="/firmware_flashing/firmware_flashing_3.png"></figure>
 <p>&nbsp;</p>
+<p>Completamento dell'attività:</p>
+<figure class="image"><img src="/firmware_flashing/firmware_flashing_4.png"></figure>
+<p>&nbsp;</p>
+<p>Al raggiungimento del 100%, come in schermata, la scheda si riavvierà e caricherà il nuovo firmware.</p>
+<p>Potrete a questo punto scollegarla dal computer e chiudere la scheda del browser.</p>
+<p>&nbsp;</p>
+<h3>Schede basate su nRF52 &amp; RP2040</h3>
+<p>Seguire le istruzioni sul sito <a href="https://meshtastic.org/docs/getting-started/flashing-firmware/nrf52/">https://meshtastic.org/docs/getting-started/flashing-firmware/nrf52/</a></p>
 <p>&nbsp;</p>
 <h3>Se la scheda non dovesse rispondere</h3>
-<p>&nbsp;</p>
 <p>Caricamente interrotti o non riusciti possono portare la scheda in uno stato di stallo per cui per ritentare il flashing del firmware occorre seguire una procedura particolare.<br>Nel caso delle t-beam si può provare a forzare la modalità upload in questo modo: mentre si tiene premuto PWR si preme brevemente RST, poi si rilascia PWR.</p>
 <p>Per le T-Lora, per forzare il boot in modalità upload occorre fare un ponticello tra questi due PIN:</p>
 <figure class="image"><img src="/firmware_flashing/photo_5834813496997560123_y.jpg"></figure>
