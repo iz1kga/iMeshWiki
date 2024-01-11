@@ -2,7 +2,7 @@
 title: Gestione I/O
 description: Gestione I/O
 published: true
-date: 2023-03-05T18:07:10.412Z
+date: 2024-01-11T10:20:08.632Z
 tags: 
 editor: markdown
 dateCreated: 2023-02-10T10:50:18.072Z
@@ -116,7 +116,6 @@ TBEAM v2.0 perfettamente funzionanti: 2, 13, 14, 15, 25
 
 TLORA V.1.1.6 perfettamente funzionanti: 2, 12, 13, 15, 19
 
-https://www.youtube.com/Ej2QexL5kts
 
 ## Applicazione pratica dei GPIO da remoto
 
