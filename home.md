@@ -2,7 +2,7 @@
 title: Home
 description: LoRa Italia
 published: true
-date: 2024-01-11T10:16:15.833Z
+date: 2024-01-11T10:18:12.434Z
 tags: 
 editor: markdown
 dateCreated: 2023-01-21T23:17:51.009Z
@@ -40,7 +40,7 @@ acquistare uno dei molti dispositivi disponibili, il cui costo parte dai 15€, 
 di collegamento radio" un altro nodo.
 
 Una rappresentazione non esaustiva ma piuttosto fedele dell'estensione geografica della  
-rete è visibile all'indirizzo [map.loraitalia.it](http://map.loraitalia.it). Questa è in una fase di evoluzione piuttosto rapida  
+rete è visibile all'indirizzo [map.loraitalia.it](https://map.loraitalia.it). Questa è in una fase di evoluzione piuttosto rapida  
 e chi può accendere un nodo in aree scoperte viene supportato rimpiazzando  
 temporaneamente il link radio con un link internet.
 
@@ -52,7 +52,7 @@ Non siamo nemmeno legati in alcun modo al marchio Meshtastic.
 
 Per creare la mesh stiamo usando firmware Meshtastic®. La mesh wireless è basata sul protocollo LoRa che consente a più dispositivi di comunicare tra loro formando una rete senza la necessità di un server o gateway centrale.
 
-LoRa Italia è una community di appassionati, non fa parte di [Meshtastic®](www.meshtastic.org)
+LoRa Italia è una community di appassionati, non fa parte di [Meshtastic®](https://www.meshtastic.org)
 
 Meshtastic® is a registered trademark of Meshtastic LLC.
 
@@ -66,7 +66,7 @@ Meshtastic® is a registered trademark of Meshtastic LLC.
 
 - [🔩 Applicazioni](/applicazioni/app_index)
 
-- [📡 Antenne](/teoria/antenne)
+- [📡 Antenne](/hardware/antenne)
 
 - [📚 Teoria](/teoria/Mesh)
 
