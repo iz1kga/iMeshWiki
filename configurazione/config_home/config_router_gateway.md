@@ -1,8 +1,8 @@
 ---
 title: Configurazione Router - Gateway
 description: 
-published: true
-date: 2024-01-08T19:37:05.972Z
+published: false
+date: 2024-01-11T10:27:38.216Z
 tags: 
 editor: markdown
 dateCreated: 2023-01-30T13:59:05.219Z
