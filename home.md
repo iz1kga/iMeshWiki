@@ -2,7 +2,7 @@
 title: Home
 description: LoRa Italia
 published: true
-date: 2024-01-11T10:04:14.936Z
+date: 2024-01-11T10:07:00.338Z
 tags: 
 editor: markdown
 dateCreated: 2023-01-21T23:17:51.009Z
@@ -58,32 +58,18 @@ Meshtastic® is a registered trademark of Meshtastic LLC.
 
 ## Contenuti
 
--   [🌐 Mappa](https://hub.iz1kga.it)
+- [🌐 Mappa](https://map.loraitalia.it)
 
-![🆘](/_assets/svg/twemoji/1f198.svg)
+- [🆘 Supporto](https://t.me/meshtastic_italia)
 
--   [Supporto](https://t.me/meshtastic_italia)
+- [📝 Reports & Tests](/reports&tests/index)
 
-![📝](/_assets/svg/twemoji/1f4dd.svg)
+- [🔩 Applicazioni](/applicazioni/app_index)
 
--   [Reports & Tests](/reports&tests/index)
+- [📡 Antenne](/teoria/antenne)
 
-![🔩](/_assets/svg/twemoji/1f529.svg)
+- [📚 Teoria](/teoria/Mesh)
 
--   [Applicazioni](/applicazioni/app_index)
+- [⚙️ Configurazione](/configurazione/config_home)
 
-![📡](/_assets/svg/twemoji/1f4e1.svg)
-
--   [Antenne](/teoria/antenne)
-
-![📚](/_assets/svg/twemoji/1f4da.svg)
-
--   [Teoria](/teoria/Mesh)
-
-![⚙️](/_assets/svg/twemoji/2699.svg)
-
--   [Configurazione](/configurazione/config_home)
-
-![📡](/_assets/svg/twemoji/1f4e1.svg)
-
--   [Hardware Compatibile](/hardware)
+- [📡 Hardware Compatibile](/hardware)
