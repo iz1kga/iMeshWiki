@@ -2,7 +2,7 @@
 title: Configurazione Nodi
 description: 
 published: true
-date: 2024-01-12T17:20:18.097Z
+date: 2024-01-12T17:56:47.491Z
 tags: 
 editor: markdown
 dateCreated: 2023-01-22T00:08:07.747Z
@@ -57,19 +57,11 @@ meshtastic --set lora.hop_limit 3
 ```
 
 ## Role
-Il ruolo di un nodo **mobile** deve essere di tipo **CLIENT**.
-Il ruolo di un nodo **fisso** deve essere di tipo **ROUTER_CLIENT**.
-
-L'utente non avverte differenza tra le due impostazioni, ma la correttà impostazione del ruolo contribuirà a migliorare le prestazioni della rete
+Il ruolo di un nodo deve essere di tipo **CLIENT**.
 
 ```bash
 meshtastic --set device.role CLIENT
 ```
-
-```bash
-meshtastic --set device.role CLIENT_ROUTER
-```
-
 ## NodeInfo
 
 Un nodo comunica i propri dettagli tramite un pacchetto di tipo nodeInfo contenente Longname, shortName e modello Hardware. Per i nodi di tipo client i tempi di invio di questo pacchetto non devono essere inferiori ai 3600s per i nodi **mobili** e non inferiore a 10800 per i nodi **fissi**.
