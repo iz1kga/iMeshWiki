@@ -2,7 +2,7 @@
 title: Configurazione Client
 description: 
 published: true
-date: 2024-01-12T15:52:04.974Z
+date: 2024-01-12T16:19:04.502Z
 tags: 
 editor: markdown
 dateCreated: 2023-01-22T00:08:07.747Z
@@ -87,7 +87,7 @@ Le tempistiche di invio dei pacchetti di telemetria devono essere non inferiori 
 
 ## Neighbor Info
 
-Questo modulo invia in rete informazioni circa i nodi con i quali il nostro nodo riesce a stabilire una comunicazione radio diretta. Questo permette di visualizzare sulla [mappa](https://map.loraitalia.it/) la topologia di rete e ci restituisce informazioni preziose circa la bontà dei link che vengono stabiliti. E' bene attivarlo ed impostare a 3600 secondi la frequenza di invio.
+Questo modulo invia in rete informazioni circa i nodi con i quali il nostro nodo riesce a stabilire una comunicazione radio diretta. Attivare questa opzione solo sui nodi **fissi** Questo permette di visualizzare sulla [mappa](https://map.loraitalia.it/) la topologia di rete e ci restituisce informazioni preziose circa la bontà dei link che vengono stabiliti. E' bene attivarlo ed impostare a 3600 secondi la frequenza di invio.
 
 ## Tabella Riassuntiva tempistiche pacchetti
 
