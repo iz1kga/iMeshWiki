@@ -2,11 +2,16 @@
 title: Convenzione del nome dei nodi
 description: 
 published: true
-date: 2023-02-17T14:40:11.114Z
+date: 2024-01-12T15:11:02.539Z
 tags: 
 editor: markdown
 dateCreated: 2023-02-16T16:55:00.384Z
 ---
+
+Questa pagina non è più valida, al momento è possibile chiamare i Nomi a piacere, è consigliato un nome "parlante" per i nodi fissi (ad esempio dove è installato Torino-Centro). Per i nodi mobili la scelta è libera, ricordate che non c'è un cotrollo sui nomi duplicati e quindi se il nodo viene chiamato "Giovanni" la probabilità di avere due nodi chiamati uguali e quindi difficilmente distinguibile è alta.
+
+TBD --- Da qui in giù la documentazione non è valida e deve essere aggiornata
+
 
 Ciascun nodo Meshtastic è identificato da un nodeID, derivato dal MAC address Bluetooth. Il firmware assegna automaticamente un "Long Name" al nodo con la logica "Meshtastic" + spazio + ultimi quattro caratteri del Mac address Bluetooth, per esempio:
 
