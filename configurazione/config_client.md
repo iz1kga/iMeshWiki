@@ -1,8 +1,8 @@
 ---
-title: Configurazione Client
+title: Configurazione Nodi
 description: 
 published: true
-date: 2024-01-12T16:19:04.502Z
+date: 2024-01-12T16:19:22.797Z
 tags: 
 editor: markdown
 dateCreated: 2023-01-22T00:08:07.747Z
