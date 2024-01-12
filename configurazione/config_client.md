@@ -2,7 +2,7 @@
 title: Configurazione Client
 description: 
 published: true
-date: 2024-01-12T15:37:24.911Z
+date: 2024-01-12T15:38:44.208Z
 tags: 
 editor: markdown
 dateCreated: 2023-01-22T00:08:07.747Z
@@ -79,6 +79,7 @@ Le tempistiche di invio dei pacchetti di telemetria devono essere non inferiori 
 Questo modulo invia in rete informazioni circa i nodi con i quali il nostro nodo riesce a stabilire una comunicazione radio diretta. Questo permette di visualizzare sulla [mappa](https://map.loraitalia.it/) la topologia di rete e ci restituisce informazioni preziose circa la bontà dei link che vengono stabiliti. E' bene attivarlo ed impostare a 3600 secondi la frequenza di invio.
 
 ## Tabella Riassuntiva tempistiche pacchetti
+
 |           Parametro App             |           Parametro CLI               | Tempo (s) |
 |-------------------------------------|---------------------------------------|-----------|
 |     NodeInfo Broadcast Interval     |    position.position_broadcast_secs   |    3600   |
@@ -86,7 +87,7 @@ Questo modulo invia in rete informazioni circa i nodi con i quali il nostro nodo
 |    Device Metrics Update Interval   |    telemetry.device_update_interval   |    3600   |
 | Environment Metrics Update Interval | telemetry.environment_update_interval |    1800   |
 |    Neighbor Info Update Interval    |      neighbor_info.update_interval    |    3600   |
-
+{.dense}
 
 ## Channel URL
 
