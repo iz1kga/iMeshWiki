@@ -2,7 +2,7 @@
 title: Configurazione Client
 description: 
 published: true
-date: 2024-01-11T11:07:47.657Z
+date: 2024-01-12T15:18:40.807Z
 tags: 
 editor: markdown
 dateCreated: 2023-01-22T00:08:07.747Z
@@ -60,6 +60,9 @@ Il ruolo di un nodo, salvo casi particolari, deve essere di tipo **CLIENT**
 ```bash
 meshtastic --set device.role CLIENT
 ```
+## NodeInfo
+
+Un nodo comunica i propri dettagli tramite un pacchetto di tipo nodeInfo contenente Longname, shortName e modello Hardware. Per i nodi di tipo client i tempi di invio di questo pacchetto non devono essere inferiori ai 3600s.
 
 ## Position
 
@@ -69,6 +72,7 @@ Impostare 43200 secondi come intervallo di invio della posizione è più che suf
 ## Telemetry
 
 Il dispositivo, tramite dei sensori interni, può inviare a intervalli regolari il livello di carica della batteria e anche, se dotato di sensori aggiuntivi, misure relative all'ambiente (T/H/P) o - ad esempio - alla corrente e alla tensione di un circuito di alimentazione solare.
+Le tempistiche di invio dei pacchetti di telemetria devono essere non inferiori ai 3600s per le telemetrie del dispositivo e non inferiori ai 1800s per le telemetrie ambientali.
 
 ## Neighbor Info
 
