@@ -2,7 +2,7 @@
 title: Configurazione Nodi
 description: 
 published: true
-date: 2024-01-12T17:56:47.491Z
+date: 2024-01-15T19:16:15.808Z
 tags: 
 editor: markdown
 dateCreated: 2023-01-22T00:08:07.747Z
@@ -87,7 +87,7 @@ Questo modulo invia in rete informazioni circa i nodi con i quali il nostro nodo
 
 |           Parametro App             |           Parametro CLI               | Tempo (s) |
 |-------------------------------------|---------------------------------------|-----------|
-|     NodeInfo Broadcast Interval     |    position.position_broadcast_secs   |    3600   |
+|     NodeInfo Broadcast Interval     |    device.node_info_broadcast_secs    |    3600   |
 |     Position Broadcast Interval     |    position.position_broadcast_secs   |    3600   |
 |    Device Metrics Update Interval   |    telemetry.device_update_interval   |    3600   |
 | Environment Metrics Update Interval | telemetry.environment_update_interval |    1800   |
@@ -97,7 +97,7 @@ Questo modulo invia in rete informazioni circa i nodi con i quali il nostro nodo
 
 |           Parametro App             |           Parametro CLI               | Tempo (s) |
 |-------------------------------------|---------------------------------------|-----------|
-|     NodeInfo Broadcast Interval     |    position.position_broadcast_secs   |    10800   |
+|     NodeInfo Broadcast Interval     |    device.node_info_broadcast_secs    |    10800   |
 |     Position Broadcast Interval     |    position.position_broadcast_secs   |    43200   |
 |    Device Metrics Update Interval   |    telemetry.device_update_interval   |    3600   |
 | Environment Metrics Update Interval | telemetry.environment_update_interval |    1800   |
