@@ -2,7 +2,7 @@
 title: Index
 description: In questa sezione saranno raccolti test e misure fatti nel mesh
 published: true
-date: 2023-09-09T14:14:31.054Z
+date: 2024-01-16T20:54:59.069Z
 tags: 
 editor: markdown
 dateCreated: 2023-02-15T18:25:10.281Z
@@ -21,3 +21,4 @@ Lista dei documenti presenti in questa sezione:
 [test_pannelli_fotovoltaici_con_obiettivo_alimentazione_tlora_gw.pdf](/test_pannelli_fotovoltaici_con_obiettivo_alimentazione_tlora_gw.pdf)
 [TestImpiantoTloraGWpannello20W](/reports&tests/TestImpiantoTloraGWpannello20W)
 [mppt_controller_pannello20w_tlora.pdf](/mppt_controller_pannello20w_tlora.pdf)
+[prestazioni_tlora2-1.1.6_batteria_3500mah_h24_7x7.pdf](/prestazioni_tlora2-1.1.6_batteria_3500mah_h24_7x7.pdf)
