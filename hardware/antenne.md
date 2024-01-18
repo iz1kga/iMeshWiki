@@ -2,7 +2,7 @@
 title: Antenne
 description: Antenne LoRa
 published: true
-date: 2024-01-05T18:08:29.025Z
+date: 2024-01-18T16:17:19.511Z
 tags: 
 editor: markdown
 dateCreated: 2023-02-16T08:06:26.099Z
@@ -17,8 +17,9 @@ dateCreated: 2023-02-16T08:06:26.099Z
 ![ruizhi_ant.jpg](/antenne/ruizhi_ant.jpg =x300)![ruizhi.jpg](/antenne/ruizhi.jpg =500x)
 
 # EIGHTWOOD
-### Verifica in corso
-[Eightwood 868mhz Antenna](https://www.amazon.it/dp/B0716XRW4G)
+### ATTENZIONE questo link non è attendibile
+le antenne recentemente acquistate risuonano a 915MHz, su amazon è indicato 868 ma evidentemente non è stata aggiornata la descrizione
+~~[Eightwood 868mhz Antenna](https://www.amazon.it/dp/B0716XRW4G)~~
 ![eightwood.jpg](/antenne/eightwood.jpg)
 
 
