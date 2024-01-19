@@ -2,7 +2,7 @@
 title: Index
 description: In questa sezione saranno raccolti test e misure fatti nel mesh
 published: true
-date: 2024-01-16T20:54:59.069Z
+date: 2024-01-19T14:42:47.582Z
 tags: 
 editor: markdown
 dateCreated: 2023-02-15T18:25:10.281Z
@@ -22,3 +22,4 @@ Lista dei documenti presenti in questa sezione:
 [TestImpiantoTloraGWpannello20W](/reports&tests/TestImpiantoTloraGWpannello20W)
 [mppt_controller_pannello20w_tlora.pdf](/mppt_controller_pannello20w_tlora.pdf)
 [prestazioni_tlora2-1.1.6_batteria_3500mah_h24_7x7.pdf](/prestazioni_tlora2-1.1.6_batteria_3500mah_h24_7x7.pdf)
+[studio_su_msgs_telemetry.pdf](/studio_su_msgs_telemetry.pdf)
