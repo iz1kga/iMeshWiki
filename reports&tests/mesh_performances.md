@@ -2,7 +2,7 @@
 title: Mesh performances
 description: 
 published: true
-date: 2024-01-24T10:21:50.847Z
+date: 2024-01-29T11:37:53.729Z
 tags: 
 editor: markdown
 dateCreated: 2023-02-15T17:54:35.741Z
@@ -175,6 +175,7 @@ In data 7 Maggio 2023 aggiornati broadcast_msg_pyq5.py e meshdb.db in modo da re
 
 In data 1 Ottobre aggiunto controllo ricezione messaggi duplicati.
 In data 24 Gen 2024 corretto gestione della rappresentazione in mappa dei GW in mesh
+In data 29 Gen 2024 introdotta gestione eventuale DB locked che occorre saltuariamente con processori 32bit datati
 ### Download applicazione e DB Sqlite
 [broadcast_msg_pyq5.py](/broadcast_msg_pyq5.py)
 [meshdb.db](/meshdb.db)
