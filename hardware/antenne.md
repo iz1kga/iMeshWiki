@@ -2,32 +2,31 @@
 title: Antenne
 description: Antenne LoRa
 published: true
-date: 2024-01-18T16:22:47.352Z
+date: 2024-01-31T14:41:48.837Z
 tags: 
 editor: markdown
 dateCreated: 2023-02-16T08:06:26.099Z
 ---
 
 # EUNEWR
-[EUNEWR Antenna 868MHZ 3dBi - 30CM-B](https://amzn.eu/d/4Ie6jpj)
-![eunwr_ant.jpg](/antenne/eunwr_ant.jpg =x300)![eunewr.jpg](/antenne/eunewr.jpg =500x)
+EUNEWR Antenna 868MHZ 3dBi - 30CM-B
+![eunwr_ant.jpg](/antenne/eunwr_ant.jpg =x300)![eunewr.jpg](/antenne/eunewr.jpg =300x)
 
 # RUIZHI
 [RUIZHI 3 dBi LoRa Antenna 868Mhz](https://www.amazon.it/dp/B09KLTR3SL)
-![ruizhi_ant.jpg](/antenne/ruizhi_ant.jpg =x300)![ruizhi.jpg](/antenne/ruizhi.jpg =500x)
-
-# EIGHTWOOD
-### ATTENZIONE NON ACQUISTARE
-le antenne recentemente acquistate risuonano a 915MHz, su amazon è indicato 868 ma evidentemente non è stata aggiornata la descrizione
-~~[Eightwood 868mhz Antenna](https://www.amazon.it/dp/B0716XRW4G)~~
-![eightwood.jpg](/antenne/eightwood.jpg)
+![ruizhi_ant.jpg](/antenne/ruizhi_ant.jpg =x300)![ruizhi.jpg](/antenne/ruizhi.jpg =300x)
 
 
 # 4G 5dbi Antenna LTE
 [Antenna LTE](https://it.aliexpress.com/item/32888310888.html)
-![4glte_ant.webp](/antenne/4glte_ant.webp =x300)![4glte.jpg](/antenne/4glte.jpg =500x)
+![4glte_ant.webp](/antenne/4glte_ant.webp =x300)![4glte.jpg](/antenne/4glte.jpg =300x)
 
 # Grandwisdom 5dBi
-[Antenna portatile da 27cm](https://www.aliexpress.com/item/1005004357899957.html) Attenzione a selezionare il connettore "SMA Male"
-![grandwisdom2.webp](/grandwisdom2.webp)
-![grandwisdom_inside.jpeg](/grandwisdom_inside.jpeg)
+[Antenna portatile da 27cm](https://www.aliexpress.com/item/1005004357899957.html) 
+**Attenzione a selezionare il connettore "SMA Male"**
+![grandwisdom2.webp](/grandwisdom2.webp =x300) ![grandwisdom_inside.jpeg](/grandwisdom_inside.jpeg =x350)
+
+# CDSENET 3dBi
+[Acquistabile su Aliexpress](https://it.aliexpress.com/item/1005003251011643.html)
+**Attenzione a selezionare 868MHz**
+![cdsent.jpg](/antenne/cdsent.jpg =x300) ![cdsentvna.jpg](/antenne/cdsentvna.jpg =x300)
