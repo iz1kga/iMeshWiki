@@ -2,7 +2,7 @@
 title: Schede LoRa
 description: Schede LoRa compatibili con Meshtastic
 published: true
-date: 2024-01-11T11:33:57.069Z
+date: 2024-02-05T18:00:45.311Z
 tags: 
 editor: markdown
 dateCreated: 2023-01-27T13:28:35.196Z
@@ -23,7 +23,10 @@ Si può aggiungere agevolmente un ricevitore GPS per trasformare questa scheda i
 [Modulo GPS (Amazon)](https://www.amazon.it/ICQUANZX-GY-NEO6MV2-Controller-ceramica-resistente/dp/B088LR3488/)
 
 [![gpsconn.png](/hardware/gpsconn.png =250x)](/hardware/gpsconn.png)
-Connessione modulo GPS
+Connessione modulo GPS. 
+Attenzione, rispetto all'immagine , i pin RX e tX sono da invertire (soltanto su un lato!). Nella configurazione del dispositivo andranno esplicitati i pin sul quale la scheda GPS è stata collegata: 
+GPS_RX_PIN: 15
+GPS_TX_PIN: 13
 
 
 ## T-Beam
