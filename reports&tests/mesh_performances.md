@@ -2,7 +2,7 @@
 title: Mesh performances
 description: 
 published: true
-date: 2024-01-29T11:37:53.729Z
+date: 2024-02-05T10:11:52.003Z
 tags: 
 editor: markdown
 dateCreated: 2023-02-15T17:54:35.741Z
@@ -176,6 +176,7 @@ In data 7 Maggio 2023 aggiornati broadcast_msg_pyq5.py e meshdb.db in modo da re
 In data 1 Ottobre aggiunto controllo ricezione messaggi duplicati.
 In data 24 Gen 2024 corretto gestione della rappresentazione in mappa dei GW in mesh
 In data 29 Gen 2024 introdotta gestione eventuale DB locked che occorre saltuariamente con processori 32bit datati
+In data 5 Feb 2024 modificato criteri di mapping cosicché ora vengono sempre mostrati in real time tutti i nodi distinti fra GW (in rosso) e mobili (in verde). Per il mapping dello storico abbiamo invece la selezione del singolo nodo nella giornata scelta dove comunque vengono mostrati anche i GW
 ### Download applicazione e DB Sqlite
 [broadcast_msg_pyq5.py](/broadcast_msg_pyq5.py)
 [meshdb.db](/meshdb.db)
