@@ -2,7 +2,7 @@
 title: Gestione I/O
 description: Gestione I/O
 published: true
-date: 2024-01-11T10:20:08.632Z
+date: 2024-02-08T08:59:11.870Z
 tags: 
 editor: markdown
 dateCreated: 2023-02-10T10:50:18.072Z
@@ -93,19 +93,19 @@ Dal dispositivo LOCALE ora si possono inviare i comandi di scrittura sui GPIO, v
 dispositivo LOCALE:
 
 ```plaintext
-meshtastic --port comXX --gpio-wrb 2 0 --dest !25a77b70 
+meshtastic --port comXX --gpio-wrb 2 0 --dest !25a34fb0 
 ```
 
  (id del dispositivo remoto) , setta a valore 0 il gpio 2
 
 ```plaintext
-meshtastic --port comXX --gpio-wrb 2 1 --dest !25a77b70
+meshtastic --port comXX --gpio-wrb 2 1 --dest !25a34fb0
 ```
 
  (id del dispositivo remoto) , porta a valore 1 il gpio 2
 
 ```plaintext
-meshtastic --port comxx --gpio-rd 0x10 --dest !25a77b70
+meshtastic --port comxx --gpio-rd 0x10 --dest !25a34fb0
 ```
 
  legge il valore del gpio 4.
@@ -131,7 +131,7 @@ Corrente è su ! I valori Tensione e corrente sono a circa 12 Volt e corrente in
 
 Attivazione da remoto tramite di uno script su un raspberry che è su un nodo a circa 30 km di distanza :
 
-meshtastic --host 192.168.88.215 --gpio-wrb 2 1 --dest \!95aa7804 (spegne il router)
+meshtastic  --gpio-wrb 2 1 --dest \”tuo ID remoto con relè” (spegne il router)
 
 Dopo qualche minuto si invia lo spegnimento del router:
 
