@@ -2,7 +2,7 @@
 title: Mesh performances
 description: 
 published: true
-date: 2024-02-05T15:02:40.776Z
+date: 2024-02-10T11:26:11.725Z
 tags: 
 editor: markdown
 dateCreated: 2023-02-15T17:54:35.741Z
@@ -177,6 +177,7 @@ In data 1 Ottobre aggiunto controllo ricezione messaggi duplicati.
 In data 24 Gen 2024 corretto gestione della rappresentazione in mappa dei GW in mesh
 In data 29 Gen 2024 introdotta gestione eventuale DB locked che occorre saltuariamente con processori 32bit datati
 In data 5 Feb 2024 modificato criteri di mapping cosicché ora vengono sempre mostrati in real time tutti i nodi distinti fra GW (in rosso) e mobili (in verde). Per il mapping dello storico abbiamo invece la selezione del singolo nodo nella giornata scelta dove comunque vengono mostrati anche i GW
+In data 10 Feb 2024 soppresso '?' in messaggio RX qsl de.. di risposta automatica a qsl? onde evitare saturazione mesh nel caso 2+ utenti avessere in linea questo monitor con autorisposta attivata.
 ### Download applicazione e DB Sqlite
 [broadcast_msg_pyq5.py](/broadcast_msg_pyq5.py)
 [meshdb.db](/meshdb.db)
