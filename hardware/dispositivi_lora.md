@@ -2,7 +2,7 @@
 title: Schede LoRa
 description: Schede LoRa compatibili con Meshtastic
 published: true
-date: 2024-02-05T18:00:45.311Z
+date: 2024-02-22T14:35:57.569Z
 tags: 
 editor: markdown
 dateCreated: 2023-01-27T13:28:35.196Z
@@ -19,6 +19,7 @@ Basso assorbimento e buona affidabilità la rendono adatta all'uso come nodo fis
 
 Si può aggiungere agevolmente un ricevitore GPS per trasformare questa scheda in un ottimo nodo mobile.
 
+![pin-diagram_lora32v2.1_1.6_600x600.webp](/hardware/pin-diagram_lora32v2.1_1.6_600x600.webp)
 [Modulo GPS (Aliexpress)](https://it.aliexpress.com/item/1005005594442876.html)
 [Modulo GPS (Amazon)](https://www.amazon.it/ICQUANZX-GY-NEO6MV2-Controller-ceramica-resistente/dp/B088LR3488/)
 
