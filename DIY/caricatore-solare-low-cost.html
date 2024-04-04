@@ -1,0 +1,44 @@
+<!--
+title: Caricatore Solare low cost
+description: Descrizione di un caricatore per batterie agli ioni di litio basato su i.c. MCP73871
+published: true
+date: 2024-04-04T19:27:35.284Z
+tags: caricatore solare fotovoltaico litio li-ion
+editor: ckeditor
+dateCreated: 2024-04-04T19:27:35.284Z
+-->
+
+<h1>INTRO</h1>
+<p>Per costruire un nodo autosufficiente è necessario trovare un sistema di alimentazioni.<br>La prima cosa che viene in mente è sempre il nostro amico sole!</p>
+<h1>Ricarica di Li-Ion / Li-Poli</h1>
+<p>Per caricare le classiche batterie usate nel mondo del DIY, vengono spesso utilizzati circuiti con il microcontrollore TP4056.<br>Questi circuiti di ricarica sono ottimi e spesso implementati in vari sistemi, tuttavia è bene tenere presente che circuiti di questo tipo non hanno implementato un sistema di controllo se <u>durante la ricarica della batteria ne avviene anche l’utilizzo</u>.</p>
+<p>Per applicare un carico al nostro sistema che utilizza un TP4056, è necessario creare un circuito che separa il carico dalla batteria in modo automatico nel momento in cui all’ingresso dell’alimentazione è presente una tensione, evitando così una ricarica infinita con possibili effetti tipo esplosione, proprio perchè non vedendo mai “finire” la carica, questo continuerebbe all’infinito il processo.<br><br>Alcuni riferimenti che ho trovato su internet:</p>
+<ul>
+  <li><a href="https://youtu.be/jUL6DkklKSA?t=570"><u>https://youtu.be/jUL6DkklKSA?t=570</u></a></li>
+</ul>
+<h1>MCP73871</h1>
+<p>Scorrendo il secondo link sopracitato, arriviamo a notare l’utilizzo di una piccola scheda che utilizza il microcontrollore MCP73871.<br><br>Questo simpatico integrato ha un sacco di funzioni molto interessanti, tra cui appunto la possibilità di utilizzare la corrente fornita da una fonte di alimentazione, CONTEMPORANEAMENTE sia per la ricarica che per un carico.</p>
+<p>Acquistando la scheda in foto:</p>
+<figure class="table">
+  <table>
+    <tbody>
+      <tr>
+        <td>
+          <figure class="image image_resized image-style-align-left" style="width:90.74%;"><img src="https://lh7-us.googleusercontent.com/-cHwAdLMNxoUTcWp56YfJrJ6kq-ufU2hEBBnthrkiGHRep769hwMHOi8VZMlSI8Vrt1KSqVFTGu1dYWLngdyqHTeBG_L713Vkz3hcdtjlnwXclhRX8lUSMgoq3jt_CxIAla9dxLub7fedSrO"></figure>
+        </td>
+        <td>
+          <figure class="image image_resized image-style-align-right" style="width:86.57%;"><img src="https://lh7-us.googleusercontent.com/W7dKXnT3x0ny6G-o-fnALOnzAjEzpvk7qbz7uxmIgN9CrfzJmXLdVbM_yK9PUUA1qhb83QQOa3eyelMc5sl7-9DFp_hMr_H1hOiKGEc4UV9vfvqGssrFqMz3qqcaBlON9OLzyKJrsrwv0T-r"></figure>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</figure>
+<figure class="image image_resized" style="width:98.74%;"><img src="https://lh7-us.googleusercontent.com/usQirprUjjG-nf__FCkAM9Jx4CjysaBXajYKy69EyjT6UG2hp8oLesLps3i6ZVH0d0bfVYNu0YtyfEukye55aw-VWdwKUjRi6GtroUYT-QxURURod5ShYVh8urM9gYsmy1NMZowZYtRusye-"></figure>
+<p>questa è già predisposta per poter essere utilizzata con un pannello fotovoltaico che dia una tensione di 5,5V-6V e fornisce una corrente di 500mA, quindi meglio usare un pannello che possa fornire almeno a 600mA-700mA.</p>
+<p>Una caratteristica che mi ha colpito particolarmente è il funzionamento simile ad un MPPT, che cerca di sfruttare la massima corrente senza far droppare la tensione del pannello.<br>E’ possibile modificare la corrente di carica sostituendo una resistenza sul circuito, potendo così andare da un minimo di 50mA ad un massimo di 1000mA.</p>
+<p>E’ presente anche l’attacco per un sensore di temperatura NTC da 10K da mettere sulla batteria.</p>
+<p>Vi lascio un link che spiega molto meglio nel dettaglio le caratteristiche di questo fantastico MCP73871 e che spiega anche il problema del TP4056.</p>
+<p><a href="https://www.studiopieters.nl/battery-charger/"><u>https://www.studiopieters.nl/battery-charger/</u></a></p>
+<p>TIP:</p>
+<p>ho usato dei morsetti KF301-2P per semplificare il collegamento pannello/batterie/tlora</p>
+<figure class="image image_resized" style="width:602px;"><img src="https://lh7-us.googleusercontent.com/t0G05LMA5qy_EeHSGl7AdbzcCy5YNUvdv8zq51AAkiADd1XxTyman2ZJI3h8WPzgZIB5HGfKqsPRawYLn2uEP0VM6CcpZO4xN0h38O3aZHpfZZr0bI5gD9mt51IvByYEH1NniJ3Gnx0PU99Q"></figure>
