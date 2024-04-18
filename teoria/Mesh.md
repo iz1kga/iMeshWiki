@@ -2,7 +2,7 @@
 title: Teoria
 description: Teoria della mesh
 published: true
-date: 2024-01-08T19:09:19.171Z
+date: 2024-04-18T19:29:47.508Z
 tags: 
 editor: markdown
 dateCreated: 2023-01-21T23:18:47.654Z
@@ -92,17 +92,8 @@ https://www.youtube.com/watch?v=LbvAMmKtjcE
 
 
 
-> ### Relazione tra canali e frequenze:
-> |canale | frequenza (433 MHz)| frequenza (868 MHz)|
-> |---|---|---|
-> |Very Long Slow | 433,000 MHz|869,542 MHz|
-> |Long Slow | 433,300 MHz|869,506 MHz|
-> |Long Moderate | 433,550 MHz|869,383 MHz|
-> |Long Fast | 433,875 MHz|869,482 MHz|
-> |Medium Slow | 433,875 MHz|869,449 MHz|
-> |Medium Fast | 433,125 MHz|869,453 MHz|
-> |Short Slow | 433,600 MHz|869,448 MHz|
-> Short Fast | 433,875 MHz|869,448 MHz|
-N.B. Non è necessario cambiare la frequenza sul dispositivo; la selezione del canale imposta automaticamente la frequenza.
+## Relazione tra canali e frequenze:
+Per conoscere l'effettiva freuenza di trasmissione è possibile utilizzare il tool disponibile all'indirizzo https://meshtastic.org/docs/overview/radio-settings/#frequency-slot-calculator
+N.B. Non è necessario cambiare la frequenza sul dispositivo; la selezione del modem-preset imposta automaticamente la frequenza.
 
 
