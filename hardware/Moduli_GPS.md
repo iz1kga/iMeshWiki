@@ -1,8 +1,8 @@
 ---
 title: Moduli GPS
 description: Raccolta di Moduli GPS consigliati e relative configurazioni 
-published: false
-date: 2024-04-24T20:42:32.987Z
+published: true
+date: 2024-04-24T20:43:02.127Z
 tags: accessori, bds, galileo, glonass, gps, qzss, rak, rak12500, sbas
 editor: markdown
 dateCreated: 2024-04-24T14:50:47.747Z
