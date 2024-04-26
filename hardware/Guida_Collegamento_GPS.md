@@ -2,7 +2,7 @@
 title: Come collegare il GPS
 description: Guida al collegamento di un modulo GPS
 published: true
-date: 2024-04-24T20:56:39.538Z
+date: 2024-04-26T08:41:31.454Z
 tags: gps
 editor: markdown
 dateCreated: 2024-04-24T20:56:39.538Z
@@ -22,3 +22,22 @@ I moduli GPS hanno solitamente un elevato consumo energetico, che può potenzial
 3. Un transistor NPN, consigliato il 2N2222
 4. Filo, saldatore, stagno, flussante e materiale da saldatura
 5. (opzionale) Un interruttore
+
+# Istruzioni
+Heltec V3:
+1. Saldare un filo dal pin TX del GPS al pin GPIO 48 di Heltec (o un altro GPIO libero)
+2. Saldare un filo dal pin RX del GPS al pin GPIO 47 di Heltec (o un altro GPIO libero)
+3. Saldare un filo dal pin GND del GPS al pin GND di Heltec
+4. Saldare un filo dal piedino sinistro del transistor npn (guardandolo dal lato piatto) al pin VCC del gps
+5. Saldare un filo dal piedino destro del transistor npn al pin 3V3 di Heltec
+6. Saldare un filo dal piedino centrale del transistor npn al pin GPIO 48 di Heltec (o un altro GPIO libero)
+7. Accendere il nodo e andare nelle sue impostazioni usando l'app su telefono o il client web o CLI
+8. Nel menù 'Position' impostare il GPS come 'Enabled'
+9. Impostare GPS_RX_PIN con il numero del GPIO usato per il collegamento al pin TX del GPS (si, devono essere invertiti. questo perchè il GPS trasmette dati dal pin TX e la scheda li riceve dal pin RX e viceversa)
+10. Impostare GPS_TX_PIN con il numero del GPIO usato per il collegamento al pin RX del GPS
+11. PIN_GPS_EN con il numero del GPIO usato per il collegamento al piedino centrale del transistor
+12. Salvare le impostazioni
+
+Una volta che la scheda sarà riavviata, potrete scorrere tra le pagine e verificare nell'ultima che il GPS sia stato riconosciuto. Se è così, leggerete inizialmente 'No GPS fix' che indicherà che il GPS sta cercando satelliti. Una volta trovati, vi mostrerà le vostre coordinate.
+Se invece viene mostrato 'GPS disabled' basterà premere velocemente 3 volte il tasto utente (quello che usate per scorrere tra le pagine) per attivarlo
+Se la scritta riporta 'GPS not present', ricontrollate i vostri collegamenti e le impostazioni
