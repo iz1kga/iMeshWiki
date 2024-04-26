@@ -2,7 +2,7 @@
 title: Come collegare il GPS
 description: Guida al collegamento di un modulo GPS
 published: true
-date: 2024-04-26T08:42:02.577Z
+date: 2024-04-26T08:43:49.165Z
 tags: gps
 editor: markdown
 dateCreated: 2024-04-24T20:56:39.538Z
@@ -25,6 +25,7 @@ I moduli GPS hanno solitamente un elevato consumo energetico, che può potenzial
 
 # Istruzioni
 Heltec V3:
+![schema_collegamento.webp](/hardware/gps/schema_collegamento.webp)
 1. Saldare un filo dal pin TX del GPS al pin GPIO 48 di Heltec (o un altro GPIO libero)
 2. Saldare un filo dal pin RX del GPS al pin GPIO 47 di Heltec (o un altro GPIO libero)
 3. Saldare un filo dal pin GND del GPS al pin GND di Heltec
