@@ -2,7 +2,7 @@
 title: Normativa
 description: Riferimenti normativi per l'uso di Meshtastic in banda 868MHz
 published: true
-date: 2024-04-28T08:19:51.876Z
+date: 2024-04-28T08:20:00.591Z
 tags: leggi
 editor: ckeditor
 dateCreated: 2024-04-19T18:09:03.070Z
@@ -11,7 +11,7 @@ dateCreated: 2024-04-19T18:09:03.070Z
 <p>I dispositivi LoRa possono usare diverse frequenze per il loro funzionamento: la modulazione LoRa è in sostanza indipendente dalla frequenza di ricetrasmissione, un pò come dire che potete trasmettere in FM su qualunque frequenza (se siete autorizzati !). Per favorire un uso legittimo di LoRa da parte di chiunque (quindi un utilizzo sostanzialmente libero) sono state scelte opportunamente delle frequenze di ricetrasmissione che ogni nazione/continente riserva, con alcuni limiti e vincoli, proprio per tali scopi.</p>
 <p>In Europa esistono alcune fette dello spettro RF che sono ad uso libero (si pensi banalmente ai telecomandi a 433Mhz) e una delle più note e articolate è la <strong>EU_868</strong> : una fetta di frequenze che va dagli 862MHz agli 874MHz suddivisa al suo interno in sottosezioni con specifici vincoli. Le raccomandazioni europee sono raccolte nel documento <a href="https://docdb.cept.org/download/3700">CEPT ECC ERC 70-03</a><br>E L'Italia ovviamente aderisce alle direttive comunitarie europee accogliendo tali raccomandazioni.</p>
 <p>Meshtastic utilizza una specifica porzione della EU_868 che va da <a href="https://meshtastic.org/docs/overview/radio-settings/">869.400MHz ai 869.650MHz</a> e nella fattispecie di LoraItalia viene utilizzato il preset MEDIUM_FAST che trasmette sui <strong>869.525MHz</strong> (si veda il <a href="https://meshtastic.org/docs/overview/radio-settings/">frequency slot calculator</a>)</p>
-<figure class="image image_resized" style="width:26.33%;"><img src="/freq_calc_mediumfast.png"></figure>
+<figure class="image image_resized" style="width:45.12%;"><img src="/freq_calc_mediumfast.png"></figure>
 <p>Cosa dice l'attuale normativa nazionale riguardo la frequenza di 869.525Mhz ?<br>Il documento di riferimento è il &nbsp;<a href="https://atc.mise.gov.it/images/documenti/Decreto_PNRF_31-08-2022_firmato.pdf">D.M. 31 AGOSTO 2022</a> che definisce il nuovo <i>Piano Nazionale di Ripartizione delle Frequenze (PNRF)</i> descritto qui <a href="https://atc.mise.gov.it/index.php/tecnologie-delle-comunicazioni/gestione-spettro-radio/piano-nazionale-di-ripartizione-delle-frequenze">https://atc.mise.gov.it/index.php/tecnologie-delle-comunicazioni/gestione-spettro-radio/piano-nazionale-di-ripartizione-delle-frequenze</a></p>
 <p>A noi interessa la <a href="https://atc.mise.gov.it/images/documenti/03-Tabella_B.docx.pdf">TABELLA B</a> dove si evince che la gamma 862,0000 - 876,0000 MHz eroga i servizi definiti con i codici "110 A B C D E F". I codici dei servizi sono consultabili nel documento <a href="https://atc.mise.gov.it/images/documenti/05-Note.pdf">NOTE ESPLICATIVE</a> . In sintesi i servizi definiti come "110" fanno riferimento alle caratteristiche tecniche indicate nei vari "Annex" della &nbsp;ERC 70-03. Nel nostro caso specifico rientriamo nel servizio 110B che ha come riferimento tecnico l' ANNEX 1 dell'ERC 70-03 , pagina 8, sezione h1.7 : 500mW ERP e duty cycle del 10% (il duty cycle è calcolato su base oraria, ossia il device in 60 minuti non può occupare il canale trasmettendo per più di 6 minuti complessivi).</p>
 <p><strong>Riassumendo: LoraItalia usa Meshtastic con preset Medium_Fast che trasmette a 869.525MHz. CHIUNQUE può usare quella frequenza a patto che:</strong></p>
