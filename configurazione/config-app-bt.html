@@ -2,10 +2,28 @@
 title: Config con smartphone e BT
 description: 
 published: false
-date: 2024-04-28T06:54:32.258Z
+date: 2024-04-28T12:36:42.819Z
 tags: app, bluetooth, configurazione
 editor: ckeditor
 dateCreated: 2024-04-28T06:53:36.429Z
 -->
 
-<p>prova</p>
+<p>Questa miniguida ha lo scopo di mostrare come installare Meshtastic su un device Heltec V3 in ambiente Windows ma può essere usata come riferimento anche per altri dispositivi analoghi.</p>
+<p><strong><u>IMPORTANTE: COLLEGATE SEMPRE L' ANTENNA</u></strong> prima di accendere il device altrimenti rischiate di bruciare la sezione radio.</p>
+<h1>Installare driver USB CP2102</h1>
+<p>I dispositivi Heltec usano il chip CP2102 per gestire la comunicazione USB e quindi dovete assicurarvi di avere installato nella vostra macchina Windows i relativi driver. Se così non fosse andate qui <a href="https://www.silabs.com/developers/usb-to-uart-bridge-vcp-drivers?tab=downloads">https://www.silabs.com/developers/usb-to-uart-bridge-vcp-drivers?tab=downloads</a> , scaricate ed installate i <a href="https://www.silabs.com/documents/public/software/CP210x_Universal_Windows_Driver.zip">CP210x Universal Windows Driver</a></p>
+<figure class="image image_resized" style="width:52.98%;"><img src="/firmware_flashing/f0.png"></figure>
+<h1>Flashare Meshtastic</h1>
+<p>Il modo più semplice è usare una recente versione del browser Chrome che supporta internamente il colloquio con le porte seriali e quindi può essere usato per flashare il firmware quasi come fosse un programma dedicato.</p>
+<p>Collegate il vostro Heltec alla porta USB del PC&nbsp;</p>
+<figure class="image image_resized" style="width:44.14%;"><img src="/firmware_flashing/f1.jpg"></figure>
+<p>e usando Chrome andate all'indirizzo <a href="https://flasher.meshtastic.org/">https://flasher.meshtastic.org/</a> e selezionate le seguenti opzioni:</p>
+<ul>
+  <li>Device: Heltec V3</li>
+  <li>Firmware: uno ‘stable’ recente (in foto il 2.3.4) (gli ‘stable’ sono sempre ‘Beta’, gli ‘unstable’ sono ‘alpha’)</li>
+  <li>per finire cliccate su Flash</li>
+</ul>
+<p>nota: non preoccupatevi se in basso a destra c'è la scritta “Not Connected”.</p>
+<figure class="image image_resized" style="width:89.94%;"><img src="/firmware_flashing/f2.png"></figure>
+<p><br>&nbsp;</p>
+<p>&nbsp;</p>
