@@ -2,7 +2,7 @@
 title: Come collegare il GPS
 description: Guida al collegamento di un modulo GPS
 published: true
-date: 2024-04-28T09:22:11.150Z
+date: 2024-04-28T09:26:57.282Z
 tags: gps
 editor: markdown
 dateCreated: 2024-04-24T20:56:39.538Z
