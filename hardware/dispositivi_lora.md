@@ -2,7 +2,7 @@
 title: Schede LoRa
 description: Schede LoRa compatibili con Meshtastic
 published: true
-date: 2024-04-28T08:04:32.705Z
+date: 2024-04-28T09:20:28.265Z
 tags: 
 editor: markdown
 dateCreated: 2023-01-27T13:28:35.196Z
