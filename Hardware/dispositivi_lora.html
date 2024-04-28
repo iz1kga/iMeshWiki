@@ -2,48 +2,43 @@
 title: Schede LoRa
 description: Schede LoRa compatibili con Meshtastic
 published: true
-date: 2024-04-28T12:54:38.868Z
+date: 2024-04-28T12:56:34.110Z
 tags: 
 editor: ckeditor
 dateCreated: 2023-01-27T13:28:35.196Z
 -->
 
-<h1 class="toc-header" id="schede-compatibili-con-meshtastic"> Schede compatibili con MeshTastic</h1>
-<p>Se siete alle prime armi prima di effettuare un acquisto è caldamente consigliato dare una occhiata all'elenco ufficiale dei device supportati  (sempre aggiornato) disponibile sul sito ufficiale di Meshtastic all'indirizzo <a rel="noreferrer" target="_blank" class="is-external-link" href="https://meshtastic.org/docs/hardware/devices/">https://meshtastic.org/docs/hardware/devices/</a></p>
-<h2 class="toc-header" id="t-lora-lora-32"> T-LoRa (Lora 32)</h2>
-<p><img width="250" alt="lora32.jpg" src="/hardware/lora32.jpg"><br>
-Scheda basata su ESP32, è economica, piccola e integra display, BLE, Wi-Fi ma non il GPS.<br>
-Basso assorbimento e buona affidabilità la rendono adatta all'uso come nodo fisso autoalimentato.</p>
+<h1>Schede compatibili con MeshTastic</h1>
+<p>Se siete alle prime armi prima di effettuare un acquisto è caldamente consigliato dare una occhiata all'elenco ufficiale dei device supportati (sempre aggiornato) disponibile sul sito ufficiale di Meshtastic all'indirizzo <a href="https://meshtastic.org/docs/hardware/devices/">https://meshtastic.org/docs/hardware/devices/</a></p>
+<h2>T-LoRa (Lora 32)</h2>
+<figure class="image"><img src="/hardware/lora32.jpg" alt="lora32.jpg"></figure>
+<p><br>Scheda basata su ESP32, è economica, piccola e integra display, BLE, Wi-Fi ma non il GPS.<br>Basso assorbimento e buona affidabilità la rendono adatta all'uso come nodo fisso autoalimentato.</p>
 <p>Si può aggiungere agevolmente un ricevitore GPS per trasformare questa scheda in un ottimo nodo mobile.</p>
-<p><img alt="pin-diagram_lora32v2.1_1.6_600x600.webp" src="/hardware/pin-diagram_lora32v2.1_1.6_600x600.webp"><br>
-<a rel="noreferrer" target="_blank" class="is-external-link" href="https://it.aliexpress.com/item/1005005594442876.html">Modulo GPS (Aliexpress)</a><br>
-<a rel="noreferrer" target="_blank" class="is-external-link" href="https://www.amazon.it/ICQUANZX-GY-NEO6MV2-Controller-ceramica-resistente/dp/B088LR3488/">Modulo GPS (Amazon)</a></p>
-<p><a class="is-asset-link" href="/hardware/gpsconn.png"><img width="250" alt="gpsconn.png" src="/hardware/gpsconn.png"></a><br>
-Connessione modulo GPS.<br>
-Attenzione, rispetto all'immagine , i pin RX e tX sono da invertire (soltanto su un lato!). Nella configurazione del dispositivo andranno esplicitati i pin sul quale la scheda GPS è stata collegata:<br>
-GPS_RX_PIN: 15<br>
-GPS_TX_PIN: 13</p>
-<h2 class="toc-header" id="t-beam"> T-Beam</h2>
-<p><img width="250" alt="t-beam.jpg" src="/hardware/t-beam.jpg"><br>
-Scheda basata su ESP32, integra BLE, Wi-Fi, GPS e un alloggiamento per una batteria 18650 Li-ion con circuito di ricarica, rendendola molto comoda per uso portatile.<br>
-Il display è opzionale ed è necessario saldarlo per l'installazione.</p>
-<h2 class="toc-header" id="t-echo"> T-Echo</h2>
-<p><img width="250" alt="t-echo.jpg" src="/hardware/t-echo.jpg"></p>
-<h2 class="toc-header" id="heltec-lora32"> Heltec LoRa32</h2>
+<figure class="image"><img src="/hardware/pin-diagram_lora32v2.1_1.6_600x600.webp" alt="pin-diagram_lora32v2.1_1.6_600x600.webp"></figure>
+<p><br><a href="https://it.aliexpress.com/item/1005005594442876.html">Modulo GPS (Aliexpress)</a><br><a href="https://www.amazon.it/ICQUANZX-GY-NEO6MV2-Controller-ceramica-resistente/dp/B088LR3488/">Modulo GPS (Amazon)</a></p>
+<figure class="image"><img src="/hardware/gpsconn.png" alt="gpsconn.png"></figure>
+<p><br>Connessione modulo GPS.<br>Attenzione, rispetto all'immagine , i pin RX e tX sono da invertire (soltanto su un lato!). Nella configurazione del dispositivo andranno esplicitati i pin sul quale la scheda GPS è stata collegata:<br>GPS_RX_PIN: 15<br>GPS_TX_PIN: 13</p>
+<h2>T-Beam</h2>
+<figure class="image"><img src="/hardware/t-beam.jpg" alt="t-beam.jpg"></figure>
+<p><br>Scheda basata su ESP32, integra BLE, Wi-Fi, GPS e un alloggiamento per una batteria 18650 Li-ion con circuito di ricarica, rendendola molto comoda per uso portatile.<br>Il display è opzionale ed è necessario saldarlo per l'installazione.</p>
+<h2>T-Echo</h2>
+<figure class="image"><img src="/hardware/t-echo.jpg" alt="t-echo.jpg"></figure>
+<h2>Heltec LoRa32</h2>
 <p>Il device è disponibile in diverse versioni (normale, tracker, ink, stick) e ad oggi siamo alla rel. 3.1. Basato su ESP32 e SX1262, integra WiFi 2.4GHz e BT, connettore USB-C per scambio dati e alimentazione. Dispone di un connettore per collegare una eventuale batteria LiPo di cui gestisce anche la ricarica (come batteria tampone o alimentazione al posto della USB-C). Dotata a seconda delle versioni di display OLED o INK. Perfetta per chi comincia mostra però qualche lacuna di caso di nodi autoalimentati (pannelli solari) e non presidiati: consuma un pò di più rispetto altri dispositivi e tende a bloccarsi se la tensione della batteria LiPo scende sotto certi valori e potrebbe poi non ripartire. Un funzionamento talvolta erratico in funzione della tensione di alimentazione. Da attenzionare nel caso di installazioni remote.</p>
-<p><a rel="noreferrer" target="_blank" class="is-external-link" href="https://it.aliexpress.com/item/1005006361015484.html">Heltec Official Store</a></p>
-<p>Modello base con display OLED:<br>
-<img width="250" alt="heltec4.png" src="/heltec4.png"></p>
-<p>Display Ink:<br>
-<img width="250" alt="heltec3.png" src="/heltec3.png"></p>
-<p>Stick:<br>
-<img width="250" alt="heltec2.png" src="/heltec2.png"></p>
-<p>Tracker con GPS:<br>
-<img width="250" alt="heltec1.png" src="/heltec1.png"></p>
-<h2 class="toc-header" id="rak-wisblock"> RAK WisBlock</h2>
-<h3 class="toc-header" id="modulo-core-rak4631-su-base-rak19007"> modulo Core RAK4631 su Base RAK19007</h3>
-<p><img width="250" alt="rak4631on19007.jpg" src="/hardware/rak4631on19007.jpg"><br>
-<a rel="noreferrer" target="_blank" class="is-external-link" href="https://store.rakwireless.com/pages/wisblock">Sistema modulare</a> composto da una scheda madre "Base" su cui installare i moduli per le funzionalità richieste.<br>
-Un <a rel="noreferrer" target="_blank" class="is-external-link" href="https://store.rakwireless.com/products/wisblock-meshtastic-starter-kit">kit Meshtastic</a> minimo richiede un modulo Core RAK4631 per avere LoRa e BLE, a cui possono essere aggiunti un modulo sensore ed un modulo GPS.<br>
-Il display è opzionale e non è possibile avere contemporaneamente funzionalità LoRa e Wi-Fi.<br>
-In compenso, questo sistema offre i consumi più bassi e l'aggiornamento firmware più semplice tra tutti i dispositivi compatibili con Meshtastic.</p>
+<p><a href="https://it.aliexpress.com/item/1005006361015484.html">Heltec Official Store</a></p>
+<p>Modello base con display OLED:</p>
+<figure class="image"><img src="/heltec4.png" alt="heltec4.png"></figure>
+<p>&nbsp;</p>
+<p>Wireless Paper (display ink):</p>
+<figure class="image image_resized" style="width:41.61%;"><img src="/heltec3.png" alt="heltec3.png"></figure>
+<p>&nbsp;</p>
+<p>Wireless Stick:</p>
+<figure class="image"><img src="/heltec2.png" alt="heltec2.png"></figure>
+<p>&nbsp;</p>
+<p>Wireless Tracker (con GPS):</p>
+<figure class="image"><img src="/heltec1.png" alt="heltec1.png"></figure>
+<p>&nbsp;</p>
+<h2>RAK WisBlock</h2>
+<h3>modulo Core RAK4631 su Base RAK19007</h3>
+<figure class="image"><img src="/hardware/rak4631on19007.jpg" alt="rak4631on19007.jpg"></figure>
+<p><br><a href="https://store.rakwireless.com/pages/wisblock">Sistema modulare</a> composto da una scheda madre "Base" su cui installare i moduli per le funzionalità richieste.<br>Un <a href="https://store.rakwireless.com/products/wisblock-meshtastic-starter-kit">kit Meshtastic</a> minimo richiede un modulo Core RAK4631 per avere LoRa e BLE, a cui possono essere aggiunti un modulo sensore ed un modulo GPS.<br>Il display è opzionale e non è possibile avere contemporaneamente funzionalità LoRa e Wi-Fi.<br>In compenso, questo sistema offre i consumi più bassi e l'aggiornamento firmware più semplice tra tutti i dispositivi compatibili con Meshtastic.</p>
