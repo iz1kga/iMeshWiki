@@ -1,8 +1,8 @@
 ---
-title: Lo.Ra.
+title: Cos'è LoRa
 description: 
 published: true
-date: 2024-01-08T16:47:47.320Z
+date: 2024-04-28T10:49:35.490Z
 tags: 
 editor: markdown
 dateCreated: 2023-01-22T07:59:58.412Z
