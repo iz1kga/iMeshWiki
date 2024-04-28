@@ -2,7 +2,7 @@
 title: Schede LoRa
 description: Schede LoRa compatibili con Meshtastic
 published: true
-date: 2024-04-28T07:46:44.592Z
+date: 2024-04-28T07:48:55.035Z
 tags: 
 editor: markdown
 dateCreated: 2023-01-27T13:28:35.196Z
@@ -38,7 +38,7 @@ Il display è opzionale ed è necessario saldarlo per l'installazione.
 ![t-echo.jpg](/hardware/t-echo.jpg =250x)
 
 ## Heltec LoRa32
-Siamo alla rel. 3.1 basata su ESP32 e SX1262, integra WiFi 2.4GHz e BT, connettore USB-C per scambio dati e alimentazione. Dispone di un connettore per collegare una eventuale batteria LiPo di cui gestisce anche la ricarica. Dotata a seconda delle versioni (normale, tracker, ink, stick) di display OLED o INK. Perfette per chi comincia
+Siamo alla rel. 3.1 basata su ESP32 e SX1262, integra WiFi 2.4GHz e BT, connettore USB-C per scambio dati e alimentazione. Dispone di un connettore per collegare una eventuale batteria LiPo di cui gestisce anche la ricarica. Dotata a seconda delle versioni (normale, tracker, ink, stick) di display OLED o INK. Perfetta per chi comincia mostra però qualche lacuna di caso di nodi autoalimentati (pannelli solari) e non pesidiati: consuma un pò di più rispetto altri dispositivi e tende a bloccarsi se la tensione della batteria LiPo scende sotto certi valori e potrebbe poi non ripartire. Un funzionamento talvolta erratico in funzione della tensione di alimentazione. Da attenzionare nel caso di installazioni remote.
 ![helteclora32.png](/hardware/helteclora32.png =250x)
 
 ## RAK WisBlock
