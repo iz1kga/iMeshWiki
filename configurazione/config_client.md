@@ -2,13 +2,13 @@
 title: Configurazione Nodi
 description: 
 published: true
-date: 2024-01-15T19:16:15.808Z
+date: 2024-04-28T06:51:33.036Z
 tags: 
 editor: markdown
 dateCreated: 2023-01-22T00:08:07.747Z
 ---
 
-[Una buona configurazione è la base del buon funzionamento della mesh!](/teoria/Mesh)
+Prima di procedere si consiglia di leggere [Una buona configurazione è la base del buon funzionamento della mesh!](/teoria/Mesh)
 
 ## Nome dispositivo
 Il nome del dispositivo permette agli altri nodi di identificare il proprio in maniera univoca.
