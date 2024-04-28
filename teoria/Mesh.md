@@ -2,7 +2,7 @@
 title: Teoria
 description: Teoria della mesh
 published: true
-date: 2024-04-28T08:12:59.400Z
+date: 2024-04-28T08:16:26.687Z
 tags: 
 editor: markdown
 dateCreated: 2023-01-21T23:18:47.654Z
@@ -95,7 +95,9 @@ https://www.youtube.com/watch?v=LbvAMmKtjcE
 ## Relazione tra canali e frequenze:
 Per conoscere l'effettiva frequenza di trasmissione è possibile utilizzare il tool disponibile all'indirizzo https://meshtastic.org/docs/overview/radio-settings/#frequency-slot-calculator
 
-Nel caso specifico di LoraItalia viene utilizzato di comune accordo il range di frequenze EU_868 e in Meshtastic il preset MEDIUM_FAST. Questo implica che la frequenza effettivamente utilizzata è 869.525MHz  (si veda la voce [Normativa](/teoria/Normativa) per ulteriori dettagli).
+Nel caso specifico di LoraItalia viene utilizzato di comune accordo il range di frequenze EU_868 e in Meshtastic il preset MEDIUM_FAST.
+![freq_calc_mediumfast.png](/freq_calc_mediumfast.png)
+Questo implica che la frequenza effettivamente utilizzata è 869.525MHz  (si veda la voce [Normativa](/teoria/Normativa) per ulteriori dettagli).
 N.B. Non è necessario cambiare la frequenza sul dispositivo: la selezione del modem-preset imposta automaticamente la frequenza (come detto nel caso specifico di LoraItalia 869.525MHz).
 
 
