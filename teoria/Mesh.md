@@ -2,7 +2,7 @@
 title: Teoria
 description: Teoria della mesh
 published: true
-date: 2024-04-28T08:16:43.744Z
+date: 2024-04-28T08:17:30.638Z
 tags: 
 editor: markdown
 dateCreated: 2023-01-21T23:18:47.654Z
@@ -99,6 +99,5 @@ Nel caso specifico di LoraItalia viene utilizzato di comune accordo il range di 
 ![freq_calc_mediumfast.png](/freq_calc_mediumfast.png)
 Questo implica che la frequenza effettivamente utilizzata è 869.525MHz  (si veda la voce [Normativa](/teoria/Normativa) per ulteriori dettagli).
 
-**N.B. Non è necessario cambiare la frequenza sul dispositivo: la selezione del modem-preset imposta automaticamente la frequenza (come detto nel caso specifico di LoraItalia 869.525MHz).
-**
+**N.B. Non è necessario cambiare la frequenza sul dispositivo: la selezione del modem-preset imposta automaticamente la frequenza (come detto nel caso specifico di LoraItalia 869.525MHz).**
 
