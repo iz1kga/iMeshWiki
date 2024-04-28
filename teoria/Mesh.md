@@ -2,7 +2,7 @@
 title: Teoria
 description: Teoria della mesh
 published: true
-date: 2024-04-18T19:29:47.508Z
+date: 2024-04-28T08:08:26.948Z
 tags: 
 editor: markdown
 dateCreated: 2023-01-21T23:18:47.654Z
@@ -93,7 +93,7 @@ https://www.youtube.com/watch?v=LbvAMmKtjcE
 
 
 ## Relazione tra canali e frequenze:
-Per conoscere l'effettiva freuenza di trasmissione è possibile utilizzare il tool disponibile all'indirizzo https://meshtastic.org/docs/overview/radio-settings/#frequency-slot-calculator
-N.B. Non è necessario cambiare la frequenza sul dispositivo; la selezione del modem-preset imposta automaticamente la frequenza.
+Per conoscere l'effettiva frequenza di trasmissione è possibile utilizzare il tool disponibile all'indirizzo https://meshtastic.org/docs/overview/radio-settings/#frequency-slot-calculator
+N.B. Non è necessario cambiare la frequenza sul dispositivo: la selezione del modem-preset imposta automaticamente la frequenza.
 
 
