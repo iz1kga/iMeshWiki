@@ -1,8 +1,8 @@
 ---
-title: Teoria
+title: Cos'è una Mesh
 description: Teoria della mesh
 published: true
-date: 2024-04-28T08:18:43.118Z
+date: 2024-04-28T10:48:12.193Z
 tags: 
 editor: markdown
 dateCreated: 2023-01-21T23:18:47.654Z
