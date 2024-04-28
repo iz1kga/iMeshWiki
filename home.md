@@ -2,7 +2,7 @@
 title: Home
 description: LoRa Italia
 published: true
-date: 2024-02-06T17:49:33.218Z
+date: 2024-04-28T20:17:10.206Z
 tags: 
 editor: markdown
 dateCreated: 2023-01-21T23:17:51.009Z
@@ -68,7 +68,7 @@ Meshtastic® is a registered trademark of Meshtastic LLC.
 
 - [📡 Antenne](/hardware/antenne-lora-da-acquistare)
 
-- [📚 Teoria](/teoria/Mesh)
+- [📚 Teoria](/1-Teoria/Mesh)
 
 - [⚙️ Configurazione](/configurazione/config_client)
 
