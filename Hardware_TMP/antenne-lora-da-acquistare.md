@@ -2,7 +2,7 @@
 title: Antenne da acquistare
 description: Antenne LoRa disponibili sul mercato
 published: true
-date: 2024-04-28T09:24:22.465Z
+date: 2024-04-28T09:24:43.291Z
 tags: antenne lora 868 meshtastic
 editor: markdown
 dateCreated: 2023-02-16T08:06:26.099Z
