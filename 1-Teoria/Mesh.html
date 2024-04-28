@@ -2,156 +2,149 @@
 title: Cos'è una Mesh
 description: Teoria della mesh
 published: true
-date: 2024-04-28T10:59:11.462Z
+date: 2024-04-28T11:00:02.447Z
 tags: 
 editor: ckeditor
 dateCreated: 2023-01-21T23:18:47.654Z
 -->
 
-<h2 class="toc-header" id="tipologia-di-nodi"> Tipologia di nodi</h2>
+<h1>Tipologia di nodi</h1>
 <p>Le configurazioni che abbiamo pensato per il buon funzionamento della rete prevedono 3 tipologie di nodi:</p>
 <ul>
-<li>client</li>
-<li>router</li>
-<li>gateway</li>
+  <li>client</li>
+  <li>router</li>
+  <li>gateway</li>
 </ul>
-<p>Il nodo di tipo client è quello che viene usato dall'utente finale per accedere alla mesh e comunicare con gli altri.<br>
-Il nodo di tipo router ha una funzione infrastrutturale e asseconda la necessità di risparmio energetico dettata da una probabile installazione a fotovoltaico.<br>
-Il nodo di tipo gateway instrada, attraverso la connessione internet a un broker MQTT, il traffico ricevuto, sostituendo una tratta radio non ancora in essere.</p>
+<p>Il nodo di tipo client è quello che viene usato dall'utente finale per accedere alla mesh e comunicare con gli altri.<br>Il nodo di tipo router ha una funzione infrastrutturale e asseconda la necessità di risparmio energetico dettata da una probabile installazione a fotovoltaico.<br>Il nodo di tipo gateway instrada, attraverso la connessione internet a un broker MQTT, il traffico ricevuto, sostituendo una tratta radio non ancora in essere.</p>
 <p>Qeste tipologie di nodi possono essere unite: può, ad esempio, esistere un client-gateway o un gateway-router.</p>
-<h2 class="toc-header" id="una-mesh-efficiente"> Una mesh efficiente</h2>
-<p>Quello che vorremmo ottenere è una mesh efficiente che permetta di far circolare i messaggi in modo rapido e affidabile.<br>
-Con questo scopo si è progettata la rete e la configurazione dei nodi che ne entrano a far parte.</p>
-<h3 class="toc-header" id="nodi-backbone-di-primo-livello"> Nodi Backbone di primo livello</h3>
+<h1>Una mesh efficiente</h1>
+<p>Quello che vorremmo ottenere è una mesh efficiente che permetta di far circolare i messaggi in modo rapido e affidabile.<br>Con questo scopo si è progettata la rete e la configurazione dei nodi che ne entrano a far parte.</p>
+<h2>Nodi Backbone di primo livello</h2>
 <p>Questi sono i nodi principali della rete: sono installati in modo fisso in posizione strategica e garantiscono, grazie all'elevata copertura geografica, il minimo numero di HOP che i pacchetti devono fare per raggiungere la loro destinazione. Questi nodi dovrebbero essere così configurati:</p>
 <ul>
-<li>Tipo - ROUTER</li>
-<li>Limite Hop - 3</li>
+  <li>Tipo - ROUTER</li>
+  <li>Limite Hop - 3</li>
 </ul>
-<h3 class="toc-header" id="nodi-backbone-di-secondo-livello"> Nodi Backbone di secondo livello</h3>
-<p>Questi sono i nodi secondari della rete: sono fissi e permettono ai nodi client di raggiungere i nodi principali quando questi non sono da loro direttamente raggiungibili.<br>
-Questi nodi dovrebbero essere così configurati:</p>
+<h2>Nodi Backbone di secondo livello</h2>
+<p>Questi sono i nodi secondari della rete: sono fissi e permettono ai nodi client di raggiungere i nodi principali quando questi non sono da loro direttamente raggiungibili.<br>Questi nodi dovrebbero essere così configurati:</p>
 <ul>
-<li>Tipo - ROUTER</li>
-<li>Limite Hop - 3</li>
+  <li>Tipo - ROUTER</li>
+  <li>Limite Hop - 3</li>
 </ul>
-<h3 class="toc-header" id="nodi-client-o-utente"> Nodi client o utente</h3>
+<h2>Nodi client o utente</h2>
 <p>Questi sono i nodi finali della rete, quelli effettivamente utilizzati dagli utenti e dovrebbero essere così configurati:</p>
 <ul>
-<li>Tipo - CLIENT</li>
-<li>Limite Hop - min 3 max 5</li>
+  <li>Tipo - CLIENT</li>
+  <li>Limite Hop - min 3 max 5</li>
 </ul>
-<h3 class="toc-header" id="gateway"> Gateway</h3>
-<p>I gateway sono dei nodi che instradamo da e tramite internet i pacchetti ricevuti permettendo di unire parti della mesh che altrimenti non sarebbero in comunicazione.<br>
-Trasmettono inoltre alcune informazioni ad alcuni server che permettono, ad esempio, di generare una mappa dinamica dei nodi della mesh (<a rel="noreferrer" target="_blank" class="is-external-link" href="https://map.loraitalia.it">https://map.loraitalia.it</a>).</p>
+<h2>Gateway</h2>
+<p>I gateway sono dei nodi che instradamo da e tramite internet i pacchetti ricevuti permettendo di unire parti della mesh che altrimenti non sarebbero in comunicazione.<br>Trasmettono inoltre alcune informazioni ad alcuni server che permettono, ad esempio, di generare una mappa dinamica dei nodi della mesh (<a href="https://map.loraitalia.it">https://map.loraitalia.it</a>).</p>
 <p>Merita di essere sottolineato che lo spirito della mesh è quella di garantire il suo <strong>funzionamento in qualsiasi condizione</strong>. Da questo si deduce che l'utilizzo dei gateway (e di internet, quindi) debba essere limitato il più possibile, idealmente per la sola funzione di generazione della mappa.</p>
 <p>Questo importante obiettivo è raggiungibile ponendo la massima attenzione nella realizzazione dei link radio, curandone la realizzazione in ogni dettaglio.</p>
-<h2 class="toc-header" id="esempio-di-infrastruttura"> Esempio di infrastruttura</h2>
-<p><img height="671" width="450" alt="mesh-diagram.jpg" src="/mesh-map/mesh-diagram.jpg"></p>
-<h2 class="toc-header" id="come-funziona-il-routing"> Come funziona il routing</h2>
-<p><a rel="noreferrer" target="_blank" class="is-external-link" href="https://www.youtube.com/watch?v=7v6UbC5blJU&amp;ab_channel=Meshtastic">https://www.youtube.com/watch?v=7v6UbC5blJU&amp;ab_channel=Meshtastic</a></p>
-<h2 class="toc-header" id="tipi-di-canale"> Tipi di canale</h2>
-<p>Esistono 6 canali predefiniti, che prevedono valori diversi dei seguenti parametri:<br>
-<em>Spreading Factor (SF)</em> - Quanto i dati vengono distribuiti nel tempo.<br>
-<em>Bandwidth</em> - Quant'è grande la porzione di spettro che andiamo ad impegnare.<br>
-<em>Coding Rate</em> - Quanta ridondanza aggiungiamo per proteggerci dal rumore.</p>
+<h1>Esempio di infrastruttura</h1>
+<figure class="image"><img src="/mesh-map/mesh-diagram.jpg" alt="mesh-diagram.jpg"></figure>
+<h1>Come funziona il routing</h1>
+<p><a href="https://www.youtube.com/watch?v=7v6UbC5blJU&amp;ab_channel=Meshtastic">https://www.youtube.com/watch?v=7v6UbC5blJU&amp;ab_channel=Meshtastic</a></p>
+<h1>Tipi di canale</h1>
+<p>Esistono 6 canali predefiniti, che prevedono valori diversi dei seguenti parametri:<br><i>Spreading Factor (SF)</i> - Quanto i dati vengono distribuiti nel tempo.<br><i>Bandwidth</i> - Quant'è grande la porzione di spettro che andiamo ad impegnare.<br><i>Coding Rate</i> - Quanta ridondanza aggiungiamo per proteggerci dal rumore.</p>
 <blockquote>
-<h3 class="toc-header" id="canali-predefiniti"> Canali predefiniti</h3>
-<table>
-<thead>
-<tr>
-<th>Channel setting</th>
-<th>Alt Channel Name</th>
-<th>Data-Rate</th>
-<th>SF / Symbols</th>
-<th>Coding Rate</th>
-<th>Bandwidth</th>
-<th>Link Budget</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Short Range / Fast</td>
-<td>Short Fast</td>
-<td>10.94 kbps</td>
-<td>7 / 128</td>
-<td>4/5</td>
-<td>250</td>
-<td>137dB</td>
-</tr>
-<tr>
-<td>Short Range / Slow</td>
-<td>Short Slow</td>
-<td>6.25 kbps</td>
-<td>8 / 256</td>
-<td>4/5</td>
-<td>250</td>
-<td>140dB</td>
-</tr>
-<tr>
-<td>Medium Range / Fast</td>
-<td>Medium Fast</td>
-<td>3.52 kbps</td>
-<td>9 / 512</td>
-<td>4/5</td>
-<td>250</td>
-<td>143dB</td>
-</tr>
-<tr>
-<td>Medium Range / Slow</td>
-<td>Medium Slow</td>
-<td>2.95 kbps</td>
-<td>10 / 1024</td>
-<td>4/5</td>
-<td>250</td>
-<td>146dB</td>
-</tr>
-<tr>
-<td>Long Range / Fast</td>
-<td>Long Fast</td>
-<td>1.07 kbps (default)</td>
-<td>11 / 2048</td>
-<td>4/5</td>
-<td>250</td>
-<td>148.5dB</td>
-</tr>
-<tr>
-<td>Long Range / Moderate</td>
-<td>Long Moderate</td>
-<td>0.335 kbps</td>
-<td>11 / 2048</td>
-<td>4/8</td>
-<td>125</td>
-<td>151dB</td>
-</tr>
-<tr>
-<td>Long Range / Slow</td>
-<td>Long Slow</td>
-<td>0.18 kbps</td>
-<td>12 / 4096</td>
-<td>4/8</td>
-<td>125</td>
-<td>154dB</td>
-</tr>
-<tr>
-<td>Very Long Range / Slow</td>
-<td>Very Long Slow</td>
-<td>0.09 kbps</td>
-<td>12 / 4096</td>
-<td>4/8</td>
-<td>62.5</td>
-<td>157dB</td>
-</tr>
-</tbody>
-</table>
+  <h3>Canali predefiniti</h3>
+  <figure class="table">
+    <table>
+      <thead>
+        <tr>
+          <th>Channel setting</th>
+          <th>Alt Channel Name</th>
+          <th>Data-Rate</th>
+          <th>SF / Symbols</th>
+          <th>Coding Rate</th>
+          <th>Bandwidth</th>
+          <th>Link Budget</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Short Range / Fast</td>
+          <td>Short Fast</td>
+          <td>10.94 kbps</td>
+          <td>7 / 128</td>
+          <td>4/5</td>
+          <td>250</td>
+          <td>137dB</td>
+        </tr>
+        <tr>
+          <td>Short Range / Slow</td>
+          <td>Short Slow</td>
+          <td>6.25 kbps</td>
+          <td>8 / 256</td>
+          <td>4/5</td>
+          <td>250</td>
+          <td>140dB</td>
+        </tr>
+        <tr>
+          <td>Medium Range / Fast</td>
+          <td>Medium Fast</td>
+          <td>3.52 kbps</td>
+          <td>9 / 512</td>
+          <td>4/5</td>
+          <td>250</td>
+          <td>143dB</td>
+        </tr>
+        <tr>
+          <td>Medium Range / Slow</td>
+          <td>Medium Slow</td>
+          <td>2.95 kbps</td>
+          <td>10 / 1024</td>
+          <td>4/5</td>
+          <td>250</td>
+          <td>146dB</td>
+        </tr>
+        <tr>
+          <td>Long Range / Fast</td>
+          <td>Long Fast</td>
+          <td>1.07 kbps (default)</td>
+          <td>11 / 2048</td>
+          <td>4/5</td>
+          <td>250</td>
+          <td>148.5dB</td>
+        </tr>
+        <tr>
+          <td>Long Range / Moderate</td>
+          <td>Long Moderate</td>
+          <td>0.335 kbps</td>
+          <td>11 / 2048</td>
+          <td>4/8</td>
+          <td>125</td>
+          <td>151dB</td>
+        </tr>
+        <tr>
+          <td>Long Range / Slow</td>
+          <td>Long Slow</td>
+          <td>0.18 kbps</td>
+          <td>12 / 4096</td>
+          <td>4/8</td>
+          <td>125</td>
+          <td>154dB</td>
+        </tr>
+        <tr>
+          <td>Very Long Range / Slow</td>
+          <td>Very Long Slow</td>
+          <td>0.09 kbps</td>
+          <td>12 / 4096</td>
+          <td>4/8</td>
+          <td>62.5</td>
+          <td>157dB</td>
+        </tr>
+      </tbody>
+    </table>
+  </figure>
 </blockquote>
-<p>Il data rate è inversamente proporzionale alla distanza teoricamente raggiungibile.<br>
-La rete attualmente è configurata sul canale Medium / Fast e garantisce collegamenti stabili di oltre 100 km tra un nodo e l'altro.</p>
+<p>Il data rate è inversamente proporzionale alla distanza teoricamente raggiungibile.<br>La rete attualmente è configurata sul canale Medium / Fast e garantisce collegamenti stabili di oltre 100 km tra un nodo e l'altro.</p>
 <p>Nel video che segue è possibile vedere un test che mette confronto la trasmissione di tipo "Short/Fast" con quella "Long/Fast":</p>
-<p><a rel="noreferrer" target="_blank" class="is-external-link" href="https://www.youtube.com/watch?v=LbvAMmKtjcE">https://www.youtube.com/watch?v=LbvAMmKtjcE</a></p>
-<h2 class="toc-header" id="relazione-tra-canali-e-frequenze"> Relazione tra canali e frequenze:</h2>
-<p>Per conoscere l'effettiva frequenza di trasmissione è possibile utilizzare il tool disponibile all'indirizzo <a rel="noreferrer" target="_blank" class="is-external-link" href="https://meshtastic.org/docs/overview/radio-settings/#frequency-slot-calculator">https://meshtastic.org/docs/overview/radio-settings/#frequency-slot-calculator</a></p>
-<p>Nel caso specifico di LoraItalia viene utilizzato di comune accordo il range di frequenze EU_868 e in Meshtastic il preset MEDIUM_FAST.<br>
-<img width="350" alt="freq_calc_mediumfast.png" src="/freq_calc_mediumfast.png"><br>
-Questo implica che la frequenza effettivamente utilizzata è 869.525MHz  (si veda la voce <a class="is-internal-link is-valid-page" href="/teoria/Normativa">Normativa</a> per ulteriori dettagli).</p>
+<p><a href="https://www.youtube.com/watch?v=LbvAMmKtjcE">https://www.youtube.com/watch?v=LbvAMmKtjcE</a></p>
+<h1>Relazione tra canali e frequenze:</h1>
+<p>Per conoscere l'effettiva frequenza di trasmissione è possibile utilizzare il tool disponibile all'indirizzo <a href="https://meshtastic.org/docs/overview/radio-settings/#frequency-slot-calculator">https://meshtastic.org/docs/overview/radio-settings/#frequency-slot-calculator</a></p>
+<p>Nel caso specifico di LoraItalia viene utilizzato di comune accordo il range di frequenze EU_868 e in Meshtastic il preset MEDIUM_FAST.<br>&nbsp;</p>
+<figure class="image"><img src="/freq_calc_mediumfast.png" alt="freq_calc_mediumfast.png"></figure>
+<p><br>Questo implica che la frequenza effettivamente utilizzata è 869.525MHz (si veda la voce <a href="/teoria/Normativa">Normativa</a> per ulteriori dettagli).</p>
 <p><strong>N.B. Non è necessario cambiare la frequenza sul dispositivo: la selezione del modem-preset imposta automaticamente la frequenza (come detto nel caso specifico di LoraItalia 869.525MHz).</strong></p>
