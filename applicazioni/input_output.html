@@ -2,53 +2,83 @@
 title: Gestione I/O
 description: Gestione I/O
 published: true
-date: 2023-02-11T07:56:58.219Z
+date: 2024-04-29T18:57:17.511Z
 tags: 
 editor: ckeditor
 dateCreated: 2023-02-10T10:50:18.072Z
 -->
 
-<h2>Configurazione di periferiche GPIO</h2>
+<h2 class="toc-header" id="configurazione-di-periferiche-gpio"> Configurazione di periferiche GPIO</h2>
 <p>GPIO, o General Purpose Input/Output, si riferisce a un set di pin su un microcontrollore o computer a scheda singola che possono essere programmati come pin di input o output. LoRa, o Long Range, è una tecnologia di comunicazione wireless che consente la trasmissione di dati a lungo raggio con un basso consumo energetico.</p>
 <p>Se utilizzati insieme, GPIO e LoRa possono essere utilizzati per creare un sistema di comunicazione wireless in cui i pin GPIO possono essere utilizzati per controllare la comunicazione e il trasferimento dei dati utilizzando la tecnologia LoRa. Ad esempio, è possibile utilizzare un microcontrollore con pin GPIO e un modulo LoRa per creare una rete di sensori wireless, in cui il microcontrollore legge i dati del sensore e li invia a un dispositivo centrale utilizzando il modulo LoRa.</p>
+<p><img alt="329989445_724949482593138_2375873192942626684_n.jpg" src="/329989445_724949482593138_2375873192942626684_n.jpg"></p>
 <p>Tieni presente che avrai bisogno di un modulo LoRa compatibile con i pin GPIO del microcontrollore e potresti anche dover scrivere codice per controllare la comunicazione e il trasferimento dei dati tra il microcontrollore e il modulo LoRa.</p>
-<p>Attivazione GPIO su T-Beam e T-Lora con firmware Meshtastic&nbsp;</p>
+<p>Attivazione GPIO su T-Beam e T-Lora con firmware Meshtastic</p>
 <p>Per impedire l'accesso da parte di utenti non attendibili, occorre attivare un canale gpio che verrà utilizzato per l'accesso autenticato a questa funzione. Occorrerà installare questo canale sia sul nodo LOCALE che su quello REMOTO.</p>
 <p>Collegare il dispositivo LOCALE tramite USB</p>
 <p><strong>Creare un canale GPIO:</strong></p>
-<pre><code class="language-plaintext">meshtastic --port comXX --ch-add gpio</code></pre>
+<pre v-pre="true" class="prismjs line-numbers"><code class="language-plaintext">meshtastic --port comXX --ch-add gpio
+</code></pre>
 <p>(per cancellare un canale già precedentemente creato)</p>
-<pre><code class="language-plaintext">meshtastic --port comXX --ch-index 1 --ch-del</code></pre>
+<pre v-pre="true" class="prismjs line-numbers"><code class="language-plaintext">meshtastic --port comXX --ch-index 1 --ch-del
+</code></pre>
 <p>ATTENZIONE: In caso di collegamento ad un server MQTT, verificare che i seguenti settaggi siano ancora attivi:</p>
-<pre><code class="language-plaintext">meshtastic --port comXX --ch-index 0 --ch-set uplink_enabled true --ch-index 0 --ch-set downlink_enabled true</code></pre>
+<pre v-pre="true" class="prismjs line-numbers"><code class="language-plaintext">meshtastic --port comXX --ch-index 0 --ch-set uplink_enabled true --ch-index 0 --ch-set downlink_enabled true
+</code></pre>
 <p>Se esegui test locali, potresti anche voler modificare la velocità del canale:</p>
-<pre><code class="language-plaintext">meshtastic --port comXX --ch-medfast</code></pre>
+<pre v-pre="true" class="prismjs line-numbers"><code class="language-plaintext">meshtastic --port comXX --ch-medfast
+</code></pre>
 <p>Verificare che il canale sia stato creato e copiare il lungo "URL completo" che contiene tutti i canali su quel dispositivo:</p>
-<pre><code class="language-plaintext">meshtastic --port comXX --info</code></pre>
-<p>example: Complete URL (includes all channels): https://meshtastic.org/e/#CgMSAf1u4nP9oZfsC9-aAnDwt3xHSAk1Hls2mYeaNB4gu0aBGdwaW8SCggBOANAA0gBUBs</p>
+<pre v-pre="true" class="prismjs line-numbers"><code class="language-plaintext">meshtastic --port comXX --info
+</code></pre>
+<p>example: Complete URL (includes all channels): <a rel="noreferrer" target="_blank" class="is-external-link" href="https://meshtastic.org/e/#CgMSAf1u4nP9oZfsC9-aAnDwt3xHSAk1Hls2mYeaNB4gu0aBGdwaW8SCggBOANAA0gBUBs">https://meshtastic.org/e/#CgMSAf1u4nP9oZfsC9-aAnDwt3xHSAk1Hls2mYeaNB4gu0aBGdwaW8SCggBOANAA0gBUBs</a></p>
 <p>Connettere il dispositivo REMOTO tramite USB (o usare la funzione di amministrazione remota per raggiungerlo attraverso la rete)</p>
 <p>Abilitare la gestione hardware remota</p>
-<pre><code class="language-plaintext">meshtastic --port comXX  --set remote_hardware.enabled true</code></pre>
-<p>Attenzione : Con la versione firmware 2.0.3 non occorre attivare questa funzione, con quelle successive non funziona da console, ma occorre collegarsi con l'APP al dispositivo remoto e nella sezione: "Module Setting" &gt; Remote Hardware Config &gt; Remote Hardware enabled &gt;Abilitare il Servizio (ON)</p>
-<p>&nbsp;Successivamente occorre configurare il dispositivo REMOTO per unire il canale gpio che creato sul dispositivo LOCALE:</p>
-<pre><code class="language-plaintext">meshtastic --port comXX --seturl "URL completo copiato dal quello LOCALE"</code></pre>
+<pre v-pre="true" class="prismjs line-numbers"><code class="language-plaintext">meshtastic --port comXX  --set remote_hardware.enabled true
+</code></pre>
+<hr>
+<p>(con canale gpio aggiungere --dest !xxxxxxxxx per comando remoto)</p>
+<p>meshtastic --ch-index 0 --ch-set downlink_enabled true<br>
+meshtastic --ch-index 0 --ch-set uplink_enabled true<br>
+meshtastic --ch-index 0 --ch-set psk none</p>
+<p>meshtastic --ch-index 1 --ch-set downlink_enabled true<br>
+meshtastic --ch-index 1 --ch-set uplink_enabled true<br>
+meshtastic --ch-index 1 --ch-set psk none</p>
+<hr>
+<p>meshtastic --port com54  --set remote_hardware.enabled true</p>
+<p>Utilizzare firmware dalla versione 2.0.21 quelle precedenti hanno qualche problema</p>
+<p>Attenzione : Con la versione firmware 2.0.3 non occorre attivare questa funzione, con quelle successive non funziona da console, ma occorre collegarsi con l'APP al dispositivo remoto e nella sezione: "Module Setting" &gt; Remote Hardware Config &gt; Remote Hardware enabled &gt;Abilitare il Servizio (ON).</p>
+<p>Successivamente occorre configurare il dispositivo REMOTO per unire il canale gpio che creato sul dispositivo LOCALE:</p>
+<pre v-pre="true" class="prismjs line-numbers"><code class="language-plaintext">meshtastic --port comXX --seturl "URL completo copiato dal quello LOCALE"
+</code></pre>
 <p>Dal dispositivo LOCALE ora si possono inviare i comandi di scrittura sui GPIO, vedere tabellina di quelli disponibili su TBEAM e TLORA</p>
 <p>dispositivo LOCALE:</p>
-<pre><code class="language-plaintext">meshtastic --port comXX --gpio-wrb 2 0 --dest !25a77b70 </code></pre>
-<p>&nbsp;(id del dispositivo remoto) , setta a valore 0 il gpio 2</p>
-<p>&nbsp;</p>
-<pre><code class="language-plaintext">meshtastic --port comXX --gpio-wrb 2 1 --dest !25a77b70</code></pre>
-<p>&nbsp;(id del dispositivo remoto) , porta a valore 1 il gpio 2</p>
-<p>&nbsp;</p>
-<pre><code class="language-plaintext">meshtastic --port comxx --gpio-rd 0x10 --dest !25a77b70</code></pre>
-<p>&nbsp;legge il valore del gpio 4.</p>
-<p>&nbsp;</p>
+<pre v-pre="true" class="prismjs line-numbers"><code class="language-plaintext">meshtastic --port comXX --gpio-wrb 2 0 --dest !25a34fb0 
+</code></pre>
+<p>(id del dispositivo remoto) , setta a valore 0 il gpio 2</p>
+<pre v-pre="true" class="prismjs line-numbers"><code class="language-plaintext">meshtastic --port comXX --gpio-wrb 2 1 --dest !25a34fb0
+</code></pre>
+<p>(id del dispositivo remoto) , porta a valore 1 il gpio 2</p>
+<pre v-pre="true" class="prismjs line-numbers"><code class="language-plaintext">meshtastic --port comxx --gpio-rd 0x10 --dest !25a34fb0
+</code></pre>
+<p>legge il valore del gpio 4.</p>
 <p>GPIO disponibili sui seguenti dispositivi:</p>
 <p>TBEAM v2.0 perfettamente funzionanti: 2, 13, 14, 15, 25</p>
 <p>TLORA V.1.1.6 perfettamente funzionanti: 2, 12, 13, 15, 19</p>
-<p>&nbsp;</p>
-<figure class="media">
-  <oembed url="https://youtu.be/Ej2QexL5kts"></oembed>
-</figure>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
+<h2 class="toc-header" id="applicazione-pratica-dei-gpio-da-remoto"> Applicazione pratica dei GPIO da remoto</h2>
+<p>Problema: da remoto vogliamo sapere se in casa la rete a 220V è caduta o se è un problema del router internet che è andato down e non è più raggiungibile</p>
+<p>Soluzione: con T-lora, verificare che sia effettivamente giù la 220V o sia andato giù il link internet e di conseguenza occorre un reboot del router per riattivazione la linea internet.</p>
+<p>Dopo aver configurato correttamente la tlora con i sensori INA219 e Relè su GPIO, in caso non si riesca a contattare il router occorre verificare se la tensione e corrente sono nella norma , tramite APP controllare i valori di tensione corrente rilevati sull’alimentazione del router dal Tlora remoto collegato al router:</p>
+<p><img alt="whatsapp_image_2023-03-05_at_14.26.55(1).jpeg" src="/test/whatsapp_image_2023-03-05_at_14.26.55(1).jpeg"></p>
+<p>Corrente è su ! I valori Tensione e corrente sono a circa 12 Volt e corrente intorno a 60 mA.</p>
+<p>Attivazione da remoto tramite di uno script su un raspberry che è su un nodo a circa 30 km di distanza :</p>
+<p>meshtastic  --gpio-wrb 2 1 --dest \”tuo ID remoto con relè” (spegne il router)</p>
+<p>Dopo qualche minuto si invia lo spegnimento del router:</p>
+<p><img alt="whatsapp_image_2023-03-05_at_14.19.30.jpeg" src="/test/whatsapp_image_2023-03-05_at_14.19.30.jpeg"></p>
+<p>La corrente è giù abbiamo spento il router !</p>
+<p>Il valoredi  tensione è a circa 7 Volt e la corrente intorno a 0,3 mA</p>
+<p>Andiamo ad accendere il router:</p>
+<p>Meshtastic --gpio-wrb 2 0 --dest \”tuo ID remoto con relè” (accende router)</p>
+<p><img alt="whatsapp_image_2023-03-05_at_14.19.29_(1).jpeg" src="/test/whatsapp_image_2023-03-05_at_14.19.29_(1).jpeg"></p>
+<p>La corrente è su ! I valori tensione e corrente sono a circa 12 Volt e corrente intorno a 60 mA</p>
+<p>Dopo qualche minuto , il collegamento da remoto alla linea internet è operativo !!!!</p>
