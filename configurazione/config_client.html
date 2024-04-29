@@ -1,0 +1,126 @@
+<!--
+title: Configurazione Nodi
+description: 
+published: true
+date: 2024-04-29T18:40:23.834Z
+tags: 
+editor: ckeditor
+dateCreated: 2023-01-22T00:08:07.747Z
+-->
+
+<p>Prima di procedere si consiglia di leggere <a class="is-internal-link is-valid-page" href="/teoria/Mesh">Una buona configurazione è la base del buon funzionamento della mesh!</a></p>
+<h2 class="toc-header" id="nome-dispositivo"> Nome dispositivo</h2>
+<p>Il nome del dispositivo permette agli altri nodi di identificare il proprio in maniera univoca.<br>
+Ci sono due nomi da impostare: il LongName e lo ShortName</p>
+<h3 class="toc-header" id="longname"> LongName</h3>
+<p>il LongName viene usato nell'elenco dei nodi ricevuti e nella mappa.<br>
+Può contenere lettere, numeri, simboli ed anche icone</p>
+<p><strong>Python CLI:</strong></p>
+<pre v-pre="true" class="prismjs line-numbers"><code class="language-bash">meshtastic --set-owner 'NODE-NAME'
+</code></pre>
+<h3 class="toc-header" id="shortname"> ShortName</h3>
+<p>Lo short name viene utilizzato per identificare il nodo nella chat. Ha un vincolo sulla lunghezza di 4 caratteri, oppure un'icona.</p>
+<p><strong>Python CLI:</strong></p>
+<pre v-pre="true" class="prismjs line-numbers"><code class="language-bash">meshtastic --set-owner-short  'A1B2'
+</code></pre>
+<h2 class="toc-header" id="radio-lora"> Radio Lora</h2>
+<p>Le <strong>normative</strong> in ambito radiantistico non sono armonizzate in tutto il mondo ed è quindi <strong>necessario</strong> selezionare le impostazioni corrette in modo che il dispositivo si comporti come prescritto dalla normativa del paese dove viene utilizzato. Inoltre è necessario impostare <em>hopLimit</em> in modo da evitare un'eccessiva propagazione dei pacchetti lora.</p>
+<h3 class="toc-header" id="region"> Region</h3>
+<p>La regione è il parametro che configura il modem LoRa in modo che si attenga alle normative del proprio paese.<br>
+Per l'Italia, selezionare EU_868.</p>
+<p><strong>Python CLI:</strong></p>
+<pre v-pre="true" class="prismjs line-numbers"><code class="language-bash">meshtastic --set lora.region 3
+</code></pre>
+<h3 class="toc-header" id="hoplimit"> HopLimit</h3>
+<p>Un pacchetto lora ha un <strong>limite massimo</strong> di nodi da cui può essere ripetuto.<br>
+Ogni ripetizione di un nodo è chiamato <strong>hop</strong>.<br>
+Un nodo client dovrebbe avere impostato l'<em><strong>hopLimit</strong></em> a 3.</p>
+<p><strong>ATTENZIONE NODI CON ALTO NUMERO DI HOPLIMIT POSSONO GENERARE MOLTO TRAFFICO SULLA MESH</strong></p>
+<p><strong>Python CLI:</strong></p>
+<pre v-pre="true" class="prismjs line-numbers"><code class="language-bash">meshtastic --set lora.hop_limit 3
+</code></pre>
+<h2 class="toc-header" id="role"> Role</h2>
+<p>Il ruolo di un nodo deve essere di tipo <strong>CLIENT</strong>.</p>
+<pre v-pre="true" class="prismjs line-numbers"><code class="language-bash">meshtastic --set device.role CLIENT
+</code></pre>
+<h2 class="toc-header" id="nodeinfo"> NodeInfo</h2>
+<p>Un nodo comunica i propri dettagli tramite un pacchetto di tipo nodeInfo contenente Longname, shortName e modello Hardware. Per i nodi di tipo client i tempi di invio di questo pacchetto non devono essere inferiori ai 3600s per i nodi <strong>mobili</strong> e non inferiore a 10800 per i nodi <strong>fissi</strong>.</p>
+<h2 class="toc-header" id="position"> Position</h2>
+<p>La posizione viene acquisita dal dispositivo in maniera automatica se dotato di ricevitore GPS integrato. In caso contrario è possibile impostare dei valori fissi di latitudine / longitudine oppure far si che questi vengano acquisiti, tramite bluetooth, dallo smartphone.<br>
+Impostare non meno di <strong>3600</strong> secondi un nodo <strong>mobile</strong>.<br>
+Impostare non meno di <strong>43200</strong> secondi per un nodo <strong>fisso</strong>.</p>
+<h2 class="toc-header" id="telemetry"> Telemetry</h2>
+<p>Il dispositivo, tramite dei sensori interni, può inviare a intervalli regolari il livello di carica della batteria e anche, se dotato di sensori aggiuntivi, misure relative all'ambiente (T/H/P) o - ad esempio - alla corrente e alla tensione di un circuito di alimentazione solare.<br>
+Le tempistiche di invio dei pacchetti di telemetria devono essere non inferiori ai <strong>3600</strong> secondi per le <strong>telemetrie del dispositivo</strong> e non inferiori ai <strong>1800</strong> secondi per le <strong>telemetrie ambientali</strong>.</p>
+<h2 class="toc-header" id="neighbor-info"> Neighbor Info</h2>
+<p>Questo modulo invia in rete informazioni circa i nodi con i quali il nostro nodo riesce a stabilire una comunicazione radio diretta. Attivare questa opzione solo sui nodi <strong>fissi</strong> Questo permette di visualizzare sulla <a rel="noreferrer" target="_blank" class="is-external-link" href="https://map.loraitalia.it/">mappa</a> la topologia di rete e ci restituisce informazioni preziose circa la bontà dei link che vengono stabiliti. E' bene attivarlo ed impostare a 3600 secondi la frequenza di invio.</p>
+<h2 class="toc-header" id="tabella-riassuntiva-tempistiche-pacchetti"> Tabella Riassuntiva tempistiche pacchetti</h2>
+<h3 class="toc-header" id="nodi-mobili"> Nodi Mobili</h3>
+<div class="table-container"><table class="dense">
+<thead>
+<tr>
+<th>Parametro App</th>
+<th>Parametro CLI</th>
+<th>Tempo (s)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>NodeInfo Broadcast Interval</td>
+<td>device.node_info_broadcast_secs</td>
+<td>3600</td>
+</tr>
+<tr>
+<td>Position Broadcast Interval</td>
+<td>position.position_broadcast_secs</td>
+<td>3600</td>
+</tr>
+<tr>
+<td>Device Metrics Update Interval</td>
+<td>telemetry.device_update_interval</td>
+<td>3600</td>
+</tr>
+<tr>
+<td>Environment Metrics Update Interval</td>
+<td>telemetry.environment_update_interval</td>
+<td>1800</td>
+</tr>
+</tbody>
+</table></div>
+<h3 class="toc-header" id="nodi-fissi"> Nodi Fissi</h3>
+<div class="table-container"><table class="dense">
+<thead>
+<tr>
+<th>Parametro App</th>
+<th>Parametro CLI</th>
+<th>Tempo (s)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>NodeInfo Broadcast Interval</td>
+<td>device.node_info_broadcast_secs</td>
+<td>10800</td>
+</tr>
+<tr>
+<td>Position Broadcast Interval</td>
+<td>position.position_broadcast_secs</td>
+<td>43200</td>
+</tr>
+<tr>
+<td>Device Metrics Update Interval</td>
+<td>telemetry.device_update_interval</td>
+<td>3600</td>
+</tr>
+<tr>
+<td>Environment Metrics Update Interval</td>
+<td>telemetry.environment_update_interval</td>
+<td>1800</td>
+</tr>
+<tr>
+<td>Neighbor Info Update Interval</td>
+<td>neighbor_info.update_interval</td>
+<td>3600</td>
+</tr>
+</tbody>
+</table></div>
