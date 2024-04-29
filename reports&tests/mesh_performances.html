@@ -1,0 +1,170 @@
+<!--
+title: Mesh performances
+description: 
+published: true
+date: 2024-04-29T19:15:42.283Z
+tags: 
+editor: ckeditor
+dateCreated: 2023-02-15T17:54:35.741Z
+-->
+
+<h1 class="toc-header" id="lo-strumento-di-controllo-sviluppato"> Lo strumento di controllo sviluppato</h1>
+<p>by Vincenzo Lorenzale (IU2RPO) il 6 Marzo 2023</p>
+<hr>
+<p>Da Dicembre 2020  sto seguendo il progetto Meshtastic che si propone di creare una rete di comunicazione su banda 868Mhz con apparecchi basati su ESP32 e LoRa radio (es.: TTGO-LoRa32-oled). Fin da inizio 2021 ho pensato di costruire uno strumento atto al controllo dei messaggi di protocollo nel mesh e all'utilizzo degli stessi per una rappresentazione grafica, in tempo reale, della posizione gps dei vari nodi collegati verso il nodo di controllo centrale che raccogliesse anche tutti i messaggi di testo interccorsi in rete e ne conservasse il tutto in un archivio storico.</p>
+<p>Sono passati due anni d'allora e tutto il progetto ha avuto la sensibile evoluzione che mi ha portato a integrare/perfezionare lo strumento sviluppato due anni fa per arrivare alla versione attuale che qui presento.</p>
+<h2 class="toc-header" id="requisiti-hwsw"> Requisiti hw/sw</h2>
+<ol>
+<li>PC standard che supporti Windows 10</li>
+<li>Python3 ver. 3.9 o superiore (oggi meshtastic python richiede appunto minimo la ver. 3.9)</li>
+<li>un Tlora TTGO-LoRa32-oled o equivalente per collegamento seriale a PC via USB</li>
+<li>configurazione del suddetto Tlora come router_client http host e mqtt client verso il server che connette tutti i mesh router (nel nostro caso <a rel="noreferrer" target="_blank" class="is-external-link" href="http://meshtastic.iz1kga.it">meshtastic.iz1kga.it</a>)</li>
+<li>avendo la python CLI meshtastic già installata, occorre installare in python anche i seguenti moduli:</li>
+</ol>
+<ul>
+<li>pip install pyqt5</li>
+<li>pip install pyqtwebengine</li>
+<li>pip install folium</li>
+</ul>
+<p>L'applicazione python-PyQt5 oggetto di questa descrizione si chiama broadcast_msg_pyq5.py ed è scaricabile da <a rel="noreferrer" target="_blank" class="is-external-link" href="https://github.com/vinloren/meshtastic_broadcast">https://github.com/vinloren/meshtastic_broadcast</a> clonando il repository o via download in formato  zip (il relativo <a rel="noreferrer" target="_blank" class="is-external-link" href="http://README.md">README.md</a> fa ancora riferimento alla vecchia versione non avendolo ancora aggionato alla descrizione attuale)</p>
+<p>Insieme con broadcast_msg_pyq5.py, nella cardella che conterrà questo file, dovrà essere copiato il file meshDB.db che è lo Sqlite3 DB di supporto all'applicazione.</p>
+<h2 class="toc-header" id="strumenti-utili-non-indispensabil-a-supporto"> Strumenti utili non indispensabil a supporto</h2>
+<ol>
+<li>DB Browser for Sqlite scaricabile at <a rel="noreferrer" target="_blank" class="is-external-link" href="https://sqlitebrowser.org/">https://sqlitebrowser.org/</a> per controllare il DB meshDB.db</li>
+<li>Open Office 4 scaricabile at <a rel="noreferrer" target="_blank" class="is-external-link" href="https://www.openoffice.org/">https://www.openoffice.org/</a> per eventualmente elaborare gli output dell'applicazione</li>
+</ol>
+<h2 class="toc-header" id="obiettivi-dellapplicazione"> Obiettivi dell'applicazione</h2>
+<p>Più che fare una lista mi pare più utile prsentare l'immagine della GUI desrivendone i componenti attraverso i quali vengono raggiunti gli obiettivi desiderati.<br>
+<img alt="mesh_data_show_1.png" src="/mesh_data_show_1.png"></p>
+<h3 class="toc-header" id="campi-home-lat-e-home-lon-scopo"> Campi Home lat e Home lon / scopo</h3>
+<p>Questi due campi di input devono contenere le coordinate geografiche del nostro router_client e attualmente riportano i valori del qth di vinloren_GW_0a78_868. Chi avesse installato l'applicazione dovrà al primo lancio sostituire queste coordinate con quelle del vero qth prima di dare START. A conclusione del primo lancio le nuove coordinate saranno salvate nel Sqlite3 DB meshDB.db che risiede nella stessa cartella del file python broadcast_msg_pyq5.py in modo che i lanci successivi troveranno automaticamente le nuove coordinate aggiornate.</p>
+<p>Lo scopo della fissazione di queste coordinate è quello di poter poi misurare rilevamento e distanza di tutti i nodi presenti in mesh rispetto alla posizione del nostro client_router.</p>
+<h3 class="toc-header" id="tasto-show-map"> Tasto SHOW MAP</h3>
+<p>Produce una geo map (default OpenStreetMap) con al centro la posizione del nostro router_clien (marker in blu) e tutti i GW presenti nel mesh (markers in rosso) come default. Se la combo box 'map nodes' punta su un nodo non GW anziché il default 'mappa solo i GW', oltre ai GW verra mappata anche la posisione del nodo scelto con un marker verde.</p>
+<p>La mappa apparirà poi cliccando sul tab 'geo map' subito sotto nell'immagine. Una volta aperta la mappa, cliccando sui marker appariranno le relative informazioni da questi riferite.</p>
+<h3 class="toc-header" id="radio-button-storico-giorno"> Radio button 'storico giorno:'</h3>
+<p>Se questo widget non è selezionato la mappa conseguente sarà la foto del momento riferita alla posizione dei nodi riportati. Se invece è selezionato la mappa riporterà tutte le posizioni registrate nel giorno prescelto tramite la combo box che gli sta accanto. La scelta del giorno è limitata dai campi 'fra' ed 'e' precompilati ma alterabili a piacimento. Questa limitazione serviva a evitare di avere una lista dei giorni troppo lunga ma allo stato attuale, dato che i riferimenti di posizione geografica dei nodi sono poi stati limitati agli ultimi 7 giorni, oggi risulta ridondante.</p>
+<h3 class="toc-header" id="combo-box-tipo-map"> Combo box 'tipo map'</h3>
+<p>Oltre alla OpenStreetMap sono disponibili altre sorgenti che si possono scegliere fra quelle offerte dalla libreria python folium qui riportate.</p>
+<h3 class="toc-header" id="tab-messaggi"> Tab 'Messaggi'</h3>
+<p>Contiene i dettagli su tutti i messaggi di protocollo e di testo scambiati nel mesh in tempo reale. Il contenuto di questi messaggi oltre ad apparire in questa pagina di Tab, può anche essere salvato in un file .csv per successiva elaborazione su excell se ls checkbox 'genera csv file' a fondo pagina è selezionata. Il file risultante 'meshtastic_data.csv' sarà disponibile nella cartella contenente l'applicazione, deselezionando la checkbox una volta selezionata.</p>
+<h3 class="toc-header" id="tab-connessi"> Tab 'Connessi'</h3>
+<p>Contiene i riferimenti in tempo reale a tutti i nodi del mesh che al momento colloquiano col nostro client_router. I dati riportati sono autoesplicativi.</p>
+<h3 class="toc-header" id="tab-geomap"> Tab 'GeoMap'</h3>
+<p>Si spiega da sola ovvero con le note accennate col tasto 'SHOW MAP' e col radio button 'storico giorno:' visti sopra.</p>
+<h3 class="toc-header" id="text-area-log-protocollo"> Text area 'Log protocollo'</h3>
+<p>Sono sintetizzati in tempo reale i messaggi di protocollo ricevuti e trasmessi da 'mioGW'. Vengono riportati 'date-time', 'user_id', 'longname', 'dest_id', 'tipo messaggio'. Questi campi sono separati da tab e scritti in font 'courier new' (fixed size) in modo che se copiamo tutto il contenuto della text area negli appunti possimo poi creare agevolmente un file di testo in .csv atto a essere caricato in excell (o meglio in OpenOffice) per successive elaborazioni.</p>
+<h3 class="toc-header" id="text-area-texts-ricevutitrasmessi"> Text area 'Texts ricevuti/trasmessi'</h3>
+<p>Qui vengono riportati i messaggi di testo intercorsi nel mesh con riferimenti temporali e indicazione del longname che li ha inviati.</p>
+<h3 class="toc-header" id="tasto-start"> Tasto 'START'</h3>
+<p>Serve ad avviare l'applicazione e se premuto una volta avviata, fa recepire al programma l'invio di un nostro messaggio immediato al mesh o il cambiamento di stato fra 'solo ricezione' ovvero invio periodico di messaggio di test ogni 10 minuti.</p>
+<p>l'invio periodico del messaggio riportato dal text field 'Dati inviati' accanto a START avviene automaticamente con cadenza ogni 10 minuti se la checkbox 'solo ricezione' non è marcata. Questi messaggi hanno, oltre a data-ora, una numerazione progressiva atta alla verifica di quanto è stato ricevuto nel mesh.</p>
+<h3 class="toc-header" id="campo-di-testo-dati-inviati"> Campo di testo 'Dati inviati'</h3>
+<p>Il contenuto di questo campo sarà inviato periodicamente oppure immediatamente premendo START se la checkbox 'Mess. immediato' è marcata.</p>
+<h3 class="toc-header" id="checkbox-solo-ricezione"> Checkbox 'solo ricezione'</h3>
+<p>Già spiegato sotto tasto 'START'</p>
+<h3 class="toc-header" id="checkbox-mess-immediato"> Checkbox 'Mess. immediato'</h3>
+<p>Già spiegato sotto campo di testo 'Dati inviati'.</p>
+<h3 class="toc-header" id="checkbox-autorisposta"> Checkbox 'Autorisposta'</h3>
+<p>Se questa checkbox è marcata, qualunque messaggio di testo in arrivo contenete la parola 'qsl?' (senza apici) avrà immediata risposta automatica di conferma ricezione. Il messaggio di risposta verrà mostrato sotto quello ricevuto in 'Texts ricevuti/trasmessi'.</p>
+<h3 class="toc-header" id="checkbox-genera-csv-file"> Checkbox 'Genera csv file'</h3>
+<p>Già descritta sotto 'Tab Messaggi'</p>
+<h3 class="toc-header" id="progress-bar-chutil-e-airutiltxx10"> Progress bar ChUtil e AirUtilTXx10</h3>
+<p>Ogni messaggio Telemetry trasmesso dal nostro router_client contenete valori di ChanUtil e AirUtilTX viene intercettato per riprodurre sulle rispettive progress bar i relativi valori percentuali. ChanUtil è arrotondato all'unità nella progress bar come pure AirUtilTx moltiplicato per 10.</p>
+<p>Le barre sono rappresentate con 3 colori possibili:</p>
+<ol>
+<li>verde per ChanUtil e AirUtilTx &lt; 51 (51 - 5.1)</li>
+<li>giallo per ChanUtil fra 51 e 75 e AirUtilTx fra 51 e 99 (9.9)</li>
+<li>rosso per ChanUtil &gt; 75 e AirUtilTx = 100 (10.0)</li>
+</ol>
+<p>Com'è noto se AirUtilTX raggiunge il 10% l'unità che ha registrato questo valore non trasmette più e avere quindi sotto mano la situazione presso i vari router può dare un'idea dell'affidabilità della consegna dei messaggi in rete. Avere impostato tutti i devices in MEDIUM_FAST al posto del precedente LONG_FAST ha sensibilmente migliorato la situazione generale, per quanto ho però constatato, il 10% viene ancora a volte raggiunto dal mio GW mentre ciò apparentemente non capita con tutti gli altri nel mesh.</p>
+<p>E' questo un argomento sul quale sto indagando anche perché vedo che il mio GW invia messaggi di Telemetry ogni minuto con grande precisione senza perderne alcuno, mentre questi messaggi non mi giungono dagli altri nodi / router con la stessa cadenza ma apparentemente in modo saltuario.</p>
+<h2 class="toc-header" id="note-sul-db-meshdbdb"> Note sul DB meshDB.db</h2>
+<p>Il DB è costituito da quattro tabelle:<br>
+Tabella per dati ChanUtil e AirUtilTX<br>
+1.CREATE TABLE "airtx" (<br>
+"data"	TEXT,<br>
+"ora"	TEXT,<br>
+"nodenum"	INTEGER,<br>
+"longname"	TEXT,<br>
+"chanutil" REAL,<br>
+"airutiltx" REAL,<br>
+"battlv" REAL,<br>
+"pressione" REAL,<br>
+"temperatura" REAL,<br>
+"umidita" REAL<br>
+)</p>
+<p>Tabella per dati di monitor posizione geografica devices in tempo reale<br>
+2. CREATE TABLE "connessioni" (<br>
+"data"	TEXT,<br>
+"ora"	TEXT,<br>
+"user"	TEXT,<br>
+"alt"	INTEGER,<br>
+"lat"	REAL,<br>
+"lon"	REAL,<br>
+"batt"	INTEGER,<br>
+"snr"	REAL,<br>
+"dist"	REAL,<br>
+"rilev"	REAL,<br>
+"_id"	INTEGER UNIQUE,<br>
+PRIMARY KEY("_id" AUTOINCREMENT)<br>
+)</p>
+<p>Tabella per registazione dati di ciascun nodo aggiornati nel tempo<br>
+3. CREATE TABLE "meshnodes" (<br>
+"data"	TEXT,<br>
+"ora"	TEXT,<br>
+"nodenum"	INTEGER UNIQUE PRIMARY KEY,<br>
+"longname"	TEXT,<br>
+"alt"	INTEGER,<br>
+"lat"	REAL,<br>
+"lon"	REAL,<br>
+"batt"	INTEGER,<br>
+"snr"	REAL,<br>
+"dist"	REAL,<br>
+"rilev"	REAL,<br>
+"chanutil" REAL,<br>
+"airutiltx" REAL,<br>
+"pressione" REAL,<br>
+"temperat" REAL,<br>
+"umidita" REAL,<br>
+"voltage" REAL,<br>
+"corrente" REAL<br>
+)</p>
+<p>Tabella per controllo messaggi duplicati<br>
+4. CREATE TABLE "origmsg" (<br>
+"data"	TEXT,<br>
+"ora"	TEXT,<br>
+"msgid"	TEXT,<br>
+"origin"	TEXT,<br>
+"longname"	TEXT<br>
+, tipmsg text)</p>
+<p>La tabella connessioni contiene un record per ogni singolo nodo per ogni singola variazione di distanza di oltre 100mt verso il router_client Home. In questo modo è possibile tracciare i percorsi effettuati dai nodi nel tempo.</p>
+<p>La tabella meshnodes contiene un singolo record per ciascun nodo identificato da chiave unica non duplicabile costituita dal nodenumber (integer su 4 bytes) attraverso il quale si risale a longname. Ad ogni variazione di dati il relativo record viene aggiornato anche nella data. Questi dati sono la base di riferimento ad ogni ripartenza dell'applicazione consentendoci così di identificare i nodi già dal primo messaggio qualunque sia il tipo di messaggio ricevuto.</p>
+<p>I dati vecchi oltre i 10 giorni vengono automaticamente cancellati ad ogni ripartenza in tutt'e tre le tabelle. Questo valore può essere modificato in textbox.</p>
+<h2 class="toc-header" id="esempio-di-vista-connessioni"> Esempio di vista 'connessioni'</h2>
+<p><img alt="mesh_data_show_2.png" src="/mesh_data_show_2.png"></p>
+<h2 class="toc-header" id="esempio-di-vista-geomap"> Esempio di vista 'GeoMap'</h2>
+<p><img alt="mesh_data_show_3.jpg" src="/mesh_data_show_3.jpg"></p>
+<h2 class="toc-header" id="note-pratiche-duso"> Note pratiche d'uso</h2>
+<ol>
+<li>
+<p>Avendo raggiunto un numero di nodi gestiti nel mesh intorno alla trentina capita abbastanza spesso che la connessione seriale al device vada in time-out alla partenza. Questa evenienza è segnalata nella text area log protocollo con le istruzioni atte ad aggirare il problema: staccare e riattaccare la connessione USB, poi lanciare il comando CLI 'meshtastic --info' e ripeterlo fino a che finisca senza errore di time-out. A questo punto rilanciare l'applicazione.</p>
+</li>
+<li>
+<p>Il primo messaggio che normalmente esce dal device è un ADMIN_APP con origine e destinazione pari a node_id dello stesso. E' importante che questo messaggio arrivi nei primi inviati pervhé è per questo tramite che viene identificato il nodenum che è la chiave identificativa di mioGW ovvero il nodo Home. Se il messaggio ADMIN_APP non esce nei primi sette / otto basta al volo un reset per reboot e la cosa si risolve.</p>
+</li>
+</ol>
+<h3 class="toc-header" id="ultimi-aggiornamenti"> Ultimi aggiornamenti</h3>
+<p>In data 13 aprile 2023 aggiornati broadcast_msg_pyq5.py e meshdb.db in modo da registrare in DB nei dati di telemetry anche quelli di 'environment' ovvero pressione, temperatura, umidità che eventualmente il nodo fornisce con cadenza ogni 10 minuti.</p>
+<p>In data 7 Maggio 2023 aggiornati broadcast_msg_pyq5.py e meshdb.db in modo da registrare in DB nei dati di telemetry anche tensione di batteria e corrente consumata o di carica misurate dal sensore INA219</p>
+<ol>
+<li>In data 1 Ottobre 2023 aggiunto controllo ricezione messaggi duplicati.</li>
+<li>In data 24 Gen 2024 corretto gestione della rappresentazione in mappa dei GW in mesh</li>
+<li>In data 29 Gen 2024 introdotta gestione eventuale DB locked che occorre saltuariamente con processori 32bit datati</li>
+<li>In data 5 Feb 2024 modificato criteri di mapping cosicché ora vengono sempre mostrati in real time tutti i nodi distinti fra GW (in rosso) e mobili (in verde). Per il mapping dello storico abbiamo invece la selezione del singolo nodo nella giornata scelta dove comunque vengono mostrati anche i GW</li>
+<li>In data 10 Feb 2024 soppresso '?' in messaggio RX qsl de.. di risposta automatica a qsl? onde evitare saturazione mesh nel caso 2+ utenti avessero in linea questo monitor con autorisposta attivata.</li>
+<li>In data 23 Feb 2024 gestita ulteriore situazione di DB locked che raramente poteva aver luogo su PC 32bit datati.</li>
+</ol>
+<h3 class="toc-header" id="download-applicazione-e-db-sqlite"> Download applicazione e DB Sqlite</h3>
+<p><a class="is-asset-link" href="/broadcast_msg_pyq5.py">broadcast_msg_pyq5.py</a><br>
+<a class="is-asset-link" href="/meshdb.db">meshdb.db</a></p>
