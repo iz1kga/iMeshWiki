@@ -2,13 +2,13 @@
 title: Convenzione del nome dei nodi
 description: 
 published: true
-date: 2024-04-29T18:45:03.612Z
+date: 2024-04-29T18:49:51.849Z
 tags: 
 editor: ckeditor
 dateCreated: 2023-02-16T16:55:00.384Z
 -->
 
-<p>Ciascun nodo Meshtastic è identificato da un nodeID, derivato dal MAC address Bluetooth. Il firmware assegna automaticamente un "Long Name" al nodo con la logica "Meshtastic" + spazio + ultimi quattro caratteri del Mac address Bluetooth, per esempio:</p>
-<p><code>Meshtastic af67</code></p>
-<p>L'utente ha la facoltà di modificare il Long Name come preferisce, perché l'identificazione univoca del nodo è garantita dal nodeID.</p>
-<p>Tuttavia, per evitare che sulla mappa possano comparire nodi omonimi, è consigliabile che anche il Long Name sia univoco.</p>
+<p>Ciascun nodo Meshtastic è identificato da un <strong>nodeID </strong>che è derivato dal MAC address del trasmetittore Bluetooth.<br>Il firmware assegna automaticamente un "Long Name" al nodo con la logica&nbsp;<br><span style="font-family:'Courier New', Courier, monospace;">"Meshtastic" + spazio + ultimi quattro caratteri del Mac address Bluetooth</span><br>per esempio: <code>Meshtastic af67</code></p>
+<p>L'utente ha la facoltà di modificare il Long Name come preferisce, perché l'identificazione reale ed univoca del nodo a livello di protocollo è garantita dal suo nodeID che può quindi anche non corrispondere con il Long Name.</p>
+<p>Tuttavia, per evitare che sulla mappa possano comparire nomi di nodi omonimi e/o doppioni <u>è altamento consigliato che anche il Long Name sia univoco</u>. Createlo voi come preferite, ma che sia diverso da tutti gli altri nodi (vostri o di altri).</p>
+<p>&nbsp;</p>
